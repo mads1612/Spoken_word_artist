@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Naiha</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <div class="nav_logo_knap"></div>
+            <div id="navigations-knapper">
+                <a class="nav_om_knap" href="om.html"></a>
+                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section id="om">
+
+
+        <article class="om_indhold">
+            <h1 class="om_overskrift1"></h1>
+            <div class="line"></div>
+            <div class="om_box">
+                <h1 class="naiha_overskrift"></h1>
+                <p class="naiha_tekst"></p>
+                <!--                <video class="om_video"></video>-->
+            </div>
+        </article>
+    </section>
+
+    <section id="social_feed">
+
+        <article class="social_indhold">
+            <h1 class="social_overskrift"></h1>
+            <div class="line"></div>
+
+
+        </article>
+    </section>
+
+    <footer>
+        <div class="footer_indhold">
+            <h1 class="footer_overskrift"></h1>
+            <div class="right">
+                <a class="email_tekst"></a>
+                <a class="tlf_tekst"></a>
+                <a class="map_tekst"></a>
+
+
+            </div>
+            <div class="left">
+                <img class="email">
+                <img class="tlf">
+                <img class="map">
+
+            </div>
+
+            <div class="bottom">
+                <img class="face">
+                <img class="insta">
+                <img class="linkedin">
+            </div>
+        </div>
+    </footer>
+    <script src="header.js"></script>
+    <script src="burgermenu.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        let side;
+        const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/om/111";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            side = await response.json();
+            vis();
+        }
+
+
+
+        function vis() {
+            document.querySelector(".om_overskrift1").textContent = side.om_overskrift;
+            document.querySelector(".naiha_overskrift").textContent = side.om_overskrift2;
+            document.querySelector(".naiha_tekst").textContent = side.om_tekst;
+
+            document.querySelector(".social_overskrift").textContent = side.om_overskrift_social;
+
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
