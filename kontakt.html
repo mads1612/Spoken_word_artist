@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="">
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav>
+            <div class="nav_logo_knap"></div>
+            <div id="navigations-knapper">
+                <a class="nav_om_knap" href="om.html"></a>
+                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <section id="kontakt">
+
+        <article class="kontakt_indhold">
+            <h1 class="sektion_overskrift"></h1>
+            <div class="line"></div>
+            <div class="kontakt_box_container">
+
+                <div class="kontakt_venstre position">
+                    <h1 class="overskrift1"></h1>
+
+                    <div class="tekst">
+                        <div class="top">
+                            <img class="ikon1" src="">
+                            <p class="tekst1"></p>
+                        </div>
+
+                        <div class="mid">
+                            <img class="ikon2" src="">
+                            <p class="tekst2"></p>
+                        </div>
+
+                        <div class="bottom">
+                            <img class="ikon3" src="">
+                            <p class="tekst3"></p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="kontakt_midten position">
+                    <h1 class="overskrift2"></h1>
+
+                    <div class="tekst">
+                        <div class="top">
+                            <img class="ikon4" src="">
+                            <p class="tekst5"></p>
+                        </div>
+
+                        <div class="mid">
+                            <img class="ikon5" src="">
+                            <p class="tekst6"></p>
+                        </div>
+
+                        <div class="bottom">
+                            <img class="ikon6" src="">
+                            <p class="tekst7"></p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="kontakt_hojre position">
+                    <div class="tekst_box">
+
+                        <h1 class="overskrift3"></h1>
+                        <img class="ikon7" src="">
+                        <img class="ikon8" src="">
+                        <img class="ikon9" src="">
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="kontakt_form_knap"></button>
+        </article>
+    </section>
+    <section id="kontakt_formular_sektion">
+
+
+
+        <article class="kontakt_formular_indhold">
+            <div class="container">
+                <h1 class="formular_overskrift"></h1>
+
+                <div class="tekst">
+                    <p class="formular_tekst"></p>
+
+                    <div class="top">
+                        <img class="map" src="">
+                        <p class="formular_adresse"></p>
+                    </div>
+
+                    <div class="mid">
+                        <img class="tlf" src="">
+                        <p class="formular_tlf"></p>
+                    </div>
+
+                    <div class="bottom">
+                        <img class="mail" src="">
+                        <p class="formular_mail"></p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="social_bottom">
+                    <img class="facebook" src="">
+                    <img class="instagram" src="">
+                    <img class="linkedin" src="">
+
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+
+    <section class="formular">
+        <div class="border">
+            <div class="formular_container">
+                <div class="formular_indhold">
+                    <form action="action_page.php">
+                        <label for="fname">Email</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
+
+                        <label for="lname">Emne</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
+
+
+
+                        <label for="subject">Besked</label>
+                        <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h1 class="footer_overskrift"></h1>
+        <img class="email">
+        <a class="email_tekst"></a>
+        <img class="tlf">
+        <a class="tlf_tekst"></a>
+        <img class="map">
+        <a class="map_tekst"></a>
+        <img class="face">
+        <img class="insta">
+        <img class="linkedin">
+
+    </footer>
+    <script src="header.js"></script>
+    <script src="burgermenu.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        let side;
+        const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/kontakt/110";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            side = await response.json();
+            vis();
+        }
+
+
+
+        function vis() {
+            document.querySelector(".sektion_overskrift").textContent = side.kontakt_overskrift;
+
+            document.querySelector(".overskrift1").textContent = side.kontakt_overskrift_venstre_box;
+
+            document.querySelector(".tekst1").textContent = side.kontakt_tekst_venstre_mail;
+
+
+
+
+
+
+
+            document.querySelector(".tekst2").textContent = side.kontakt_tekst_venstre_tlf;
+
+
+            document.querySelector(".tekst3").textContent = side.kontakt_tekst_venstre_map;
+
+
+
+
+            document.querySelector(".tekst5").textContent = side.kontakt_tekst_mid_mail;
+            document.querySelector(".tekst6").textContent = side.kontakt_tekst_mid_tlf;
+            document.querySelector(".tekst7").textContent = side.kontakt_tekst_mid_map;
+
+
+
+            document.querySelector(".overskrift2").textContent = side.kontakt_overskrift_mid_box;
+            document.querySelector(".overskrift3").textContent = side.kontakt_overskrift_hojre_box;
+
+            document.querySelector(".ikon1").src = side.kontakt_mail_hvid.guid;
+
+            document.querySelector(".ikon2").src = side.kontakt_tlf_hvid.guid;
+
+
+            document.querySelector(".ikon3").src = side.kontakt_map_hvid.guid;
+
+
+            document.querySelector(".ikon4").src = side.kontakt_mail_hvid2.guid;
+
+            document.querySelector(".ikon5").src = side.kontakt_tlf_hvid2.guid;
+
+
+            document.querySelector(".ikon6").src = side.kontakt_map_hvid2.guid;
+
+
+            document.querySelector(".ikon7").src = side.kontakt_tekst_social_hvid.guid;
+            document.querySelector(".ikon8").src = side.kontakt_tekst_social_hvid2.guid;
+
+
+
+            document.querySelector(".kontakt_form_knap").textContent = side.kontakt_knap_tekst;
+            document.querySelector(".formular_overskrift").textContent = side.kontakt_overskrift_formular;
+
+            document.querySelector(".formular_tekst").textContent = side.kontakt_tekst_formular;
+
+            document.querySelector(".formular_adresse").textContent = side.kontakt_map_formular;
+
+
+            document.querySelector(".formular_tlf").textContent = side.kontakt_tlf_formular;
+            document.querySelector(".formular_mail").textContent = side.kontakt_mail_formular;
+
+
+            document.querySelector(".map").src = side.kontakt_map_gron.guid;
+            document.querySelector(".tlf").src = side.kontakt_tlf_gron.guid;
+            document.querySelector(".mail").src = side.kontakt_mail_gron.guid;
+
+
+            document.querySelector(".facebook").src = side.kontakt_tekst_social_brun.guid;
+            document.querySelector(".instagram").src = side.kontakt_tekst_social_brun1.guid;
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
