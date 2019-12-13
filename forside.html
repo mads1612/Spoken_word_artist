@@ -265,7 +265,6 @@
 
 
     }
-
 </style>
 
 <body>
@@ -405,16 +404,26 @@
 
     <footer>
         <h1 class="footer_overskrift"></h1>
-        <img class="email" src="">
-        <a class="email_tekst"></a>
-        <img class="tlf" src="">
-        <a class="tlf_tekst"></a>
-        <img class="map">
-        <a class="map_tekst"></a>
-        <img class="face" src="">
-        <img class="insta" src="">
-        <img class="linkedin" src="">
 
+        <div class="top">
+            <img class="email">
+            <a class="email_tekst"></a>
+        </div>
+
+        <div class="mid">
+            <img class="tlf">
+            <a class="tlf_tekst"></a>
+        </div>
+
+        <div class="bottom">
+            <img class="map">
+            <a class="map_tekst"></a>
+        </div>
+        <div class="social">
+            <img class="face">
+            <img class="insta">
+            <img class="linkedin">
+        </div>
     </footer>
     <script src="header.js"></script>
     <script src="burgermenu.js"></script>
@@ -484,7 +493,8 @@
             document.querySelector(".kontakt_tekst").textContent = side.forside_kontakt_tekst;
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
+        }
     </script>
-</body>
 
-</html>
+
+</body></html>
