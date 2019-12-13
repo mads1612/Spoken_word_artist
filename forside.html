@@ -11,15 +11,165 @@
 http://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/forside
 
 <body>
+    <header>
+
+        <nav>
+            <div id="navigations-knapper">
+                <a class="nav_logo_knap"></a>
+                <a class="nav_om_knap"></a>
+                <a class="nav_kontakt_knap"></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <section id="forside_splash">
+        <article class="splash_indhold">
+            <h1 class="navn"></h1>
+            <h2 class="profession"></h2>
+            <img class="splash_billede" src="" alt="Morgen cykel">
+        </article>
+    </section>
+
+    <section id="om_naiha">
+        <article class="om_indhold">
+            <h1 class="om_sektion_titel"></h1>
+            <div class="line"></div>
+
+            <h2 class="om_citat"></h2>
+            <p class="om_tekst"></p>
+            <button class="naiha_historie"></button>
+        </article>
+
+
+
+
+    </section>
+
+    <section id="event">
+
+        <article class="event_indhold">
+
+            <div class="event_venstre event_layout">
+                <div class="tekst">
+
+                    <h1 class="event_venstre_dato event_dato"></h1>
+                    <h2 class="event_venstre_overskrift event_overskrift"></h2>
+                    <h3 class="event_venstre_lokation event_lokation"></h3>
+                    <div class="line"></div>
+                    <button class="se_mere_venstre event_knap"></button>
+                </div>
+            </div>
+
+            <div class="event_midten event_layout ">
+                <div class="tekst">
+
+                    <h1 class="event_midten_dato event_dato"></h1>
+                    <h2 class="event_midten_overskrift event_overskrift"></h2>
+                    <h3 class="event_midten_lokation event_lokation"></h3>
+                    <div class="line"></div>
+                    <button class="se_mere_midten event_knap"></button>
+                </div>
+
+            </div>
+
+            <div class="event_hojre event_layout">
+                <div class="tekst">
+
+                    <h1 class="event_hojre_dato event_dato"></h1>
+                    <h2 class="event_hojre_overskrift event_overskrift"></h2>
+                    <h3 class="event_hojre_lokation event_lokation"></h3>
+                    <div class="line"></div>
+                    <button class="se_mere_hojre event_knap"></button>
+                </div>
+
+            </div>
+
+        </article>
+    </section>
+
+    <section id="citat">
+        <article class="citat_indhold">
+            <h1 class="citat_overskrift"></h1>
+        </article>
+    </section>
+
+    <section id="press">
+
+        <article class="press_indhold">
+            <h1 class="pres_overskrift"></h1>
+            <div class="line"></div>
+            <div class="container">
+
+
+                <div class="press_venstre position">
+                    <div class="press_tekst">
+                        <h3 class="press_venstre_dato"></h3>
+                        <h1 class="press_venstre_overskrift"></h1>
+                        <button class="press_las_artikel_venstre"></button>
+                    </div>
+                </div>
+
+                <div class="press_midten position">
+                    <div class="press_tekst">
+
+                        <h3 class="press_midten_dato"></h3>
+                        <h1 class="press_midten_overskrift"></h1>
+                        <button class="press_las_artikel_midten"></button>
+                    </div>
+
+                </div>
+
+                <div class="press_hojre position">
+                    <div class="press_tekst">
+
+                        <h3 class="press_hojre_dato"></h3>
+                        <h1 class="press_hojre_overskrift"></h1>
+                        <button class="press_las_artikel_hojre"></button>
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <section id="kontakt">
+        <article class="kontakt_indhold">
+
+            <h1 class="kontakt_overskrift"></h1>
+            <h2 class="kontakt_tekst"></h2>
+            <button class="kontakt_knap"></button>
+        </article>
+
+    </section>
+
+
+    <footer>
+        <h1 class="footer_overskrift"></h1>
+        <img class="email" src="">
+        <a class="email_tekst"></a>
+        <img class="tlf" src="">
+        <a class="tlf_tekst"></a>
+        <img class="map">
+        <a class="map_tekst"></a>
+        <img class="face" src="">
+        <img class="insta" src="">
+        <img class="linkedin" src="">
+
+    </footer>
+    <script src="header.js"></script>
+    <script src="burgermenu.js"></script>
+    <script src="footer.js"></script>
+
     <script>
         let side;
-        const url = "http://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/forside";
+        const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/forside/16";
         document.addEventListener("DOMContentLoaded", start);
-        document.querySelector('#').onclick =
 
-            function start() {
-                hentJson();
-            }
+        function start() {
+            hentJson();
+        }
 
         async function hentJson() {
             const response = await fetch(url);
@@ -27,34 +177,54 @@ http://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/word
             vis();
         }
 
+
+
         function vis() {
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side..guid;
+            document.querySelector(".navn").textContent = side.forside_navn;
+            document.querySelector(".profession").textContent = side.forside_profession;
+            document.querySelector(".splash_billede").src = side.forside_splash.guid;
+
+            document.querySelector(".om_sektion_titel").textContent = side.om_overskrift;
+            document.querySelector(".om_citat").textContent = side.forside_om_citat;
+            document.querySelector(".om_tekst").textContent = side.forside_tekst;
+            document.querySelector(".naiha_historie").textContent = side.forside_om_knap_tekst;
 
 
-            document.querySelector("."). = side..;
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side.;
+            document.querySelector(".event_venstre_dato").textContent = side.forside_event_tekst_venstre;
+            document.querySelector(".event_venstre_overskrift").textContent = side.forside_event_overskrift_venstre;
+            document.querySelector(".event_venstre_lokation").textContent = side.forside_event_tekst2_venstre;
+            document.querySelector(".se_mere_venstre").textContent = side.forside_event_knap_tekst_venstre;
 
-            document.querySelector("."). = side..;
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side.;
+            document.querySelector(".event_midten_dato").textContent = side.forside_event_tekst_midten;
+            document.querySelector(".event_midten_overskrift").textContent = side.forside_event_overskrift_midten;
+            document.querySelector(".event_midten_lokation").textContent = side.forside_event_tekst2_midten;
+            document.querySelector(".se_mere_midten").textContent = side.forside_event_knap_tekst_midten;
 
-            document.querySelector("."). = side..;
-            document.querySelector("."). = side.;
-            document.querySelector("."). = side.;
-        }
+            document.querySelector(".event_hojre_dato").textContent = side.forside_event_tekst_hojre;
+            document.querySelector(".event_hojre_overskrift").textContent = side.forside_event_overskrift_hojre;
+            document.querySelector(".event_hojre_lokation").textContent = side.forside_event_tekst2_hojre;
+            document.querySelector(".se_mere_hojre").textContent = side.forside_event_knap_tekst_hojre;
 
-        function startAnimation() {
-            document.querySelector(".").classList.add("");
-            document.querySelector(".").classList.add("");
-            document.querySelector(".").classList.add("");
-            document.querySelector(".").classList.add("");
-            document.querySelector(".").classList.add("");
-            document.querySelector(".").classList.add("");
-        }
+            document.querySelector(".citat_overskrift").textContent = side.forside_citat_overskrift;
+
+
+            document.querySelector(".pres_overskrift").textContent = side.forside_press_sektion_overskrift;
+
+            document.querySelector(".press_venstre_dato").textContent = side.forside_press_venstre_tekst;
+            document.querySelector(".press_venstre_overskrift").textContent = side.forside_press_venstre_overskrift;
+            document.querySelector(".press_las_artikel_venstre").textContent = side.forside_press_venstre_knap_tekst;
+
+            document.querySelector(".press_midten_dato").textContent = side.forside_press_midten_tekst;
+            document.querySelector(".press_midten_overskrift").textContent = side.forside_press_midten_overskrift;
+            document.querySelector(".press_las_artikel_midten").textContent = side.forside_press_midten_knap_tekst;
+
+            document.querySelector(".press_hojre_dato").textContent = side.forside_press_hojre_tekst;
+            document.querySelector(".press_hojre_overskrift").textContent = side.forside_press_hojre_overskrift;
+            document.querySelector(".press_las_artikel_hojre").textContent = side.forside_press_hojre_knap_tekst;
+
+            document.querySelector(".kontakt_overskrift").textContent = side.forside_kontakt_overskrift;
+            document.querySelector(".kontakt_tekst").textContent = side.forside_kontakt_tekst;
+            document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
     </script>
 </body>
