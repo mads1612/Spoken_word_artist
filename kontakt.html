@@ -19,12 +19,20 @@
         font-family: Kepler Std Display;
     }
 
-    #kontakt {}
+    h2 {
+        font-size: 5vw;
 
-    .sektion_overskrift {
+    }
+
+    h1 {
+        font-size: 7vw;
         text-align: center;
-        font-size: 6vw;
 
+    }
+
+    a {
+        font-size: 3.2vw;
+        padding-bottom: 5vw;
     }
 
     .line {
@@ -40,122 +48,90 @@
 
     }
 
-    .kontakt_box_container {}
-
-    .kontakt_venstre {
-        background-color: #A67246;
-        height: 90vw;
-        width: 70vw;
-        justify-content: center;
-        display: grid;
-        margin-bottom: 10vw;
-
-
-    }
-
-
-
-    .kontakt_venstre p {
-        font-size: 3vw;
-    }
-
-
     .tekst {
-        margin: 5vw
+        padding: 10vw;
     }
 
-    .overskrift1 {
-        font-size: 5vw;
+    .top {
+        display: flex;
+        align-items: center;
+
     }
 
-
-
-
-    .ikon4 {
-        height: 4vw;
-    }
-
-    .ikon5 {
-        height: 4vw;
-        padding-top: 6vw;
+    .mid {
+        display: flex;
+        align-items: center;
 
 
     }
 
-    .ikon6 {
-        width: 5vw;
-        padding-top: 4vw;
 
 
+
+    .bottom {
+        display: flex;
+        align-items: center;
     }
 
-    .kontakt_midten {
+
+    .kontakt_container {
         background-color: #A67246;
-        height: 90vw;
-        width: 70vw;
-        justify-content: center;
-        display: grid;
-    }
-
-    .kontakt_midten p {
-        font-size: 3vw;
-    }
-
-
-
-
-    .ikon1 {
-        height: 4vw;
-    }
-
-    .ikon2 {
-        height: 4vw;
-        padding-top: 6vw;
-    }
-
-    .ikon3 {
-        width: 5vw;
-        padding-top: 4vw;
-    }
-
-    .kontakt_hojre {
-        display: grid;
-        justify-content: center;
-        background-color: #A67246;
-        margin-top: 10vw;
         height: 80vw;
         width: 70vw;
+        justify-content: center;
+        display: grid;
+        margin-top: 10vw;
+
+    }
+
+
+    .kontakt_container_h1 {
+        padding-bottom: 5vw;
+
+    }
+
+    .kontakt_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+
+
+
+    .img_baggrund {
         background-image: url(kontakt_naiha.png);
         background-size: cover;
-    }
 
+    }
 
     .overskrift3 {
-        margin-top: 20vw;
-        margin-right: 30vw
+        margin-right: 20vw;
     }
 
-    .ikon7 {
+    .social_ikon_pad {
+        height: 4vw;
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
         height: 4vw;
     }
 
-    .ikon8 {
-        height: 4vw;
-    }
 
-    .ikon9 {
-        height: 4vw;
-    }
-
-    .kontakt_form_knap {
-        width: 50vw;
+    button {
+        width: 40vw;
         height: 10vw;
         background-color: #A67246;
         border: none;
-        margin-top: 8vw
+        margin-top: 15vw;
+        margin-left: 15vw;
+        font-size: 3vw;
+
     }
 
-    #kontakt_formular_sektion {
+    . #kontakt_formular_sektion {
         height: 130vw;
     }
 
@@ -164,28 +140,6 @@
         display: grid;
     }
 
-    .tekst_box {}
-
-    .top {
-        display: flex;
-        align-items: center
-    }
-
-    .mid {
-        display: flex;
-        align-items: center
-    }
-
-
-
-    .bottom {
-        display: flex;
-        align-items: center;
-
-
-    }
-
-
     .formular_overskrift {
         text-align: center;
         margin-top: 40%;
@@ -193,59 +147,20 @@
     }
 
     .formular_tekst {
-        font-size: 4.8vw;
+        font-size: 4vw;
         width: 80vw;
+        text-align: center;
+        text-align: justify;
     }
 
-    .formular_adresse {
-        font-size: 3vw;
-    }
 
-    .formular_tlf {
-        font-size: 3vw;
-
-    }
-
-    .formular_mail {
-        color: black;
-        font-size: 3vw;
-
-    }
-
-    .map {
-        height: 4vw;
-        width: 4vw;
-    }
-
-    .tlf {
-        height: 4vw;
-        width: 4vw;
-
-
-    }
-
-    .mail {
-        height: 4vw;
-        width: 4vw;
-
-    }
 
     .social_bottom {
         margin-top: 10vw;
+        padding-left: 40vw;
     }
 
-    .facebook {
-        width: 4vw;
-    }
 
-    .instagram {
-        width: 4vw;
-
-    }
-
-    .linkedin {
-        display: none;
-    }
 
     .border {
         border: 1px solid #ccc;
@@ -306,7 +221,6 @@
     </header>
 
 
-
     <section id="kontakt">
 
         <article class="kontakt_indhold">
@@ -314,47 +228,64 @@
             <div class="line"></div>
             <div class="kontakt_box_container">
 
-                <div class="kontakt_venstre position">
-                    <h1 class="overskrift1"></h1>
+                <div class="kontakt_venstre kontakt_container img_baggrund">
+                    <div class="tekst">
+                        <h2 class="overskrift3"></h2>
+                        <img class="ikon7 social_ikon" src="">
+                        <img class="ikon8 social_ikon_pad" src="">
+                        <img class="ikon9 social_ikon_pad" src="">
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="kontakt_midten kontakt_container">
 
                     <div class="tekst">
+                        <h2 class="overskrift2 kontakt_container_h1"></h2>
+
                         <div class="top">
-                            <img class="ikon1" src="">
-                            <p class="tekst1"></p>
+                            <img class="ikon4 kontakt_ikon" src="">
+                            <a class="tekst5"></a>
                         </div>
 
                         <div class="mid">
-                            <img class="ikon2" src="">
-                            <p class="tekst2"></p>
+                            <img class="ikon5 kontakt_ikon" src="">
+                            <a class="tekst6"></a>
                         </div>
 
-                        <div class="bottom">
-                            <img class="ikon3" src="">
-                            <p class="tekst3"></p>
+                        <div class="bottom ">
+                            <img class="ikon6 kontakt_ikon" src="">
+                            <a class="tekst7"></a>
                         </div>
 
 
 
                     </div>
+
                 </div>
 
-                <div class="kontakt_midten position">
-                    <h1 class="overskrift2"></h1>
+                <div class="kontakt_hojre kontakt_container">
 
                     <div class="tekst">
+                        <h2 class="overskrift1 kontakt_container_h1"></h2>
+
                         <div class="top">
-                            <img class="ikon4" src="">
-                            <p class="tekst5"></p>
+                            <img class="ikon1 kontakt_ikon" src="">
+                            <a class="tekst1"></a>
                         </div>
 
                         <div class="mid">
-                            <img class="ikon5" src="">
-                            <p class="tekst6"></p>
+                            <img class="ikon2 kontakt_ikon" src="">
+                            <a class="tekst2"></a>
                         </div>
 
                         <div class="bottom">
-                            <img class="ikon6" src="">
-                            <p class="tekst7"></p>
+                            <img class="ikon3 kontakt_ikon" src="">
+                            <a class="tekst3"></a>
                         </div>
 
 
@@ -362,20 +293,9 @@
                     </div>
 
                 </div>
-
-                <div class="kontakt_hojre position">
-                    <div class="tekst_box">
-
-                        <h1 class="overskrift3"></h1>
-                        <img class="ikon7" src="">
-                        <img class="ikon8" src="">
-                        <img class="ikon9" src="">
-                    </div>
-
-                </div>
+                <button class="kontakt_form_knap"></button>
 
             </div>
-            <button class="kontakt_form_knap"></button>
         </article>
     </section>
     <section id="kontakt_formular_sektion">
@@ -384,24 +304,25 @@
 
         <article class="kontakt_formular_indhold">
             <div class="container">
-                <h1 class="formular_overskrift"></h1>
 
                 <div class="tekst">
+                    <h1 class="formular_overskrift"></h1>
+
                     <p class="formular_tekst"></p>
 
                     <div class="top">
-                        <img class="map" src="">
-                        <p class="formular_adresse"></p>
+                        <img class="map kontakt_ikon" src="">
+                        <a class="formular_adresse"></a>
                     </div>
 
                     <div class="mid">
-                        <img class="tlf" src="">
-                        <p class="formular_tlf"></p>
+                        <img class="tlf kontakt_ikon" src="">
+                        <a class="formular_tlf"></a>
                     </div>
 
                     <div class="bottom">
-                        <img class="mail" src="">
-                        <p class="formular_mail"></p>
+                        <img class="mail kontakt_ikon" src="">
+                        <a class="formular_mail"></a>
                     </div>
 
 
@@ -409,9 +330,9 @@
                 </div>
 
                 <div class="social_bottom">
-                    <img class="facebook" src="">
-                    <img class="instagram" src="">
-                    <img class="linkedin" src="">
+                    <img class="facebook social_ikon" src="">
+                    <img class="instagram social_ikon_pad" src="">
+                    <img class="linkedin social_ikon_pad" src="">
 
                 </div>
             </div>
@@ -542,6 +463,7 @@
 
             document.querySelector(".ikon7").src = side.kontakt_tekst_social_hvid.guid;
             document.querySelector(".ikon8").src = side.kontakt_tekst_social_hvid2.guid;
+            document.querySelector(".ikon9").src = side.kontakt_tekst_social_hvid3.guid;
 
 
 
@@ -564,6 +486,7 @@
 
             document.querySelector(".facebook").src = side.kontakt_tekst_social_brun.guid;
             document.querySelector(".instagram").src = side.kontakt_tekst_social_brun1.guid;
+            document.querySelector(".linkedin").src = side.kontakt_tekst_social_brun2.guid;
 
 
 
@@ -572,3 +495,8 @@
         }
     </script>
 </body></html>
+
+
+
+
+<!--            document.querySelector(".billede").src = side.kontakt_billede.guid;-->
