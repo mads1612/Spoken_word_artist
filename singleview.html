@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <div class="nav_logo_knap"></div>
+            <div id="navigations-knapper">
+                <a class="nav_om_knap" href="om.html"></a>
+                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            </div>
+        </nav>
+
+    </header>
+
+    <section id="single_event">
+
+        <article class="single_event_indhold">
+            <div class="event_top">
+                <img class="event_billede" src="">
+
+            </div>
+            <div class="event_information">
+                <img class="tid_ikon" src="">
+                <img class="map_ikon" src="">
+                <div class="float_box">
+                    <div class="float_left">
+                        <h1 class="event_overskrift"></h1>
+                        <p class="map"></p>
+                    </div>
+                    <div class="float_right">
+
+                        <p class="dato"></p>
+                        <p class="tid"></p>
+                    </div>
+                </div>
+
+
+                <p class="event_tekst"></p>
+                <div class="social_container">
+                    <img class="face" src="">
+                    <img class="insta" src="">
+                    <img class="linkin" src="">
+                </div>
+                <button class="event_knap"></button>
+
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <h1 class="footer_overskrift"></h1>
+        <img class="email">
+        <a class="email_tekst"></a>
+        <img class="tlf">
+        <a class="tlf_tekst"></a>
+        <img class="map">
+        <a class="map_tekst"></a>
+        <img class="face">
+        <img class="insta">
+        <img class="linkedin">
+
+    </footer>
+    <script src="header.js"></script>
+    <script src="burgermenu.js"></script>
+    <script src="footer.js"></script>
+    <script>
+        let side;
+        const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/event/138";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            side = await response.json();
+            vis();
+        }
+
+
+
+        function vis() {
+            document.querySelector(".event_billede").src = side.event_billede.guid;
+            document.querySelector(".tid_ikon").src = side.event_ikon.guid;
+            document.querySelector(".tid").textContent = side.event_tekst_tid;
+            document.querySelector(".map_ikon").src = side.event_ikon2.guid;
+
+            document.querySelector(".map").textContent = side.event_tekst_map;
+
+
+            document.querySelector(".event_overskrift").textContent = side.event_overskrift;
+            document.querySelector(".event_tekst").textContent = side.event_tekst;
+            document.querySelector(".event_knap").textContent = side.event_knap_tekst;
+
+            document.querySelector(".face").src = side.event_social_facebook.guid;
+
+
+            document.querySelector(".insta").src = side.event_social_instagram.guid;
+            document.querySelector(".linkin").src = side.event_social_linkin.guid;
+            document.querySelector(".dato").textContent = side.event_dato;
+
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
