@@ -8,38 +8,120 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    .background_color {
+        background-color: #D8F0F6;
+    }
+
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+
+
+
+    .bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .kontakt_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+
+    .footer_overskrift {
+        text-align: left;
+    }
+
+    footer {
+        background-color: #3A3550;
+
+    }
+
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+
     body {
         margin: 0;
 
 
     }
 
-    footer {
-        background-color: #3A3550;
-    }
-
     p,
     h1,
-    h2 {
+    h2,
+    a {
         font-family: Kepler Std Display;
+        color: #A67246;
     }
 
-    p {
-        color: ;
+    h2 {
+        font-size: 5vw;
+
     }
 
     h1 {
-        color: ;
+        font-size: 7vw;
+
     }
 
-    h2 {
-        color: ;
+    h3 {
+        font-size: 7vw;
+
     }
 
-    h3 {}
+    a {
+        font-size: 3.2vw;
+        padding-bottom: 5vw;
+    }
+
+
+
 
     img {
         width: 100%;
+    }
+
+
+    .top {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+
+
     }
 
 
@@ -51,24 +133,26 @@
 
     .om_naiha_indhold {
         display: grid;
-        justify-content: center;
-        padding: 20vw;
+        grid-gap: 5vw;
+        width: 60vw;
+        margin: auto;
 
     }
 
     .om_naiha_h1 {
         font-size: 7vw;
         text-align: center;
+
     }
 
     .om_naiha_h2 {
         font-size: 6vw;
         text-align: center;
-
     }
 
     .om_naiha_tekst {
         font-size: 4vw;
+
     }
 
     .naiha_historie {
@@ -77,8 +161,8 @@
         font-size: 2.5vw;
         background-color: #A67246;
         border: none;
-        margin-top: 15vw;
-        margin-left: 15vw
+        color: #ffffff;
+        margin-left: 30%;
     }
 
 
@@ -89,35 +173,40 @@
         justify-content: center;
         text-align: center;
         margin-top: 20vw;
+        padding-top: 12vw;
     }
+
 
 
     .event_layout {
         display: grid;
-        justify-content: center;
-
-        background-color: #A67246;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
         height: 95vw;
         width: 70vw;
-        margin-bottom: 15vw;
-        font-size: 4vw
     }
 
     .tekst {
-        margin-top: 20vw;
+        padding: 10vw;
     }
 
-    .event_dato {}
 
-    .event_overskrift {}
-
-    .event_lokation {}
 
     .line {
-        border-top: 2px solid;
+        border-top: 2px solid #A67246;
         width: 10vw;
         height: 10vw;
+        align-self: center;
+        margin-left: 45%;
 
+    }
+
+    .kontakt_line {
+        border-top: 1px solid #ffffff;
+        width: 80vw;
+        margin-left: 8vw;
+        height: 10vw;
     }
 
     .event_knap {
@@ -125,7 +214,10 @@
         height: 8vw;
         font-size: 3vw;
         border: none;
-        background: white;
+        color: #ffffff;
+        background-color: #A67246;
+        border: 1px #ffffff solid;
+
     }
 
     .event_midten {
@@ -164,7 +256,6 @@
 
     }
 
-    .titel {}
 
     .pres_overskrift {
         text-align: center;
@@ -173,28 +264,36 @@
     }
 
 
-    .container {}
+
+
+
+
+
 
     .press_venstre {
         display: grid;
         justify-content: center;
         height: 80vw;
         width: 70vw;
-        font-size: 4.5vw;
-        background-color: #A67246;
+        background-color: #ffffff;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
     }
 
     .press_tekst {
-        padding: 10vw
+        padding: 6vw;
+
     }
 
     .press_venstre_dato {
-        font-size: ;
+        color: #A67246;
+        font-size: 6vw;
 
     }
 
     .press_venstre_overskrift {
-        font-size: ;
+        color: #A67246;
+        font-size: 6vw;
 
     }
 
@@ -202,8 +301,12 @@
     .press_las_artikel_venstre {
         width: 20vw;
         height: 8vw;
-        background-color: white;
         border: none;
+        font-size: 3vw;
+        border: none;
+        color: #ffffff;
+        background-color: #A67246;
+        border: 1px #ffffff solid;
 
 
     }
@@ -231,11 +334,13 @@
         width: 50vw;
         font-size: 7.2vw;
         margin-top: 25vw;
-        text-align: center
+        text-align: center;
+        color: #ffffff;
     }
 
     .kontakt_tekst {
         font-size: 4.8vw;
+        color: #ffffff;
 
     }
 
@@ -246,7 +351,14 @@
         background-color: #A67246;
         border: none;
         margin-top: 15vw;
+        margin-bottom: 40vw;
         margin-left: 10vw;
+        color: #ffffff;
+
+    }
+
+    footer {
+        background-color: #3A3550;
     }
 
 
@@ -286,94 +398,92 @@
 
         </article>
     </section>
-
     <section id="om_naiha">
         <article class="om_naiha_indhold">
-
             <h1 class="om_naiha_h1"></h1>
             <div class="line"></div>
             <h2 class="om_naiha_h2"></h2>
             <p class="om_naiha_tekst"></p>
             <button class="naiha_historie"></button>
-
         </article>
     </section>
+    <section class="background_color">
 
-    <section id="event">
-        <article class="event_indhold">
-            <div class="event_venstre event_layout">
-                <div class="tekst">
+        <section id="event">
+            <article class="event_indhold">
+                <div class="event_venstre event_layout">
+                    <div class="tekst">
 
-                    <h1 class="event_venstre_dato event_dato"></h1>
-                    <h2 class="event_venstre_overskrift event_overskrift"></h2>
-                    <h3 class="event_venstre_lokation event_lokation"></h3>
-                    <div class="line"></div>
-                    <button class="se_mere_venstre event_knap"></button>
-                </div>
-            </div>
-
-            <div class="event_midten event_layout ">
-                <div class="tekst">
-
-                    <h1 class="event_midten_dato event_dato"></h1>
-                    <h2 class="event_midten_overskrift event_overskrift"></h2>
-                    <h3 class="event_midten_lokation event_lokation"></h3>
-                    <div class="line"></div>
-                    <button class="se_mere_midten event_knap"></button>
+                        <h2 class="event_venstre_dato event_dato"></h2>
+                        <h1 class="event_venstre_overskrift event_overskrift"></h1>
+                        <h1 class="event_venstre_lokation event_lokation"></h1>
+                        <div class="line"></div>
+                        <button class="se_mere_venstre event_knap"></button>
+                    </div>
                 </div>
 
-            </div>
+                <div class="event_midten event_layout ">
+                    <div class="tekst">
 
-            <div class="event_hojre event_layout">
-                <div class="tekst">
+                        <h1 class="event_midten_dato event_dato"></h1>
+                        <h2 class="event_midten_overskrift event_overskrift"></h2>
+                        <h3 class="event_midten_lokation event_lokation"></h3>
+                        <div class="line"></div>
+                        <button class="se_mere_midten event_knap"></button>
+                    </div>
 
-                    <h1 class="event_hojre_dato event_dato"></h1>
-                    <h2 class="event_hojre_overskrift event_overskrift"></h2>
-                    <h3 class="event_hojre_lokation event_lokation"></h3>
-                    <div class="line"></div>
-                    <button class="se_mere_hojre event_knap"></button>
                 </div>
-            </div>
-        </article>
+
+                <div class="event_hojre event_layout">
+                    <div class="tekst">
+
+                        <h1 class="event_hojre_dato event_dato"></h1>
+                        <h2 class="event_hojre_overskrift event_overskrift"></h2>
+                        <h3 class="event_hojre_lokation event_lokation"></h3>
+                        <div class="line"></div>
+                        <button class="se_mere_hojre event_knap"></button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="citat">
+            <article class="citat_indhold">
+                <h1 class="citat_overskrift"></h1>
+            </article>
+        </section>
+
+        <section id="press">
+            <article class="press_indhold">
+                <h1 class="pres_overskrift"></h1>
+                <div class="line"></div>
+
+                <div class="press_venstre position">
+                    <div class="press_tekst">
+                        <h1 class="press_venstre_dato"></h1>
+                        <h2 class="press_venstre_overskrift"></h2>
+                        <button class="press_las_artikel_venstre"></button>
+                    </div>
+                </div>
+
+                <div class="press_midten position">
+                    <div class="press_tekst">
+                        <h3 class="press_midten_dato"></h3>
+                        <h1 class="press_midten_overskrift"></h1>
+                        <button class="press_las_artikel_midten"></button>
+                    </div>
+                </div>
+
+                <div class="press_hojre position">
+                    <div class="press_tekst">
+                        <h3 class="press_hojre_dato"></h3>
+                        <h1 class="press_hojre_overskrift"></h1>
+                        <button class="press_las_artikel_hojre"></button>
+                    </div>
+                </div>
+            </article>
+        </section>
     </section>
-
-    <section id="citat">
-        <article class="citat_indhold">
-            <h1 class="citat_overskrift"></h1>
-        </article>
-    </section>
-
-    <section id="press">
-        <article class="press_indhold">
-            <h1 class="pres_overskrift"></h1>
-            <div class="line"></div>
-
-            <div class="press_venstre position">
-                <div class="press_tekst">
-                    <h3 class="press_venstre_dato"></h3>
-                    <h1 class="press_venstre_overskrift"></h1>
-                    <button class="press_las_artikel_venstre"></button>
-                </div>
-            </div>
-
-            <div class="press_midten position">
-                <div class="press_tekst">
-                    <h3 class="press_midten_dato"></h3>
-                    <h1 class="press_midten_overskrift"></h1>
-                    <button class="press_las_artikel_midten"></button>
-                </div>
-            </div>
-
-            <div class="press_hojre position">
-                <div class="press_tekst">
-                    <h3 class="press_hojre_dato"></h3>
-                    <h1 class="press_hojre_overskrift"></h1>
-                    <button class="press_las_artikel_hojre"></button>
-                </div>
-            </div>
-        </article>
-    </section>
-
     <section id="kontakt">
         <article class="kontakt_indhold">
             <h1 class="kontakt_overskrift"></h1>
@@ -384,27 +494,34 @@
 
 
     <footer>
-        <h1 class="footer_overskrift"></h1>
+        <div class="kontakt_line"></div>
 
-        <div class="top">
-            <img class="email">
-            <a class="email_tekst"></a>
-        </div>
+        <article class="footer_indhold">
 
-        <div class="mid">
-            <img class="tlf">
-            <a class="tlf_tekst"></a>
-        </div>
+            <div class="tekst">
+                <h1 class="footer_overskrift"></h1>
 
-        <div class="bottom">
-            <img class="map">
-            <a class="map_tekst"></a>
-        </div>
-        <div class="social">
-            <img class="face">
-            <img class="insta">
-            <img class="linkedin">
-        </div>
+                <div class="top">
+                    <img class="email kontakt_ikon">
+                    <a class="email_tekst "></a>
+                </div>
+
+                <div class="mid ">
+                    <img class="tlf kontakt_ikon">
+                    <a class="tlf_tekst  "></a>
+                </div>
+
+                <div class="bottom ">
+                    <img class="map kontakt_ikon">
+                    <a class="map_tekst "></a>
+                </div>
+                <div class="social">
+                    <img class="face social_ikon">
+                    <img class="insta social_ikon_pad">
+                    <img class="linkedin social_ikon_pad">
+                </div>
+            </div>
+        </article>
     </footer>
     <script src="header.js"></script>
     <script src="burgermenu.js"></script>
