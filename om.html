@@ -8,6 +8,74 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    .background_color {
+        background-color: #D8F0F6;
+    }
+
+    .kontakt_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+
+
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+
+
+
+    .bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_overskrift {
+        text-align: left;
+    }
+
+    footer {
+        background-color: #3A3550;
+
+    }
+
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+    .social {
+
+        display: flex;
+        justify-content: center;
+        padding-top: 5vw;
+    }
+
     p,
     h1,
     h2 {
@@ -40,39 +108,7 @@
     }
 
 
-    footer {
-        background-color: #3A3550;
-        height: 100vw;
 
-    }
-
-    .footer_indhold {}
-
-    .right {}
-
-    .left {}
-
-    .bottom {}
-
-    .footer_overskrift {}
-
-    .email {}
-
-    .email_tekst {}
-
-    .tlf {}
-
-    .tlf_tekst {}
-
-    .map {}
-
-    .map_tekst {}
-
-    .face {}
-
-    .insta {}
-
-    .linkedin {}
 
 
     #om {}
@@ -80,13 +116,17 @@
     .om_indhold {
         display: grid;
         justify-content: center;
+
     }
 
     .om_box {
+        margin-top: 10vw;
+
         height: 120vw;
         width: 50vw;
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
+        background-color: #ffffff;
 
     }
 
@@ -103,6 +143,9 @@
         height: 10vw;
     }
 
+    .tekst {
+        padding: 10vw;
+    }
 
     .naiha_overskrift {
         text-align: center
@@ -138,52 +181,59 @@
         </nav>
 
     </header>
+    <section id="video">
+        <h1 class="om_overskrift"></h1>
+        <div class="line"></div>
+        <!--                <video class="om_video"></video>-->
 
 
-    <section id="om">
-        <article class="om_indhold">
-            <h1 class="om_overskrift"></h1>
-            <div class="line"></div>
-            <div class="om_box">
-                <h2 class="naiha_overskrift"></h2>
-                <p class="naiha_tekst"></p>
-                <!--                <video class="om_video"></video>-->
+    </section>
+    <section class="background_color">
+        <section id="om">
+            <article class="om_indhold">
+                <div class="om_box">
+                    <h2 class="naiha_overskrift"></h2>
+                    <p class="naiha_tekst"></p>
+                </div>
+            </article>
+        </section>
+
+        <section id="social_feed">
+
+            <article class="social_indhold">
+                <h1 class="social_overskrift"></h1>
+                <div class="line"></div>
+
+
+            </article>
+        </section>
+    </section>
+    <footer>
+        <article class="footer_indhold">
+            <div class="tekst">
+                <h1 class="footer_overskrift"></h1>
+
+                <div class="top">
+                    <img class="email kontakt_ikon">
+                    <a class="email_tekst "></a>
+                </div>
+
+                <div class="mid ">
+                    <img class="tlf kontakt_ikon">
+                    <a class="tlf_tekst  "></a>
+                </div>
+
+                <div class="bottom ">
+                    <img class="map kontakt_ikon">
+                    <a class="map_tekst "></a>
+                </div>
+                <div class="social">
+                    <img class="face social_ikon">
+                    <img class="insta social_ikon_pad">
+                    <img class="linkedin social_ikon_pad">
+                </div>
             </div>
         </article>
-    </section>
-
-    <section id="social_feed">
-
-        <article class="social_indhold">
-            <h1 class="social_overskrift"></h1>
-            <div class="line"></div>
-
-
-        </article>
-    </section>
-
-    <footer>
-        <h1 class="footer_overskrift"></h1>
-
-        <div class="top">
-            <img class="email">
-            <a class="email_tekst"></a>
-        </div>
-
-        <div class="mid">
-            <img class="tlf">
-            <a class="tlf_tekst"></a>
-        </div>
-
-        <div class="bottom">
-            <img class="map">
-            <a class="map_tekst"></a>
-        </div>
-        <div class="social">
-            <img class="face">
-            <img class="insta">
-            <img class="linkedin">
-        </div>
     </footer>
     <script src="header.js"></script>
     <script src="burgermenu.js"></script>
