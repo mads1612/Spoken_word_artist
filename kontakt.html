@@ -9,8 +9,36 @@
 </head>
 
 <style>
+    #kontakt {
+        background-color: #D8F0F6;
+        margin-top: 10vw;
+    }
+
+    .footer_overskrift {
+        text-align: left;
+    }
+
+    img {
+
+        width: 100%;
+    }
+
     footer {
         background-color: #3A3550;
+
+    }
+
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+    .social {
+
+        display: flex;
+        justify-content: center;
+        padding-top: 5vw;
     }
 
     p,
@@ -85,8 +113,7 @@
         margin-top: 10vw;
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
-
-
+        background-color: #ffffff
     }
 
 
@@ -113,26 +140,32 @@
 
     .Kontakt_venstre_h2 {
         margin-right: 20vw;
+        color: #ffffff;
     }
 
     .social_ikon_pad {
         height: 4vw;
+        width: 4vw;
+
         padding-left: 5vw;
     }
 
     .social_ikon {
         height: 4vw;
+        width: 4vw;
     }
 
 
     button {
         width: 40vw;
         height: 10vw;
-        background-color: #A67246;
+        background-color: #ffffff;
         border: none;
         margin-top: 15vw;
         margin-left: 15vw;
         font-size: 3vw;
+        color: #A67246;
+        border: 1px solid #A67246;
 
     }
 
@@ -180,7 +213,10 @@
 
     }
 
-    .formular_container {}
+    .formular_container {
+        background-color: #ffffff;
+
+    }
 
 
     .formular_indhold {}
@@ -189,6 +225,8 @@
 
     form {
         padding: 10vw;
+        color: #A67246;
+
     }
 
     input[type=text],
@@ -196,20 +234,27 @@
     textarea {
         width: 100%;
         padding: 10px;
+        height: 10vw;
         border: 1px solid #ccc;
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
         resize: vertical;
+        border: 1px solid #A67246;
+
+
     }
 
     input[type=submit] {
-        background-color: #4CAF50;
+        background-color: #ffffff;
         color: white;
         padding: 6px 61px;
         margin-top: 5vw;
         border: none;
-
+        color: #A67246;
+        border: 1px solid #A67246;
+        width: 100%;
+        height: 10vw
     }
 </style>
 
@@ -228,7 +273,7 @@
 
     </header>
 
-    <section id="kontakt">
+    <section id="kontakt_naiha">
         <article class="kontakt_indhold">
 
             <h1 class="Kontakt_h1"></h1>
@@ -242,6 +287,11 @@
                     <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
                 </div>
             </div>
+        </article>
+
+    </section>
+    <section id="kontakt">
+        <article class="kontakt_indhold">
 
             <div class="kontakt_midten kontakt_container">
                 <div class="tekst">
@@ -286,94 +336,98 @@
             </div>
             <button class="kontakt_form_knap"></button>
         </article>
-    </section>
 
 
 
-    <section id="kontakt_formular">
-        <article class="kontakt_formular_indhold">
+        <section id="kontakt_formular">
+            <article class="kontakt_formular_indhold ">
 
-            <div class="tekst">
-                <h1 class="kontakt_formular_overskrift"></h1>
-                <p class="kontakt_formular_tekst"></p>
+                <div class="tekst">
+                    <h1 class="kontakt_formular_overskrift"></h1>
+                    <p class="kontakt_formular_tekst"></p>
 
-                <div class="top">
-                    <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_top"></a>
+                    <div class="top">
+                        <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_top"></a>
+                    </div>
+
+                    <div class="mid">
+                        <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_mid"></a>
+                    </div>
+
+                    <div class="bottom">
+                        <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_bottom"></a>
+                    </div>
                 </div>
 
-                <div class="mid">
-                    <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_mid"></a>
+                <div class="social_buttons">
+                    <img class="social_buttons_left social_ikon" src="">
+                    <img class="social_buttons_mid social_ikon_pad" src="">
+                    <img class="social_buttons_right social_ikon_pad" src="">
                 </div>
+            </article>
+        </section>
 
-                <div class="bottom">
-                    <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_bottom"></a>
+        <section class="formular">
+            <div class="border">
+                <div class="formular_container">
+                    <div class="formular_indhold">
+                        <form action="action_page.php">
+                            <label for="fname">Email</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
+
+                            <label for="lname">Emne</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
+
+
+
+                            <label for="subject">Besked</label>
+                            <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
+
+                            <input type="submit" value="Submit">
+
+                        </form>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="social_buttons">
-                <img class="social_buttons_left social_ikon" src="">
-                <img class="social_buttons_mid social_ikon_pad" src="">
-                <img class="social_buttons_right social_ikon_pad" src="">
-            </div>
-        </article>
+
+
+
     </section>
-
-    <section class="formular">
-        <div class="border">
-            <div class="formular_container">
-                <div class="formular_indhold">
-                    <form action="action_page.php">
-                        <label for="fname">Email</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
-
-                        <label for="lname">Emne</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
-
-
-
-                        <label for="subject">Besked</label>
-                        <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
-
-                        <input type="submit" value="Submit">
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
 
 
 
 
     <footer>
-        <h1 class="footer_overskrift"></h1>
+        <article class="footer_indhold">
+            <div class="tekst">
+                <h1 class="footer_overskrift"></h1>
 
-        <div class="top">
-            <img class="email">
-            <a class="email_tekst"></a>
-        </div>
+                <div class="top">
+                    <img class="email kontakt_ikon">
+                    <a class="email_tekst "></a>
+                </div>
 
-        <div class="mid">
-            <img class="tlf">
-            <a class="tlf_tekst"></a>
-        </div>
+                <div class="mid ">
+                    <img class="tlf kontakt_ikon">
+                    <a class="tlf_tekst  "></a>
+                </div>
 
-        <div class="bottom">
-            <img class="map">
-            <a class="map_tekst"></a>
-        </div>
-        <div class="social">
-            <img class="face">
-            <img class="insta">
-            <img class="linkedin">
-        </div>
+                <div class="bottom ">
+                    <img class="map kontakt_ikon">
+                    <a class="map_tekst "></a>
+                </div>
+                <div class="social">
+                    <img class="face social_ikon">
+                    <img class="insta social_ikon_pad">
+                    <img class="linkedin social_ikon_pad">
+                </div>
+            </div>
+        </article>
     </footer>
     <script src="header.js"></script>
     <script src="burgermenu.js"></script>
@@ -406,6 +460,8 @@
             document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_tekst_social_hvid2.guid;
 
             document.querySelector(".Kontakt_venstre_ikon_right").src = side.kontakt_tekst_social_hvid3.guid;
+
+            document.querySelector(".linkedin").src = side.kontakt_tekst_social_hvid3.guid;
 
 
             document.querySelector(".Kontakt_midten_h2").textContent = side.kontakt_overskrift_mid_box;
