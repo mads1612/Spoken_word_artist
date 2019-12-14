@@ -8,6 +8,115 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    #single_event {
+        font-size: 3.5vw;
+
+
+    }
+
+    .background_color {
+        background-color: #D8F0F6;
+        padding-top: 10vw;
+    }
+
+    .knap_box {
+        display: flex;
+        justify-content: center;
+        padding: 10vw;
+        padding-bottom: 20vw;
+    }
+
+    p,
+    h1,
+    h2,
+    a {
+        font-family: Kepler Std Display;
+        color: #A67246;
+
+    }
+
+    h2 {
+        font-size: 5vw;
+
+    }
+
+    p {
+        padding-bottom: 3vw;
+
+    }
+
+
+    a {
+        font-size: 3.2vw;
+        padding-bottom: 5vw;
+        color: #ffffff
+    }
+
+
+    .tekst {
+        padding: 10vw;
+    }
+
+    .single_event_indhold {}
+
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+
+    .bottom {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .kontakt_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+
+    .footer_overskrift {
+        text-align: left;
+        color: #ffffff;
+    }
+
+    footer {
+        background-color: #3A3550;
+
+    }
+
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+
+    }
+
+
     img {
         width: 100%;
     }
@@ -16,81 +125,97 @@
         background-color: #3A3550;
     }
 
-    #single_event {}
-
-    .single_event_indhold {}
-
-    .event_top {}
-
-    .event_billede {}
 
     .event_information {
         display: grid;
         justify-content: center;
-    }
-
-    .float_box {
-        font-size: 3vw;
+        margin-right: 1vw;
+        line-height: 0;
 
     }
 
-    .float_left {
-        float: left;
-    }
 
-    .float_right {
-        float: right;
-    }
 
 
     .tid_ikon {
+        width: 15vw;
+        height: 15vw;
         display: none;
 
     }
 
-    .tid {}
+    .tid {
+        padding-left: 10vw;
+    }
 
     .map_ikon {
+        width: 15vw;
+        height: 15vw;
         display: none;
+
     }
 
-    .map {}
+    .mapp {
 
-    .dato {}
+        padding-right: 20.5vw;
+    }
 
-    .event_overskrift {}
+
+    .event_overskrift {
+        padding-right: 41vw;
+
+    }
+
+    .event_layout {
+        display: grid;
+        height: 120vw;
+        width: 70vw;
+        background-color: #ffffff;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        margin: auto;
+
+
+    }
+
 
     .event_tekst {
-        width: 70vw;
-        font-size: 4vw;
-        align-self: center;
+        width: 50vw;
+        margin: auto;
     }
 
     .event_knap {
-        width: 30vw;
+        width: 50vw;
         height: 10vw;
         font-size: 3.8vw;
-        background-color: #A67246;
-        border: none;
-        margin-top: 8vw;
+        background-color: #ffffff;
+        color: #A67246;
+        border: 1px #A67246 solid;
     }
 
     .social_container {
 
-        display: grid;
+        display: flex;
         justify-content: center;
-        grid-auto-rows: 60px 60px 60px;
+        padding-top: 10vw;
     }
 
-    .face {
+
+
+
+
+    .facebook {
+        padding-right: 20vw;
         width: 8vw;
     }
 
-    .insta {
+    .instagram {
         width: 8vw;
+        padding-right: 20vw;
+
     }
 
-    .linkin {
+    .linked {
         width: 8vw;
     }
 </style>
@@ -117,56 +242,68 @@
 
             </div>
             <div class="event_information">
-                <img class="tid_ikon" src="">
-                <img class="map_ikon" src="">
-                <div class="float_box">
-                    <div class="float_left">
-                        <h1 class="event_overskrift"></h1>
-                        <p class="map"></p>
-                    </div>
-                    <div class="float_right">
-
-                        <p class="dato"></p>
-                        <p class="tid"></p>
-                    </div>
+                <div class="top">
+                    <img class="tid_ikon" src="">
+                    <h1 class="event_overskrift"></h1>
+                    <p class="tid"></p>
                 </div>
+                <div class="bottom">
 
-
-                <p class="event_tekst"></p>
-                <div class="social_container">
-                    <img class="face" src="">
-                    <img class="insta" src="">
-                    <img class="linkin" src="">
+                    <img class="map_ikon" src="">
+                    <p class="mapp"></p>
+                    <p class="dato"></p>
                 </div>
-                <button class="event_knap"></button>
-
             </div>
         </article>
 
+        <section class="background_color">
+
+            <div class="event_layout">
+                <div class="tekst">
+                    <p class="event_tekst1 event_tekst"></p>
+                    <p class="event_tekst2 event_tekst"></p>
+                    <p class="event_tekst3 event_tekst"></p>
+                    <p class="event_tekst4 event_tekst"></p>
+                </div>
+            </div>
+
+            <div class="social_container">
+                <img class="facebook" src="">
+                <img class="instagram" src="">
+                <img class="linked" src="">
+            </div>
+            <div class="knap_box">
+                <button class="event_knap"></button>
+            </div>
+        </section>
     </section>
 
     <footer>
-        <h1 class="footer_overskrift"></h1>
+        <article class="footer_indhold">
+            <div class="tekst">
+                <h1 class="footer_overskrift"></h1>
 
-        <div class="top">
-            <img class="email">
-            <a class="email_tekst"></a>
-        </div>
+                <div class="top">
+                    <img class="email kontakt_ikon">
+                    <a class="email_tekst "></a>
+                </div>
 
-        <div class="mid">
-            <img class="tlf">
-            <a class="tlf_tekst"></a>
-        </div>
+                <div class="mid ">
+                    <img class="tlf kontakt_ikon">
+                    <a class="tlf_tekst  "></a>
+                </div>
 
-        <div class="bottom">
-            <img class="map">
-            <a class="map_tekst"></a>
-        </div>
-        <div class="social">
-            <img class="face">
-            <img class="insta">
-            <img class="linkedin">
-        </div>
+                <div class="bottom ">
+                    <img class="map kontakt_ikon">
+                    <a class="map_tekst "></a>
+                </div>
+                <div class="social">
+                    <img class="face social_ikon">
+                    <img class="insta social_ikon_pad">
+                    <img class="linkedin social_ikon_pad">
+                </div>
+            </div>
+        </article>
     </footer>
     <script src="header.js"></script>
     <script src="burgermenu.js"></script>
@@ -194,18 +331,23 @@
             document.querySelector(".tid").textContent = side.event_tekst_tid;
             document.querySelector(".map_ikon").src = side.event_ikon2.guid;
 
-            document.querySelector(".map").textContent = side.event_tekst_map;
+            document.querySelector(".mapp").textContent = side.event_tekst_map;
 
 
             document.querySelector(".event_overskrift").textContent = side.event_overskrift;
-            document.querySelector(".event_tekst").textContent = side.event_tekst;
+
+            document.querySelector(".event_tekst1").textContent = side.event_tekst1;
+            document.querySelector(".event_tekst2").textContent = side.event_tekst2;
+            document.querySelector(".event_tekst3").textContent = side.event_tekst3;
+            document.querySelector(".event_tekst4").textContent = side.event_tekst4;
+
             document.querySelector(".event_knap").textContent = side.event_knap_tekst;
 
-            document.querySelector(".face").src = side.event_social_facebook.guid;
+            document.querySelector(".facebook").src = side.event_social_facebook.guid;
 
 
-            document.querySelector(".insta").src = side.event_social_instagram.guid;
-            document.querySelector(".linkin").src = side.event_social_linkin.guid;
+            document.querySelector(".instagram").src = side.event_social_instagram.guid;
+            document.querySelector(".linked").src = side.event_social_linkin.guid;
             document.querySelector(".dato").textContent = side.event_dato;
 
 
