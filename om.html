@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    p,
+    h1,
+    h2 {
+        font-family: Kepler Std Display;
+    }
+
+
+    button {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+        color: #A67246;
+
+    }
+
+    h1 {
+        font-size: 7vw;
+        text-align: center;
+        color: #A67246;
+
+
+    }
+
+    p {
+        font-size: 3.2vw;
+        color: #A67246;
+
+    }
+
+
     footer {
         background-color: #3A3550;
         height: 100vw;
@@ -43,39 +75,42 @@
     .linkedin {}
 
 
-    #om {
-        height: 170vw;
-    }
+    #om {}
 
     .om_indhold {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        justify-content: center;
     }
 
     .om_box {
-        background-color: #ffffff;
         height: 120vw;
         width: 50vw;
-        align-self: center;
-        box-shadow: 12px 12px #160303;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+
     }
 
-    .om_overskrift1 {
+    .om_overskrift {
         text-align: center;
 
     }
 
+
     .line {
-        border-top: 2px solid;
+        border-top: 2px #A67246 solid;
         width: 10vw;
         align-self: center;
         height: 10vw;
     }
 
 
-    .naiha_overskrift {}
+    .naiha_overskrift {
+        text-align: center
+    }
 
-    .naiha_tekst {}
+    .naiha_tekst {
+        padding: 10vw
+    }
 
 
     .social_indhold {
@@ -106,13 +141,11 @@
 
 
     <section id="om">
-
-
         <article class="om_indhold">
-            <h1 class="om_overskrift1"></h1>
+            <h1 class="om_overskrift"></h1>
             <div class="line"></div>
             <div class="om_box">
-                <h1 class="naiha_overskrift"></h1>
+                <h2 class="naiha_overskrift"></h2>
                 <p class="naiha_tekst"></p>
                 <!--                <video class="om_video"></video>-->
             </div>
@@ -173,7 +206,7 @@
 
 
         function vis() {
-            document.querySelector(".om_overskrift1").textContent = side.om_overskrift;
+            document.querySelector(".om_overskrift").textContent = side.om_overskrift;
             document.querySelector(".naiha_overskrift").textContent = side.om_overskrift2;
             document.querySelector(".naiha_tekst").textContent = side.om_tekst;
 
