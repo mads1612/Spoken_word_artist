@@ -49,29 +49,26 @@
 
     #om_naiha {}
 
-    .om_indhold {
+    .om_naiha_indhold {
         display: grid;
         justify-content: center;
         padding: 20vw;
 
     }
 
-    .om_sektion_titel {
+    .om_naiha_h1 {
         font-size: 7vw;
         text-align: center;
-
     }
 
-    .om_citat {
+    .om_naiha_h2 {
         font-size: 6vw;
         text-align: center;
 
     }
 
-    .om_tekst {
+    .om_naiha_tekst {
         font-size: 4vw;
-
-
     }
 
     .naiha_historie {
@@ -281,32 +278,29 @@
     </header>
 
     <section id="forside_splash">
-        <article class="splash_indhold">
-            <h1 class="navn"></h1>
-            <h2 class="profession"></h2>
-            <img class="splash_billede" src="" alt="Morgen cykel">
+        <article class="forside_splash_indhold">
+
+            <h1 class="forside_splash_h1"></h1>
+            <h2 class="forside_splash_h2"></h2>
+            <img class="forside_splash_billede" src="" alt="Morgen cykel">
+
         </article>
     </section>
 
     <section id="om_naiha">
-        <article class="om_indhold">
-            <h1 class="om_sektion_titel"></h1>
+        <article class="om_naiha_indhold">
+
+            <h1 class="om_naiha_h1"></h1>
             <div class="line"></div>
-
-            <h2 class="om_citat"></h2>
-            <p class="om_tekst"></p>
+            <h2 class="om_naiha_h2"></h2>
+            <p class="om_naiha_tekst"></p>
             <button class="naiha_historie"></button>
+
         </article>
-
-
-
-
     </section>
 
     <section id="event">
-
         <article class="event_indhold">
-
             <div class="event_venstre event_layout">
                 <div class="tekst">
 
@@ -339,9 +333,7 @@
                     <div class="line"></div>
                     <button class="se_mere_hojre event_knap"></button>
                 </div>
-
             </div>
-
         </article>
     </section>
 
@@ -352,53 +344,42 @@
     </section>
 
     <section id="press">
-
         <article class="press_indhold">
             <h1 class="pres_overskrift"></h1>
             <div class="line"></div>
-            <div class="container">
 
-
-                <div class="press_venstre position">
-                    <div class="press_tekst">
-                        <h3 class="press_venstre_dato"></h3>
-                        <h1 class="press_venstre_overskrift"></h1>
-                        <button class="press_las_artikel_venstre"></button>
-                    </div>
-                </div>
-
-                <div class="press_midten position">
-                    <div class="press_tekst">
-
-                        <h3 class="press_midten_dato"></h3>
-                        <h1 class="press_midten_overskrift"></h1>
-                        <button class="press_las_artikel_midten"></button>
-                    </div>
-
-                </div>
-
-                <div class="press_hojre position">
-                    <div class="press_tekst">
-
-                        <h3 class="press_hojre_dato"></h3>
-                        <h1 class="press_hojre_overskrift"></h1>
-                        <button class="press_las_artikel_hojre"></button>
-                    </div>
-
+            <div class="press_venstre position">
+                <div class="press_tekst">
+                    <h3 class="press_venstre_dato"></h3>
+                    <h1 class="press_venstre_overskrift"></h1>
+                    <button class="press_las_artikel_venstre"></button>
                 </div>
             </div>
 
+            <div class="press_midten position">
+                <div class="press_tekst">
+                    <h3 class="press_midten_dato"></h3>
+                    <h1 class="press_midten_overskrift"></h1>
+                    <button class="press_las_artikel_midten"></button>
+                </div>
+            </div>
+
+            <div class="press_hojre position">
+                <div class="press_tekst">
+                    <h3 class="press_hojre_dato"></h3>
+                    <h1 class="press_hojre_overskrift"></h1>
+                    <button class="press_las_artikel_hojre"></button>
+                </div>
+            </div>
         </article>
     </section>
 
     <section id="kontakt">
         <article class="kontakt_indhold">
-
             <h1 class="kontakt_overskrift"></h1>
             <h2 class="kontakt_tekst"></h2>
             <button class="kontakt_knap"></button>
         </article>
-
     </section>
 
 
@@ -446,14 +427,22 @@
 
 
 
-        function vis() {
-            document.querySelector(".navn").textContent = side.forside_navn;
-            document.querySelector(".profession").textContent = side.forside_profession;
-            document.querySelector(".splash_billede").src = side.forside_splash.guid;
 
-            document.querySelector(".om_sektion_titel").textContent = side.om_overskrift;
-            document.querySelector(".om_citat").textContent = side.forside_om_citat;
-            document.querySelector(".om_tekst").textContent = side.forside_tekst;
+
+        function vis() {
+
+            document.querySelector(".forside_splash_h1").textContent = side.forside_navn;
+
+            document.querySelector(".forside_splash_h2").textContent = side.forside_profession;
+
+            document.querySelector(".forside_splash_billede").src = side.forside_splash.guid;
+
+
+            document.querySelector(".om_naiha_h1").textContent = side.om_overskrift;
+            document.querySelector(".om_naiha_h2").textContent = side.forside_om_citat;
+
+            document.querySelector(".om_naiha_tekst").textContent = side.forside_tekst;
+
             document.querySelector(".naiha_historie").textContent = side.forside_om_knap_tekst;
 
 
