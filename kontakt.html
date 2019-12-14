@@ -15,8 +15,10 @@
 
     p,
     h1,
-    h2 {
+    h2,
+    a {
         font-family: Kepler Std Display;
+        color: #A67246;
     }
 
     h2 {
@@ -75,12 +77,15 @@
 
 
     .kontakt_container {
-        background-color: #A67246;
+
         height: 80vw;
         width: 70vw;
         justify-content: center;
         display: grid;
         margin-top: 10vw;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+
 
     }
 
@@ -106,7 +111,7 @@
 
     }
 
-    .overskrift3 {
+    .Kontakt_venstre_h2 {
         margin-right: 20vw;
     }
 
@@ -131,7 +136,8 @@
 
     }
 
-    . #kontakt_formular_sektion {
+
+    . #kontakt_formular {
         height: 130vw;
     }
 
@@ -140,13 +146,15 @@
         display: grid;
     }
 
-    .formular_overskrift {
+
+
+    .kontakt_formular_overskrift {
         text-align: center;
         margin-top: 40%;
         font-size: 7vw;
     }
 
-    .formular_tekst {
+    .kontakt_formular_tekst {
         font-size: 4vw;
         width: 80vw;
         text-align: center;
@@ -155,7 +163,7 @@
 
 
 
-    .social_bottom {
+    .social_buttons {
         margin-top: 10vw;
         padding-left: 40vw;
     }
@@ -220,125 +228,97 @@
 
     </header>
 
-
     <section id="kontakt">
-
         <article class="kontakt_indhold">
-            <h1 class="sektion_overskrift"></h1>
+
+            <h1 class="Kontakt_h1"></h1>
             <div class="line"></div>
-            <div class="kontakt_box_container">
-
-                <div class="kontakt_venstre kontakt_container img_baggrund">
-                    <div class="tekst">
-                        <h2 class="overskrift3"></h2>
-                        <img class="ikon7 social_ikon" src="">
-                        <img class="ikon8 social_ikon_pad" src="">
-                        <img class="ikon9 social_ikon_pad" src="">
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="kontakt_midten kontakt_container">
-
-                    <div class="tekst">
-                        <h2 class="overskrift2 kontakt_container_h1"></h2>
-
-                        <div class="top">
-                            <img class="ikon4 kontakt_ikon" src="">
-                            <a class="tekst5"></a>
-                        </div>
-
-                        <div class="mid">
-                            <img class="ikon5 kontakt_ikon" src="">
-                            <a class="tekst6"></a>
-                        </div>
-
-                        <div class="bottom ">
-                            <img class="ikon6 kontakt_ikon" src="">
-                            <a class="tekst7"></a>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-                <div class="kontakt_hojre kontakt_container">
-
-                    <div class="tekst">
-                        <h2 class="overskrift1 kontakt_container_h1"></h2>
-
-                        <div class="top">
-                            <img class="ikon1 kontakt_ikon" src="">
-                            <a class="tekst1"></a>
-                        </div>
-
-                        <div class="mid">
-                            <img class="ikon2 kontakt_ikon" src="">
-                            <a class="tekst2"></a>
-                        </div>
-
-                        <div class="bottom">
-                            <img class="ikon3 kontakt_ikon" src="">
-                            <a class="tekst3"></a>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-                <button class="kontakt_form_knap"></button>
-
-            </div>
-        </article>
-    </section>
-    <section id="kontakt_formular_sektion">
-
-
-
-        <article class="kontakt_formular_indhold">
-            <div class="container">
+            <div class="kontakt_venstre kontakt_container img_baggrund">
 
                 <div class="tekst">
-                    <h1 class="formular_overskrift"></h1>
+                    <h2 class="Kontakt_venstre_h2"></h2>
+                    <img class="Kontakt_venstre_ikon_left social_ikon" src="">
+                    <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
+                    <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
+                </div>
+            </div>
 
-                    <p class="formular_tekst"></p>
+            <div class="kontakt_midten kontakt_container">
+                <div class="tekst">
+                    <h2 class="Kontakt_midten_h2 kontakt_container_h1"></h2>
 
                     <div class="top">
-                        <img class="map kontakt_ikon" src="">
-                        <a class="formular_adresse"></a>
+                        <img class="Kontakt_midten_ikon_top kontakt_ikon" src="">
+                        <a class="Kontakt_midten_tekst_top"></a>
                     </div>
 
                     <div class="mid">
-                        <img class="tlf kontakt_ikon" src="">
-                        <a class="formular_tlf"></a>
+                        <img class="Kontakt_midten_ikon_mid kontakt_ikon" src="">
+                        <a class="Kontakt_midten_tekst_mid"></a>
                     </div>
 
-                    <div class="bottom">
-                        <img class="mail kontakt_ikon" src="">
-                        <a class="formular_mail"></a>
+                    <div class="bottom ">
+                        <img class="Kontakt_midten_ikon_bottom kontakt_ikon" src="">
+                        <a class="Kontakt_midten_tekst_bottom"></a>
                     </div>
-
-
-
-                </div>
-
-                <div class="social_bottom">
-                    <img class="facebook social_ikon" src="">
-                    <img class="instagram social_ikon_pad" src="">
-                    <img class="linkedin social_ikon_pad" src="">
-
                 </div>
             </div>
 
-        </article>
+            <div class="kontakt_hojre kontakt_container">
+                <div class="tekst">
+                    <h2 class="Kontakt_hojre_h2 kontakt_container_h1"></h2>
 
+                    <div class="top">
+                        <img class="Kontakt_hojre_ikon_top kontakt_ikon" src="">
+                        <a class="Kontakt_hojre_tekst_top"></a>
+                    </div>
+
+                    <div class="mid">
+                        <img class="Kontakt_hojre_ikon_mid kontakt_ikon" src="">
+                        <a class="Kontakt_hojre_tekst_mid"></a>
+                    </div>
+
+                    <div class="bottom">
+                        <img class="Kontakt_hojre_ikon_bottom kontakt_ikon" src="">
+                        <a class="Kontakt_hojre_tekst_bottom"></a>
+                    </div>
+                </div>
+            </div>
+            <button class="kontakt_form_knap"></button>
+        </article>
+    </section>
+
+
+
+    <section id="kontakt_formular">
+        <article class="kontakt_formular_indhold">
+
+            <div class="tekst">
+                <h1 class="kontakt_formular_overskrift"></h1>
+                <p class="kontakt_formular_tekst"></p>
+
+                <div class="top">
+                    <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_top"></a>
+                </div>
+
+                <div class="mid">
+                    <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_mid"></a>
+                </div>
+
+                <div class="bottom">
+                    <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_bottom"></a>
+                </div>
+            </div>
+
+            <div class="social_buttons">
+                <img class="social_buttons_left social_ikon" src="">
+                <img class="social_buttons_mid social_ikon_pad" src="">
+                <img class="social_buttons_right social_ikon_pad" src="">
+            </div>
+        </article>
     </section>
 
     <section class="formular">
@@ -416,77 +396,73 @@
 
 
         function vis() {
-            document.querySelector(".sektion_overskrift").textContent = side.kontakt_overskrift;
 
-            document.querySelector(".overskrift1").textContent = side.kontakt_overskrift_venstre_box;
+            document.querySelector(".Kontakt_h1").textContent = side.kontakt_overskrift;
 
-            document.querySelector(".tekst1").textContent = side.kontakt_tekst_venstre_mail;
+            document.querySelector(".Kontakt_venstre_h2").textContent = side.kontakt_overskrift_hojre_box;
 
+            document.querySelector(".Kontakt_venstre_ikon_left").src = side.kontakt_tekst_social_hvid.guid;
 
+            document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_tekst_social_hvid2.guid;
 
-
-
-
-
-            document.querySelector(".tekst2").textContent = side.kontakt_tekst_venstre_tlf;
+            document.querySelector(".Kontakt_venstre_ikon_right").src = side.kontakt_tekst_social_hvid3.guid;
 
 
-            document.querySelector(".tekst3").textContent = side.kontakt_tekst_venstre_map;
+            document.querySelector(".Kontakt_midten_h2").textContent = side.kontakt_overskrift_mid_box;
+
+            document.querySelector(".Kontakt_midten_ikon_top").src = side.kontakt_mail_hvid.guid;
+
+            document.querySelector(".Kontakt_midten_ikon_mid").src = side.kontakt_tlf_hvid.guid;
+
+            document.querySelector(".Kontakt_midten_ikon_bottom").src = side.kontakt_map_hvid.guid;
+
+            document.querySelector(".Kontakt_midten_tekst_top").textContent = side.kontakt_tekst_mid_mail;
+
+            document.querySelector(".Kontakt_midten_tekst_mid").textContent = side.kontakt_tekst_mid_tlf;
+
+            document.querySelector(".Kontakt_midten_tekst_bottom").textContent = side.kontakt_tekst_mid_map;
 
 
+            document.querySelector(".Kontakt_hojre_h2").textContent = side.kontakt_overskrift_venstre_box;
 
+            document.querySelector(".Kontakt_hojre_ikon_top").src = side.kontakt_mail_hvid.guid;
 
-            document.querySelector(".tekst5").textContent = side.kontakt_tekst_mid_mail;
-            document.querySelector(".tekst6").textContent = side.kontakt_tekst_mid_tlf;
-            document.querySelector(".tekst7").textContent = side.kontakt_tekst_mid_map;
+            document.querySelector(".Kontakt_hojre_ikon_mid").src = side.kontakt_tlf_hvid.guid;
 
+            document.querySelector(".Kontakt_hojre_ikon_bottom").src = side.kontakt_map_hvid.guid;
 
+            document.querySelector(".Kontakt_hojre_tekst_top").textContent = side.kontakt_tekst_venstre_mail;
 
-            document.querySelector(".overskrift2").textContent = side.kontakt_overskrift_mid_box;
-            document.querySelector(".overskrift3").textContent = side.kontakt_overskrift_hojre_box;
+            document.querySelector(".Kontakt_hojre_tekst_mid").textContent = side.kontakt_tekst_venstre_tlf;
 
-            document.querySelector(".ikon1").src = side.kontakt_mail_hvid.guid;
-
-            document.querySelector(".ikon2").src = side.kontakt_tlf_hvid.guid;
-
-
-            document.querySelector(".ikon3").src = side.kontakt_map_hvid.guid;
-
-
-            document.querySelector(".ikon4").src = side.kontakt_mail_hvid2.guid;
-
-            document.querySelector(".ikon5").src = side.kontakt_tlf_hvid2.guid;
-
-
-            document.querySelector(".ikon6").src = side.kontakt_map_hvid2.guid;
-
-
-            document.querySelector(".ikon7").src = side.kontakt_tekst_social_hvid.guid;
-            document.querySelector(".ikon8").src = side.kontakt_tekst_social_hvid2.guid;
-            document.querySelector(".ikon9").src = side.kontakt_tekst_social_hvid3.guid;
-
+            document.querySelector(".Kontakt_hojre_tekst_bottom").textContent = side.kontakt_tekst_venstre_map;
 
 
             document.querySelector(".kontakt_form_knap").textContent = side.kontakt_knap_tekst;
-            document.querySelector(".formular_overskrift").textContent = side.kontakt_overskrift_formular;
 
-            document.querySelector(".formular_tekst").textContent = side.kontakt_tekst_formular;
+            document.querySelector(".kontakt_formular_overskrift").textContent = side.kontakt_overskrift_formular;
 
-            document.querySelector(".formular_adresse").textContent = side.kontakt_map_formular;
+            document.querySelector(".kontakt_formular_tekst").textContent = side.kontakt_tekst_formular;
+
+            document.querySelector(".kontakt_formular_tekst_top").textContent = side.kontakt_map_formular;
+
+            document.querySelector(".kontakt_formular_tekst_mid").textContent = side.kontakt_tlf_formular;
+
+            document.querySelector(".kontakt_formular_tekst_bottom").textContent = side.kontakt_mail_formular;
+
+            document.querySelector(".kontakt_formular_ikon_top").src = side.kontakt_map_hvid.guid;
+
+            document.querySelector(".kontakt_formular_ikon_mid").src = side.kontakt_tlf_hvid.guid;
+
+            document.querySelector(".kontakt_formular_ikon_bottom").src = side.kontakt_mail_hvid.guid;
+
+            document.querySelector(".social_buttons_left").src = side.kontakt_tekst_social_brun.guid;
+
+            document.querySelector(".social_buttons_mid").src = side.kontakt_tekst_social_brun1.guid;
+
+            document.querySelector(".social_buttons_right").src = side.kontakt_tekst_social_brun2.guid;
 
 
-            document.querySelector(".formular_tlf").textContent = side.kontakt_tlf_formular;
-            document.querySelector(".formular_mail").textContent = side.kontakt_mail_formular;
-
-
-            document.querySelector(".map").src = side.kontakt_map_gron.guid;
-            document.querySelector(".tlf").src = side.kontakt_tlf_gron.guid;
-            document.querySelector(".mail").src = side.kontakt_mail_gron.guid;
-
-
-            document.querySelector(".facebook").src = side.kontakt_tekst_social_brun.guid;
-            document.querySelector(".instagram").src = side.kontakt_tekst_social_brun1.guid;
-            document.querySelector(".linkedin").src = side.kontakt_tekst_social_brun2.guid;
 
 
 
