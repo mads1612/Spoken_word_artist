@@ -31,6 +31,6 @@
      document.querySelector(".face").src = sideFooter.footer_face_ikon.guid;
      document.querySelector(".insta").src = sideFooter.footer_insta_ikon.guid;
 
-     document.querySelector(".linkedin").textContent = sideFooter.footer_linkedin_ikon;
+     document.querySelector(".linkedin").src = sideFooter.footer_linkedin_ikon.guid;
 
  }
