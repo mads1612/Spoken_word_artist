@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    button {
+        font-size: 2.5vw;
+    }
+
     .background_color {
         background-color: #D8F0F6;
+        padding-bottom: 20%;
     }
 
     .social_ikon_pad {
@@ -64,7 +69,7 @@
 
 
     .footer_indhold {
-        display: grid;
+        display: flex;
         justify-content: center;
     }
 
@@ -78,27 +83,47 @@
     p,
     h1,
     h2,
+    h3,
     a {
         font-family: Kepler Std Display;
         color: #A67246;
     }
 
-    h2 {
+    p {
         font-size: 5vw;
+
+        /*        font-size: 1.5rem;*/
+        padding-bottom: 50px;
 
     }
 
+
     h1 {
+        font-size: 9vw;
+        /*        font-size: 2.5rem;*/
+        text-align: center;
+
+    }
+
+
+
+    h2 {
         font-size: 7vw;
+        /*        font-size: 1.9rem;*/
 
     }
 
     h3 {
-        font-size: 7vw;
+
+        font-size: 4vw;
+        /*        font-size: 1.3rem;*/
 
     }
 
+
+
     a {
+
         font-size: 3.2vw;
         padding-bottom: 5vw;
     }
@@ -129,47 +154,62 @@
         display: none;
     }
 
-    #om_naiha {}
 
-    .om_naiha_indhold {
-        display: grid;
-        grid-gap: 5vw;
-        width: 60vw;
-        margin: auto;
+    #om_naiha {
+        display: flex;
+        justify-content: center;
 
     }
 
+    .om_naiha_indhold {}
+
+    .om_layout {
+        width: 66vw;
+
+    }
+
+    .tekst {
+        padding: 41px;
+
+    }
+
+    .om_naiha_tekst {}
+
+
+
     .om_naiha_h1 {
-        font-size: 7vw;
         text-align: center;
 
     }
 
     .om_naiha_h2 {
-        font-size: 6vw;
-        text-align: center;
-    }
-
-    .om_naiha_tekst {
-        font-size: 4vw;
+        padding-bottom: 100px;
 
     }
+
+
 
     .naiha_historie {
-        width: 25vw;
-        height: 8vw;
-        font-size: 2.5vw;
+
+        width: 30vw;
+        height: 10vw;
         background-color: #A67246;
         border: none;
         color: #ffffff;
-        margin-left: 30%;
+        margin-left: 50px;
+
+
+        /*
+           width: 150px;
+        height: 50px;
+*/
     }
 
 
     #event {}
 
     .event_indhold {
-        display: grid;
+        display: flex;
         justify-content: center;
         text-align: center;
         margin-top: 20vw;
@@ -179,44 +219,68 @@
 
 
     .event_layout {
-        display: grid;
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
-        height: 95vw;
+        /*        height: 450px;
+        width: 350px;
+
+        */
+
+        height: 90vw;
         width: 70vw;
+
+
+
+
     }
 
-    .tekst {
-        padding: 10vw;
-    }
 
 
 
-    .line {
+    .om_line {
         border-top: 2px solid #A67246;
-        width: 10vw;
-        height: 10vw;
-        align-self: center;
-        margin-left: 45%;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
 
+    .event_line {
+        border-top: 2px solid #A67246;
+        width: 50px;
+        height: 71px;
+        margin: auto;
+    }
+
+    .press_line {
+        border-top: 2px solid #A67246;
+        width: 50px;
+        height: 150px;
+        margin: auto;
     }
 
     .kontakt_line {
         border-top: 1px solid #ffffff;
         width: 80vw;
-        margin-left: 8vw;
         height: 10vw;
+        margin: auto;
+        margin-top: 150px;
+
     }
 
     .event_knap {
+
         width: 20vw;
-        height: 8vw;
-        font-size: 3vw;
+        height: 8.5vw;
         border: none;
         color: #ffffff;
         background-color: #A67246;
         border: 1px #ffffff solid;
+
+        /*
+         width: 90px;
+        height: 43px;
+*/
 
     }
 
@@ -228,39 +292,53 @@
         display: none;
     }
 
-    #citat {
-        height: ;
-    }
+    #citat {}
 
     .citat_indhold {
-        padding-top: 30vw;
-        padding-bottom: 30vw;
-        display: grid;
+        padding-top: 230px;
+        display: flex;
         justify-content: center;
     }
 
     .citat_overskrift {
         text-align: center;
-        width: 50vw;
-        font-size: 7.4vw;
+        width: 290px;
+        /*        font-size: 2.34rem; */
+        font-size: 7.5vw;
+        padding-bottom: 82px;
     }
 
 
-    #press {
-        height: 150vw
-    }
+    #press {}
 
     .press_indhold {
-        display: grid;
+        display: flex;
         justify-content: center;
+    }
+
+    .press_layout {
+        display: flex;
+
+        justify-content: center;
+        align-self: center;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
+
+        height: 77.8vw;
+        width: 70vw;
+
+        /*
+           height: 389px;
+        width: 350px;
+*/
 
     }
 
 
     .pres_overskrift {
         text-align: center;
-        font-size: 7vw;
-
+        margin: auto;
     }
 
 
@@ -268,47 +346,36 @@
 
 
 
-
-
-    .press_venstre {
-        display: grid;
-        justify-content: center;
-        height: 80vw;
-        width: 70vw;
-        background-color: #ffffff;
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-    }
 
     .press_tekst {
-        padding: 6vw;
-
+        padding: 35px;
+        padding-top: 60px;
     }
 
     .press_venstre_dato {
         color: #A67246;
-        font-size: 6vw;
 
     }
 
     .press_venstre_overskrift {
         color: #A67246;
-        font-size: 6vw;
 
     }
 
 
-    .press_las_artikel_venstre {
+    .press_knap {
+
         width: 20vw;
-        height: 8vw;
-        border: none;
-        font-size: 3vw;
+        height: 8.5vw;
         border: none;
         color: #ffffff;
         background-color: #A67246;
         border: 1px #ffffff solid;
 
-
+        /*
+  width: 90px;
+        height: 43px;
+*/
     }
 
 
@@ -325,36 +392,38 @@
     }
 
     .kontakt_indhold {
-        display: grid;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
 
     }
 
     .kontakt_overskrift {
-        width: 50vw;
-        font-size: 7.2vw;
-        margin-top: 25vw;
-        text-align: center;
+        padding-top: 100px;
         color: #ffffff;
     }
 
     .kontakt_tekst {
-        font-size: 4.8vw;
         color: #ffffff;
 
     }
 
     .kontakt_knap {
-        width: 30vw;
+        margin-top: 15vw;
+
+        width: 40vw;
         height: 10vw;
-        font-size: 3.8vw;
         background-color: #A67246;
         border: none;
-        margin-top: 15vw;
-        margin-bottom: 40vw;
-        margin-left: 10vw;
         color: #ffffff;
 
+
+        /*
+          width: 200px;
+        height: 50px;
+*/
     }
 
     footer {
@@ -362,15 +431,185 @@
     }
 
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:1024px) {
+
+        .kontakt_overskrift {
+            font-size: 3.25rem;
+
+        }
+
+        .kontakt_tekst {
+            font-size: 2.25rem;
+
+        }
+
+
+        .kontakt_knap {
+            margin-top: 5vw;
+            width: 250px;
+            height: 60px;
+            font-size: 1rem;
+
+        }
+
+        p {
+            font-size: 2vw;
+
+            padding-bottom: 50px;
+
+        }
+
+
+        h1 {
+            font-size: 3.7vw;
+
+
+        }
+
+
+
+        h2 {
+            font-size: 2.93vw;
+
+        }
+
+        h3 {
+
+            font-size: 2vw;
+        }
+
+
+
+        a {
+
+            font-size: 3.2vw;
+            padding-bottom: 5vw;
+        }
+
+
+        .om_naiha_indhold {}
+
+
+        .om_naiha_tekst {}
+
+        .om_naiha_h2 {
+            font-size: 3vw;
+        }
 
         .event_midten {
-            display: block;
+            display: flex;
         }
 
         .event_hojre {
-            display: block;
+            display: flex;
         }
+
+        .event_indhold {
+            justify-content: space-around;
+        }
+
+
+
+        .event_layout {
+            width: 30vw;
+            height: 43vw;
+
+
+        }
+
+        .tekst {
+            padding: 41px;
+            /*        padding: 10vw;*/
+        }
+
+
+        .citat_overskrift {
+            width: 933px;
+            font-size: 4vw
+        }
+
+        .press_indhold {
+            justify-content: space-around;
+        }
+
+        .press_layout {
+            width: 30vw;
+            height: 35vw;
+        }
+
+
+        .press_midten {
+            display: flex;
+        }
+
+        .press_hojre {
+            display: flex;
+        }
+
+        .kontakt_overskrift {
+            width: 1200px;
+        }
+
+
+
+        .naiha_historie {
+
+            width: 20vw;
+            height: 7vw;
+            font-size: 2vw;
+
+
+
+
+
+        }
+
+
+        .event_knap {
+            font-size: 1.3vw;
+            width: 13vw;
+            height: 4vw;
+
+
+
+        }
+
+        .press_knap {
+            font-size: 1.3vw;
+
+
+            width: 8.5vw;
+            height: 4.1vw;
+        }
+
+        .om_layout {
+            width: 100vw;
+        }
+
+
+    }
+
+
+
+    @media screen and (min-width:991px) {
+
+
+        .event_layout {}
+
+    }
+
+
+
+    @media screen and (min-width:684px) {
+
+
+        .citat_overskrift {
+            width: 70vw;
+        }
+
+        .tekst {}
+
+        .event_layout {}
 
 
     }
@@ -400,11 +639,15 @@
     </section>
     <section id="om_naiha">
         <article class="om_naiha_indhold">
-            <h1 class="om_naiha_h1"></h1>
-            <div class="line"></div>
-            <h2 class="om_naiha_h2"></h2>
-            <p class="om_naiha_tekst"></p>
-            <button class="naiha_historie"></button>
+            <div class="om_layout">
+                <div class="tekst">
+                    <h1 class="om_naiha_h1"></h1>
+                    <div class="line om_line"></div>
+                    <h2 class="om_naiha_h2"></h2>
+                    <p class="om_naiha_tekst"></p>
+                    <button class="naiha_historie"></button>
+                </div>
+            </div>
         </article>
     </section>
     <section class="background_color">
@@ -414,21 +657,21 @@
                 <div class="event_venstre event_layout">
                     <div class="tekst">
 
-                        <h2 class="event_venstre_dato event_dato"></h2>
-                        <h1 class="event_venstre_overskrift event_overskrift"></h1>
-                        <h1 class="event_venstre_lokation event_lokation"></h1>
-                        <div class="line"></div>
+                        <h3 class="event_venstre_dato event_dato"></h3>
+                        <h2 class="event_venstre_overskrift event_overskrift"></h2>
+                        <h2 class="event_venstre_lokation event_lokation"></h2>
+                        <div class="line event_line"></div>
                         <button class="se_mere_venstre event_knap"></button>
                     </div>
                 </div>
 
-                <div class="event_midten event_layout ">
+                <div class="event_midten event_layout">
                     <div class="tekst">
 
-                        <h1 class="event_midten_dato event_dato"></h1>
+                        <h3 class="event_midten_dato event_dato"></h3>
                         <h2 class="event_midten_overskrift event_overskrift"></h2>
-                        <h3 class="event_midten_lokation event_lokation"></h3>
-                        <div class="line"></div>
+                        <h2 class="event_midten_lokation event_lokation"></h2>
+                        <div class="line event_line"></div>
                         <button class="se_mere_midten event_knap"></button>
                     </div>
 
@@ -437,10 +680,10 @@
                 <div class="event_hojre event_layout">
                     <div class="tekst">
 
-                        <h1 class="event_hojre_dato event_dato"></h1>
+                        <h3 class="event_hojre_dato event_dato"></h3>
                         <h2 class="event_hojre_overskrift event_overskrift"></h2>
-                        <h3 class="event_hojre_lokation event_lokation"></h3>
-                        <div class="line"></div>
+                        <h2 class="event_hojre_lokation event_lokation"></h2>
+                        <div class="line event_line"></div>
                         <button class="se_mere_hojre event_knap"></button>
                     </div>
                 </div>
@@ -454,31 +697,32 @@
         </section>
 
         <section id="press">
+            <h1 class="pres_overskrift"></h1>
+            <div class="line press_line"></div>
             <article class="press_indhold">
-                <h1 class="pres_overskrift"></h1>
-                <div class="line"></div>
 
-                <div class="press_venstre position">
+
+                <div class="press_venstre press_layout">
                     <div class="press_tekst">
-                        <h1 class="press_venstre_dato"></h1>
-                        <h2 class="press_venstre_overskrift"></h2>
-                        <button class="press_las_artikel_venstre"></button>
+                        <h2 class="press_venstre_dato"></h2>
+                        <h3 class="press_venstre_overskrift"></h3>
+                        <button class="press_las_artikel_venstre press_knap"></button>
                     </div>
                 </div>
 
-                <div class="press_midten position">
+                <div class="press_midten press_layout">
                     <div class="press_tekst">
-                        <h3 class="press_midten_dato"></h3>
-                        <h1 class="press_midten_overskrift"></h1>
-                        <button class="press_las_artikel_midten"></button>
+                        <h2 class="press_midten_dato"></h2>
+                        <h3 class="press_midten_overskrift"></h3>
+                        <button class="press_las_artikel_midten press_knap"></button>
                     </div>
                 </div>
 
-                <div class="press_hojre position">
+                <div class="press_hojre  press_layout">
                     <div class="press_tekst">
-                        <h3 class="press_hojre_dato"></h3>
-                        <h1 class="press_hojre_overskrift"></h1>
-                        <button class="press_las_artikel_hojre"></button>
+                        <h2 class="press_hojre_dato"></h2>
+                        <h3 class="press_hojre_overskrift"></h3>
+                        <button class="press_las_artikel_hojre press_knap"></button>
                     </div>
                 </div>
             </article>
@@ -486,15 +730,16 @@
     </section>
     <section id="kontakt">
         <article class="kontakt_indhold">
-            <h1 class="kontakt_overskrift"></h1>
-            <h2 class="kontakt_tekst"></h2>
+            <h2 class="kontakt_overskrift"></h2>
+            <h3 class="kontakt_tekst"></h3>
             <button class="kontakt_knap"></button>
+            <div class="kontakt_line"></div>
+
         </article>
     </section>
 
 
     <footer>
-        <div class="kontakt_line"></div>
 
         <article class="footer_indhold">
 
