@@ -9,37 +9,13 @@
 </head>
 
 <style>
-    #kontakt {
-        background-color: #D8F0F6;
-        margin-top: 10vw;
-    }
-
-    .footer_overskrift {
-        text-align: left;
-    }
+    /*-----------Diveres CSS-----------*/
 
     img {
-
         width: 100%;
     }
 
-    footer {
-        background-color: #3A3550;
-
-    }
-
-
-    .footer_indhold {
-        display: grid;
-        justify-content: center;
-    }
-
-    .social {
-
-        display: flex;
-        justify-content: center;
-        padding-top: 5vw;
-    }
+    /*-----------fonts & variables-----------*/
 
     p,
     h1,
@@ -49,20 +25,61 @@
         color: #A67246;
     }
 
-    h2 {
+    p {
         font-size: 5vw;
-
+        /*        font-size: 1.5rem;*/
+        padding-bottom: 50px;
     }
 
     h1 {
-        font-size: 7vw;
+        font-size: 9vw;
+        /*        font-size: 2.5rem;*/
         text-align: center;
+    }
 
+    h2 {
+        font-size: 7vw;
+        /*        font-size: 1.9rem;*/
+    }
+
+    h3 {
+        font-size: 4vw;
+        /*        font-size: 1.3rem;*/
     }
 
     a {
         font-size: 3.2vw;
         padding-bottom: 5vw;
+    }
+
+    /*-------------Kontakt--------------*/
+
+    /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
+
+
+    #kontakt {
+        background-color: #D8F0F6;
+        margin-top: 10vw;
+    }
+
+    .kontakt_indhold {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .kontakt_container {
+
+        height: 80vw;
+        width: 70vw;
+        justify-content: center;
+        display: flex;
+        margin-top: 10vw;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
+        align-items: center;
     }
 
     .line {
@@ -72,55 +89,8 @@
         color: #A67246;
     }
 
-    .kontakt_indhold {
-        display: grid;
-        justify-content: center;
-
-    }
-
-    .tekst {
-        padding: 10vw;
-    }
-
-    .top {
-        display: flex;
-        align-items: center;
-
-    }
-
-    .mid {
-        display: flex;
-        align-items: center;
 
 
-    }
-
-
-
-
-    .bottom {
-        display: flex;
-        align-items: center;
-    }
-
-
-    .kontakt_container {
-
-        height: 80vw;
-        width: 70vw;
-        justify-content: center;
-        display: grid;
-        margin-top: 10vw;
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        background-color: #ffffff
-    }
-
-
-    .kontakt_container_h1 {
-        padding-bottom: 5vw;
-
-    }
 
     .kontakt_ikon {
         height: 5vw;
@@ -131,10 +101,17 @@
 
 
 
-
     .img_baggrund {
         background-image: url(kontakt_naiha.png);
         background-size: cover;
+
+    }
+
+
+    /* ---- Kontakt sektion -----Overskrifter----*/
+
+    .kontakt_container_h1 {
+        padding-bottom: 5vw;
 
     }
 
@@ -143,49 +120,31 @@
         color: #ffffff;
     }
 
-    .social_ikon_pad {
-        height: 4vw;
-        width: 4vw;
+    /* ---- Kontakt sektion -----Tekst----*/
 
-        padding-left: 5vw;
-    }
-
-    .social_ikon {
-        height: 4vw;
-        width: 4vw;
-    }
+    /* ---- Kontakt sektion -----Knap----*/
 
 
-    button {
-        width: 40vw;
-        height: 10vw;
-        background-color: #ffffff;
-        border: none;
-        margin-top: 15vw;
-        margin-left: 15vw;
-        font-size: 3vw;
-        color: #A67246;
-        border: 1px solid #A67246;
 
-    }
+    /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
 
-
-    . #kontakt_formular {
+    #kontakt_formular {
         height: 130vw;
     }
 
     .kontakt_formular_indhold {
-        justify-content: center;
-        display: grid;
+        display: flex;
     }
 
-
+    /* ----Kontakt-Formular-sektion -----Overskrifter----*/
 
     .kontakt_formular_overskrift {
         text-align: center;
         margin-top: 40%;
         font-size: 7vw;
     }
+
+    /* ----Kontakt-Formular-sektion -----Tekst----*/
 
     .kontakt_formular_tekst {
         font-size: 4vw;
@@ -194,23 +153,14 @@
         text-align: justify;
     }
 
-
-
-    .social_buttons {
-        margin-top: 10vw;
-        padding-left: 40vw;
-    }
+    /* ----Kontakt-Formular-sektion-----Knap----*/
 
 
 
-    .border {
-        border: 1px solid #ccc;
-    }
+    /*~~~~~~~~~~Formular-sektion~~~~~~~~~~~~*/
 
     .formular {
-
         padding: 10vw;
-
     }
 
     .formular_container {
@@ -218,15 +168,13 @@
 
     }
 
-
-    .formular_indhold {}
-
-    label {}
+    .border {
+        border: 1px solid #ccc;
+    }
 
     form {
         padding: 10vw;
         color: #A67246;
-
     }
 
     input[type=text],
@@ -241,8 +189,6 @@
         margin-bottom: 16px;
         resize: vertical;
         border: 1px solid #A67246;
-
-
     }
 
     input[type=submit] {
@@ -256,6 +202,81 @@
         width: 100%;
         height: 10vw
     }
+
+    /*-------------Footer--------------*/
+
+    footer {
+        background-color: #3A3550;
+
+    }
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+
+    .footer_overskrift {
+        text-align: left;
+    }
+
+
+    .social {
+        display: flex;
+        justify-content: center;
+        padding-top: 5vw;
+    }
+
+    /* ----Mest genbrugte regler---------*/
+
+    .tekst {
+        padding: 10vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    button {
+        width: 40vw;
+        height: 10vw;
+        background-color: #ffffff;
+        border: none;
+        margin-top: 15vw;
+        font-size: 3vw;
+        color: #A67246;
+        border: 1px solid #A67246;
+    }
+
+    .social_buttons {
+        margin-top: 10vw;
+        padding-left: 40vw;
+    }
+
+
+    @media screen and (min-width:768px) {}
 </style>
 
 <body>
