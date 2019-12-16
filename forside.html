@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
-    button {
-        font-size: 2.5vw;
+    /*-----------Diveres CSS-----------*/
+
+    body {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
     }
 
     .background_color {
@@ -17,68 +23,7 @@
         padding-bottom: 20%;
     }
 
-    .social_ikon_pad {
-        height: 4vw;
-        width: 4vw;
-
-        padding-left: 5vw;
-    }
-
-    .social_ikon {
-        height: 4vw;
-        width: 4vw;
-    }
-
-    .top {
-        display: flex;
-        align-items: center;
-
-    }
-
-    .mid {
-        display: flex;
-        align-items: center;
-
-
-    }
-
-
-
-
-    .bottom {
-        display: flex;
-        align-items: center;
-    }
-
-    .kontakt_ikon {
-        height: 5vw;
-        width: 5vw;
-        padding-right: 5vw;
-        padding-bottom: 5vw;
-    }
-
-
-    .footer_overskrift {
-        text-align: left;
-    }
-
-    footer {
-        background-color: #3A3550;
-
-    }
-
-
-    .footer_indhold {
-        display: flex;
-        justify-content: center;
-    }
-
-
-    body {
-        margin: 0;
-
-
-    }
+    /*-----------fonts & variables-----------*/
 
     p,
     h1,
@@ -91,10 +36,8 @@
 
     p {
         font-size: 5vw;
-
         /*        font-size: 1.5rem;*/
         padding-bottom: 50px;
-
     }
 
 
@@ -102,141 +45,41 @@
         font-size: 9vw;
         /*        font-size: 2.5rem;*/
         text-align: center;
-
     }
-
-
 
     h2 {
         font-size: 7vw;
         /*        font-size: 1.9rem;*/
-
     }
 
     h3 {
-
         font-size: 4vw;
         /*        font-size: 1.3rem;*/
-
     }
 
-
-
     a {
-
         font-size: 3.2vw;
         padding-bottom: 5vw;
     }
 
 
 
+    /*------Burgermenu-----*/
 
-    img {
-        width: 100%;
-    }
+    /*-------------FORSIDEN--------------*/
 
-
-    .top {
-        display: flex;
-        align-items: center;
-
-    }
-
-    .mid {
-        display: flex;
-        align-items: center;
-
-
-    }
-
-
-    #forside_splash {
-        display: none;
-    }
-
+    /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
 
     #om_naiha {
         display: flex;
         justify-content: center;
-
     }
 
-    .om_naiha_indhold {}
 
     .om_layout {
         width: 66vw;
 
     }
-
-    .tekst {
-        padding: 41px;
-
-    }
-
-    .om_naiha_tekst {}
-
-
-
-    .om_naiha_h1 {
-        text-align: center;
-
-    }
-
-    .om_naiha_h2 {
-        padding-bottom: 100px;
-
-    }
-
-
-
-    .naiha_historie {
-
-        width: 30vw;
-        height: 10vw;
-        background-color: #A67246;
-        border: none;
-        color: #ffffff;
-        margin-left: 50px;
-
-
-        /*
-           width: 150px;
-        height: 50px;
-*/
-    }
-
-
-    #event {}
-
-    .event_indhold {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: 20vw;
-        padding-top: 12vw;
-    }
-
-
-
-    .event_layout {
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        background-color: #ffffff;
-        /*        height: 450px;
-        width: 350px;
-
-        */
-
-        height: 90vw;
-        width: 70vw;
-
-
-
-
-    }
-
-
-
 
     .om_line {
         border-top: 2px solid #A67246;
@@ -245,11 +88,63 @@
         margin: auto;
     }
 
-    .event_line {
-        border-top: 2px solid #A67246;
-        width: 50px;
-        height: 71px;
-        margin: auto;
+    /* ---- Om sektion -----Overskrifter----*/
+    .om_naiha_h1 {
+        text-align: center;
+    }
+
+    .om_naiha_h2 {
+        padding-bottom: 100px;
+    }
+
+    /* ---- Om sektion -----Tekst----*/
+
+    /* ---- Om sektion -----Knap----*/
+    .naiha_historie {
+        width: 30vw;
+        height: 10vw;
+        background-color: #A67246;
+        border: none;
+        color: #ffffff;
+        margin-left: 50px;
+        /*
+           width: 150px;
+        height: 50px;
+*/
+    }
+
+
+
+    /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
+
+    .press_indhold {
+        display: flex;
+        justify-content: center;
+    }
+
+    .press_layout {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
+
+        height: 77.8vw;
+        width: 70vw;
+        /*
+           height: 389px;
+        width: 350px;
+*/
+    }
+
+
+    .press_midten {
+        display: none;
+    }
+
+    .press_hojre {
+        display: none;
     }
 
     .press_line {
@@ -259,29 +154,65 @@
         margin: auto;
     }
 
-    .kontakt_line {
-        border-top: 1px solid #ffffff;
-        width: 80vw;
-        height: 10vw;
-        margin: auto;
-        margin-top: 150px;
+    /* ---- Press sektion -----Overskrifter----*/
 
+    .pres_overskrift {
+        text-align: center;
+        margin: auto;
     }
 
-    .event_knap {
+    .press_venstre_dato {
+        color: #A67246;
+    }
 
+    .press_venstre_overskrift {
+        color: #A67246;
+    }
+
+
+    /* ---- Press sektion -----Tekst----*/
+
+    .press_tekst {
+        padding: 35px;
+        padding-top: 60px;
+    }
+
+    /* ---- Press sektion -----Knap----*/
+
+    .press_knap {
         width: 20vw;
         height: 8.5vw;
         border: none;
         color: #ffffff;
         background-color: #A67246;
         border: 1px #ffffff solid;
-
         /*
-         width: 90px;
+  width: 90px;
         height: 43px;
 */
+    }
 
+
+
+    /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
+
+    .event_indhold {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20vw;
+        padding-top: 12vw;
+    }
+
+    .event_layout {
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
+        /*        height: 450px;
+        width: 350px;
+        */
+        height: 90vw;
+        width: 70vw;
     }
 
     .event_midten {
@@ -292,7 +223,36 @@
         display: none;
     }
 
-    #citat {}
+    .event_line {
+        border-top: 2px solid #A67246;
+        width: 50px;
+        height: 71px;
+        margin: auto;
+    }
+
+
+    /* ---- Event sektion -----Overskrifter----*/
+
+    /* ---- Event sektion -----Tekst----*/
+
+    /* ---- Event sektion -----Knap----*/
+
+    .event_knap {
+        width: 20vw;
+        height: 8.5vw;
+        border: none;
+        color: #ffffff;
+        background-color: #A67246;
+        border: 1px #ffffff solid;
+        /*
+         width: 90px;
+        height: 43px;
+*/
+    }
+
+
+
+    /*~~~~~~~~~~Citat-sektion~~~~~~~~~~~~*/
 
     .citat_indhold {
         padding-top: 230px;
@@ -309,83 +269,7 @@
     }
 
 
-    #press {}
-
-    .press_indhold {
-        display: flex;
-        justify-content: center;
-    }
-
-    .press_layout {
-        display: flex;
-
-        justify-content: center;
-        align-self: center;
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        background-color: #ffffff;
-
-        height: 77.8vw;
-        width: 70vw;
-
-        /*
-           height: 389px;
-        width: 350px;
-*/
-
-    }
-
-
-    .pres_overskrift {
-        text-align: center;
-        margin: auto;
-    }
-
-
-
-
-
-
-
-    .press_tekst {
-        padding: 35px;
-        padding-top: 60px;
-    }
-
-    .press_venstre_dato {
-        color: #A67246;
-
-    }
-
-    .press_venstre_overskrift {
-        color: #A67246;
-
-    }
-
-
-    .press_knap {
-
-        width: 20vw;
-        height: 8.5vw;
-        border: none;
-        color: #ffffff;
-        background-color: #A67246;
-        border: 1px #ffffff solid;
-
-        /*
-  width: 90px;
-        height: 43px;
-*/
-    }
-
-
-    .press_midten {
-        display: none;
-    }
-
-    .press_hojre {
-        display: none;
-    }
+    /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
 
     #kontakt {
         background-color: #3A3550;
@@ -400,30 +284,47 @@
 
     }
 
+    .kontakt_line {
+        border-top: 1px solid #ffffff;
+        width: 80vw;
+        height: 10vw;
+        margin: auto;
+        margin-top: 150px;
+    }
+
+    /* ---- Kontakt sektion -----Overskrifter----*/
     .kontakt_overskrift {
         padding-top: 100px;
         color: #ffffff;
     }
+
+    /* ---- Kontakt sektion -----Tekst----*/
 
     .kontakt_tekst {
         color: #ffffff;
 
     }
 
+    /* ---- Kontakt sektion -----Knap----*/
+
+
     .kontakt_knap {
         margin-top: 15vw;
-
         width: 40vw;
         height: 10vw;
         background-color: #A67246;
         border: none;
         color: #ffffff;
-
-
         /*
           width: 200px;
         height: 50px;
 */
+    }
+
+    /*~~~~~~~~~~Footer~~~~~~~~~~~~*/
+
+    .footer_overskrift {
+        text-align: left;
     }
 
     footer {
@@ -431,70 +332,111 @@
     }
 
 
+    .footer_indhold {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ----Mest genbrugte regler---------*/
+
+    button {
+        font-size: 2.5vw;
+    }
+
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+        padding-left: 5vw;
+    }
+
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .kontakt_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+    }
+
+    #forside_splash {
+        display: none;
+    }
+
+    .tekst {
+        padding: 41px;
+    }
+
     @media screen and (min-width:1024px) {
-
-        .kontakt_overskrift {
-            font-size: 3.25rem;
-
-        }
-
-        .kontakt_tekst {
-            font-size: 2.25rem;
-
-        }
-
-
-        .kontakt_knap {
-            margin-top: 5vw;
-            width: 250px;
-            height: 60px;
-            font-size: 1rem;
-
-        }
 
         p {
             font-size: 2vw;
-
             padding-bottom: 50px;
-
         }
-
 
         h1 {
             font-size: 3.7vw;
-
-
         }
-
-
 
         h2 {
             font-size: 2.93vw;
-
         }
 
         h3 {
-
             font-size: 2vw;
         }
 
-
-
         a {
-
             font-size: 3.2vw;
             padding-bottom: 5vw;
         }
 
 
-        .om_naiha_indhold {}
+        /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
 
 
-        .om_naiha_tekst {}
+        .om_layout {
+            width: 100vw;
+        }
 
         .om_naiha_h2 {
             font-size: 3vw;
         }
+
+        .naiha_historie {
+            width: 20vw;
+            height: 7vw;
+            font-size: 2vw;
+        }
+
+        /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
 
         .event_midten {
             display: flex;
@@ -508,25 +450,26 @@
             justify-content: space-around;
         }
 
-
-
         .event_layout {
             width: 30vw;
             height: 43vw;
-
-
         }
 
-        .tekst {
-            padding: 41px;
-            /*        padding: 10vw;*/
+        .event_knap {
+            font-size: 1.3vw;
+            width: 13vw;
+            height: 4vw;
         }
 
+        /*~~~~~~~~~~Citat-sektion~~~~~~~~~~~~*/
 
         .citat_overskrift {
             width: 933px;
             font-size: 4vw
         }
+
+
+        /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
 
         .press_indhold {
             justify-content: space-around;
@@ -546,73 +489,63 @@
             display: flex;
         }
 
+
+        .press_knap {
+            font-size: 1.3vw;
+            width: 8.5vw;
+            height: 4.1vw;
+        }
+
+        /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
+
+        .kontakt_overskrift {
+            font-size: 3.25rem;
+
+        }
+
         .kontakt_overskrift {
             width: 1200px;
         }
 
 
-
-        .naiha_historie {
-
-            width: 20vw;
-            height: 7vw;
-            font-size: 2vw;
-
-
-
-
+        .kontakt_tekst {
+            font-size: 2.25rem;
 
         }
 
 
-        .event_knap {
-            font-size: 1.3vw;
-            width: 13vw;
-            height: 4vw;
-
-
+        .kontakt_knap {
+            margin-top: 5vw;
+            width: 250px;
+            height: 60px;
+            font-size: 1rem;
 
         }
 
-        .press_knap {
-            font-size: 1.3vw;
-
-
-            width: 8.5vw;
-            height: 4.1vw;
+        .tekst {
+            padding: 41px;
+            /*        padding: 10vw;*/
         }
-
-        .om_layout {
-            width: 100vw;
-        }
-
-
     }
-
-
 
     @media screen and (min-width:991px) {
 
 
-        .event_layout {}
-
-    }
 
 
 
-    @media screen and (min-width:684px) {
+        @media screen and (min-width: 684px) {
 
 
-        .citat_overskrift {
-            width: 70vw;
+            .citat_overskrift {
+                width: 70vw;
+            }
+
+
+
+
         }
 
-        .tekst {}
-
-        .event_layout {}
-
-
-    }
 </style>
 
 <body>
@@ -845,7 +778,10 @@
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
