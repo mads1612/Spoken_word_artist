@@ -8,23 +8,132 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
-    .instagram_feed {
-        display: flex;
-        justify-content: center
+    /*-----------Diveres CSS-----------*/
+
+
+    /*-----------fonts & variables-----------*/
+
+    p,
+    h1,
+    h2 {
+        font-family: Kepler Std Display;
+    }
+
+    button {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+        color: #A67246;
+    }
+
+    h1 {
+        font-size: 7vw;
+        text-align: center;
+        color: #A67246;
+    }
+
+    p {
+        font-size: 3.2vw;
+        color: #A67246;
+    }
+
+    a {
+        font-size: 3.2vw;
+        padding-bottom: 5vw;
     }
 
     .background_color {
         background-color: #D8F0F6;
     }
 
-    .kontakt_ikon {
+    /*~~~~~~~~~~OM~~~~~~~~~~~~*/
+
+    /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
+
+
+    .om_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+    .om_box {
+        margin-top: 10vw;
+        height: 120vw;
+        width: 50vw;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: #ffffff;
+    }
+
+    .om_overskrift {
+        text-align: center;
+    }
+
+    .naiha_overskrift {
+        text-align: center
+    }
+
+    .naiha_tekst {
+        padding: 10vw
+    }
+
+    /*~~~~~~~~~~Social-Feed-sektion~~~~~~~~~~~~*/
+
+    .social_indhold {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social_overskrift {
+        text-align: center
+    }
+
+    .instagram_feed {
+        display: flex;
+        justify-content: center
+    }
+
+    /*~~~~~~~~~~Footer~~~~~~~~~~~~*/
+
+    footer {
+        background-color: #3A3550;
+
+    }
+
+    .footer_indhold {
+        display: grid;
+        justify-content: center;
+    }
+
+
+    .top {
+        display: flex;
+        align-items: center;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .footer_overskrift {
+        text-align: left;
+    }
+
+    .footer_ikon {
         height: 5vw;
         width: 5vw;
         padding-right: 5vw;
         padding-bottom: 5vw;
     }
-
-
 
     .social_ikon_pad {
         height: 4vw;
@@ -38,111 +147,13 @@
         width: 4vw;
     }
 
-    .top {
-        display: flex;
-        align-items: center;
-
-    }
-
-    .mid {
-        display: flex;
-        align-items: center;
-
-
-    }
-
-
-
-
-    .bottom {
-        display: flex;
-        align-items: center;
-    }
-
-    .footer_overskrift {
-        text-align: left;
-    }
-
-    footer {
-        background-color: #3A3550;
-
-    }
-
-
-    .footer_indhold {
-        display: grid;
-        justify-content: center;
-    }
-
     .social {
-
         display: flex;
         justify-content: center;
         padding-top: 5vw;
     }
 
-    p,
-    h1,
-    h2 {
-        font-family: Kepler Std Display;
-    }
-
-
-    button {
-        font-size: 3vw;
-    }
-
-    h2 {
-        font-size: 5vw;
-        color: #A67246;
-
-    }
-
-    h1 {
-        font-size: 7vw;
-        text-align: center;
-        color: #A67246;
-
-
-    }
-
-    p {
-        font-size: 3.2vw;
-        color: #A67246;
-
-    }
-
-
-
-    a {
-        font-size: 3.2vw;
-        padding-bottom: 5vw;
-    }
-
-
-    #om {}
-
-    .om_indhold {
-        display: grid;
-        justify-content: center;
-
-    }
-
-    .om_box {
-        margin-top: 10vw;
-
-        height: 120vw;
-        width: 50vw;
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        background-color: #ffffff;
-
-    }
-
-    .om_overskrift {
-        text-align: center;
-
-    }
+    /* ----Mest genbrugte regler---------*/
 
 
     .line {
@@ -154,26 +165,6 @@
 
     .tekst {
         padding: 10vw;
-    }
-
-    .naiha_overskrift {
-        text-align: center
-    }
-
-    .naiha_tekst {
-        padding: 10vw
-    }
-
-
-    .social_indhold {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-
-    .social_overskrift {
-        text-align: center
     }
 </style>
 
@@ -278,17 +269,17 @@
                 <h1 class="footer_overskrift"></h1>
 
                 <div class="top">
-                    <img class="email kontakt_ikon">
+                    <img class="email footer_ikon">
                     <a class="email_tekst "></a>
                 </div>
 
                 <div class="mid ">
-                    <img class="tlf kontakt_ikon">
+                    <img class="tlf footer_ikon">
                     <a class="tlf_tekst  "></a>
                 </div>
 
                 <div class="bottom ">
-                    <img class="map kontakt_ikon">
+                    <img class="map footer_ikon">
                     <a class="map_tekst "></a>
                 </div>
                 <div class="social">
