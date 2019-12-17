@@ -8,8 +8,75 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
-    /*-----------Diveres CSS-----------*/
+    #video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5vw;
+        height: 500px;
 
+
+    }
+
+    .om_video {
+        width: 90%;
+        height: 40vw;
+        object-fit: fill;
+
+    }
+
+    video {}
+
+    /*-----------Navigation desktop-----------*/
+
+    #navigationsmenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #3A3550;
+        height: 90px;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-size: 1.65rem;
+        line-height: 5rem;
+        color: #ffffff;
+
+    }
+
+    .nav_line {
+        position: relative;
+        border-bottom: 2px #ffffff solid;
+        width: 120%;
+        bottom: 20%;
+        right: 10%
+    }
+
+    .knapper {
+        padding-right: 10%;
+    }
+
+    .logo {
+
+        padding-left: 5%;
+    }
+
+    .nav_logo_knap {}
+
+
+    .nav_om_knap {}
+
+    .nav_kontakt_knap {
+        padding-left: 80px;
+    }
+
+
+    /*-----------Diveres CSS-----------*/
+    body {
+        margin: 0;
+    }
 
     /*-----------fonts & variables-----------*/
 
@@ -23,20 +90,32 @@
         font-size: 3vw;
     }
 
-    h2 {
-        font-size: 5vw;
+    p {
+        font-size: 4vw;
+        /*        font-size: 1.5rem;*/
         color: #A67246;
+
     }
+
 
     h1 {
-        font-size: 7vw;
+        font-size: 9vw;
+        /*        font-size: 2.5rem;*/
         text-align: center;
         color: #A67246;
+
     }
 
-    p {
-        font-size: 3.2vw;
+    h2 {
+        font-size: 7vw;
         color: #A67246;
+
+        /*        font-size: 1.9rem;*/
+    }
+
+    h3 {
+        font-size: 4vw;
+        /*        font-size: 1.3rem;*/
     }
 
     a {
@@ -60,15 +139,20 @@
 
     .om_box {
         margin-top: 10vw;
-        height: 120vw;
-        width: 50vw;
+        height: ;
+        width: 70vw;
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
     }
 
+    .om_tekst {
+        padding: 6vw;
+    }
+
     .om_overskrift {
         text-align: center;
+
     }
 
     .naiha_overskrift {
@@ -76,7 +160,9 @@
     }
 
     .naiha_tekst {
-        padding: 10vw
+        display: inline;
+        line-height: 5vw;
+
     }
 
     /*~~~~~~~~~~Social-Feed-sektion~~~~~~~~~~~~*/
@@ -166,6 +252,13 @@
     .tekst {
         padding: 10vw;
     }
+
+    @media screen and (max-width:684px) {
+
+        nav {
+            display: none;
+        }
+    }
 </style>
 
 <body>
@@ -173,10 +266,23 @@
     <header>
 
         <nav>
-            <div class="nav_logo_knap"></div>
-            <div id="navigations-knapper">
-                <a class="nav_om_knap" href="om.html"></a>
-                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            <div id="navigationsmenu">
+                <div class="logo">
+                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <div class="nav_line"></div>
+                </div>
+
+
+
+
+                <div class="knapper">
+                    <a class="nav_om_knap"> Om Naiha</a>
+                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <div class="nav_line"></div>
+
+                </div>
+
+
             </div>
         </nav>
 
@@ -184,7 +290,7 @@
     <section id="video">
         <h1 class="om_overskrift"></h1>
         <div class="line"></div>
-        <!--                <video class="om_video"></video>-->
+        <video class="om_video" src="video/kogavideo_loop.mp4"></video>
 
 
     </section>
@@ -192,8 +298,12 @@
         <section id="om">
             <article class="om_indhold">
                 <div class="om_box">
-                    <h2 class="naiha_overskrift"></h2>
-                    <p class="naiha_tekst"></p>
+                    <div class="om_tekst">
+                        <h2 class="naiha_overskrift"></h2>
+                        <p class="naiha_tekst_top naiha_tekst"></p>
+                        <p class="naiha_tekst_mid naiha_tekst"></p>
+                        <p class="naiha_tekst_bottom naiha_tekst"></p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -313,7 +423,9 @@
         function vis() {
             document.querySelector(".om_overskrift").textContent = side.om_overskrift;
             document.querySelector(".naiha_overskrift").textContent = side.om_overskrift2;
-            document.querySelector(".naiha_tekst").textContent = side.om_tekst;
+            document.querySelector(".naiha_tekst_top").textContent = side.om_tekst_top;
+            document.querySelector(".naiha_tekst_mid").textContent = side.om_tekst_mid;
+            document.querySelector(".naiha_tekst_bottom").textContent = side.om_tekst_bottom;
 
             document.querySelector(".social_overskrift").textContent = side.om_overskrift_social;
 
