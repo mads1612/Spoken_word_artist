@@ -9,7 +9,56 @@
 </head>
 
 <style>
+    /*-----------Navigation desktop-----------*/
+
+    #navigationsmenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #3A3550;
+        height: 90px;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-size: 1.65rem;
+        line-height: 5rem;
+        color: #ffffff;
+
+    }
+
+    .nav_line {
+        position: relative;
+        border-bottom: 2px #ffffff solid;
+        width: 120%;
+        bottom: 20%;
+        right: 10%
+    }
+
+    .knapper {
+        padding-right: 10%;
+    }
+
+    .logo {
+
+        padding-left: 5%;
+    }
+
+    .nav_logo_knap {}
+
+
+    .nav_om_knap {}
+
+    .nav_kontakt_knap {
+        padding-left: 80px;
+    }
+
     /*-----------Diveres CSS-----------*/
+
+    body {
+        margin: 0;
+    }
+
 
     img {
         width: 100%;
@@ -38,7 +87,8 @@
     }
 
     h2 {
-        font-size: 7vw;
+
+        font-size: 6vw;
         /*        font-size: 1.9rem;*/
     }
 
@@ -76,17 +126,18 @@
         justify-content: center;
         display: flex;
         margin-top: 10vw;
-        box-shadow: 6px 0px 6px grey;
+        box-shadow: 6px 0px 6px darkgrey;
+
         border: 1px #A67246 solid;
         background-color: #ffffff;
-        align-items: center;
     }
 
     .line {
         border-top: 2px solid;
-        width: 10vw;
-        height: 10vw;
+        width: 50px;
         color: #A67246;
+        margin: auto;
+
     }
 
 
@@ -111,12 +162,13 @@
     /* ---- Kontakt sektion -----Overskrifter----*/
 
     .kontakt_container_h1 {
-        padding-bottom: 5vw;
+        padding-bottom: 7vw;
 
     }
 
     .Kontakt_venstre_h2 {
-        margin-right: 20vw;
+
+        margin-right: 9vw;
         color: #ffffff;
     }
 
@@ -161,6 +213,8 @@
 
     .formular {
         padding: 10vw;
+        display: flex;
+        justify-content: center;
     }
 
     .formular_container {
@@ -170,6 +224,7 @@
 
     .border {
         border: 1px solid #ccc;
+        width: 90%;
     }
 
     form {
@@ -180,14 +235,12 @@
     input[type=text],
     select,
     textarea {
-        width: 100%;
+        width: 48vw;
         padding: 10px;
-        height: 10vw;
-        border: 1px solid #ccc;
+        height: ;
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
-        resize: vertical;
         border: 1px solid #A67246;
     }
 
@@ -199,9 +252,12 @@
         border: none;
         color: #A67246;
         border: 1px solid #A67246;
-        width: 100%;
+        width: 48vw;
         height: 10vw
     }
+
+
+
 
     /*-------------Footer--------------*/
 
@@ -276,7 +332,103 @@
     }
 
 
-    @media screen and (min-width:768px) {}
+    @media screen and (min-width:1024px) {
+
+
+        p {
+            font-size: 2vw;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3.7vw;
+        }
+
+        h2 {
+            font-size: 2vw;
+        }
+
+        h3 {
+            font-size: 2vw;
+        }
+
+        a {
+            font-size: 1.3vw;
+            padding-bottom: 5vw;
+        }
+
+
+        .kontakt_indhold {
+            flex-direction: row-reverse;
+            justify-content: space-around;
+
+        }
+
+
+        .kontakt_container {
+
+            width: 27vw;
+            height: 38vw;
+        }
+
+
+        .kontakt_ikon {
+            height: 2vw;
+            width: 2vw;
+            padding-right: 2vw;
+            padding-bottom: 5vw;
+        }
+
+        .tekst {
+            padding: 0vw;
+            padding-top: 5vw;
+        }
+
+
+        .top {
+            height: 5vw
+        }
+
+        .mid {
+            height: 5vw
+        }
+
+        .bottom {
+            height: 5vw
+        }
+
+        .social_ikon_pad {
+            height: 2vw;
+            width: 2vw;
+            padding-left: 2vw;
+        }
+
+        .social_ikon {
+            height: 2vw;
+            width: 2vw;
+        }
+
+        button {
+            width: 20vw;
+            height: 5vw;
+            font-size: 2vw;
+            margin-left: 3vw;
+            margin-top: 8vw;
+
+        }
+
+        @media screen and (min-width:991px) {}
+
+        @media screen and (min-width: 684px) {}
+
+
+
+        @media screen and (max-width:684px) {
+
+            nav {
+                display: none;
+            }
+        }
 </style>
 
 <body>
@@ -285,20 +437,34 @@
     <header>
 
         <nav>
-            <div class="nav_logo_knap"></div>
-            <div id="navigations-knapper">
-                <a class="nav_om_knap" href="om.html"></a>
-                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            <div id="navigationsmenu">
+                <div class="logo">
+                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <div class="nav_line"></div>
+                </div>
+
+
+
+
+                <div class="knapper">
+                    <a class="nav_om_knap"> Om Naiha</a>
+                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <div class="nav_line"></div>
+
+                </div>
+
+
             </div>
         </nav>
 
     </header>
 
     <section id="kontakt_naiha">
+
+        <h1 class="Kontakt_h1"></h1>
+        <div class="line"></div>
         <article class="kontakt_indhold">
 
-            <h1 class="Kontakt_h1"></h1>
-            <div class="line"></div>
             <div class="kontakt_venstre kontakt_container img_baggrund">
 
                 <div class="tekst">
@@ -308,11 +474,7 @@
                     <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
                 </div>
             </div>
-        </article>
 
-    </section>
-    <section id="kontakt">
-        <article class="kontakt_indhold">
 
             <div class="kontakt_midten kontakt_container">
                 <div class="tekst">
@@ -355,70 +517,70 @@
                     </div>
                 </div>
             </div>
-            <button class="kontakt_form_knap"></button>
         </article>
-
-
-
-        <section id="kontakt_formular">
-            <article class="kontakt_formular_indhold ">
-
-                <div class="tekst">
-                    <h1 class="kontakt_formular_overskrift"></h1>
-                    <p class="kontakt_formular_tekst"></p>
-
-                    <div class="top">
-                        <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_top"></a>
-                    </div>
-
-                    <div class="mid">
-                        <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_mid"></a>
-                    </div>
-
-                    <div class="bottom">
-                        <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_bottom"></a>
-                    </div>
-                </div>
-
-                <div class="social_buttons">
-                    <img class="social_buttons_left social_ikon" src="">
-                    <img class="social_buttons_mid social_ikon_pad" src="">
-                    <img class="social_buttons_right social_ikon_pad" src="">
-                </div>
-            </article>
-        </section>
-
-        <section class="formular">
-            <div class="border">
-                <div class="formular_container">
-                    <div class="formular_indhold">
-                        <form action="action_page.php">
-                            <label for="fname">Email</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
-
-                            <label for="lname">Emne</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
-
-
-
-                            <label for="subject">Besked</label>
-                            <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
-
-                            <input type="submit" value="Submit">
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
+        <button class="kontakt_form_knap"></button>
 
     </section>
+
+
+    <section id="kontakt_formular">
+        <article class="kontakt_formular_indhold ">
+
+            <div class="tekst">
+                <h1 class="kontakt_formular_overskrift"></h1>
+                <p class="kontakt_formular_tekst"></p>
+
+                <div class="top">
+                    <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_top"></a>
+                </div>
+
+                <div class="mid">
+                    <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_mid"></a>
+                </div>
+
+                <div class="bottom">
+                    <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
+                    <a class="kontakt_formular_tekst_bottom"></a>
+                </div>
+            </div>
+
+            <div class="social_buttons">
+                <img class="social_buttons_left social_ikon" src="">
+                <img class="social_buttons_mid social_ikon_pad" src="">
+                <img class="social_buttons_right social_ikon_pad" src="">
+            </div>
+        </article>
+    </section>
+
+    <section class="formular">
+        <div class="border">
+            <div class="formular_container">
+                <div class="formular_indhold">
+                    <form action="action_page.php">
+                        <label for="fname">Email</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
+
+                        <label for="lname">Emne</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
+
+
+
+                        <label for="subject">Besked</label>
+                        <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
 
