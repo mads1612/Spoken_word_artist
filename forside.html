@@ -8,6 +8,53 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    /*-----------Navigation desktop-----------*/
+
+    #navigationsmenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #3A3550;
+        height: 90px;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-size: 1.65rem;
+        line-height: 5rem;
+        color: #ffffff;
+
+    }
+
+    .nav_line {
+        position: relative;
+        border-bottom: 2px #ffffff solid;
+        width: 120%;
+        bottom: 20%;
+        right: 10%
+    }
+
+    .knapper {
+        padding-right: 10%;
+    }
+
+    .logo {
+
+        padding-left: 5%;
+    }
+
+    .nav_logo_knap {}
+
+
+    .nav_om_knap {}
+
+    .nav_kontakt_knap {
+        padding-left: 80px;
+    }
+
+
+
+
     /*-----------Diveres CSS-----------*/
 
     body {
@@ -67,6 +114,13 @@
     /*------Burgermenu-----*/
 
     /*-------------FORSIDEN--------------*/
+
+
+    /*~~~~~~~~~~Forside-splash-sektion~~~~~~~~~~~~*/
+
+    #forside_splash {
+        display: none;
+    }
 
     /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
 
@@ -204,7 +258,7 @@
         padding-top: 12vw;
     }
 
-    .event_layout {
+    .event_box {
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
@@ -323,9 +377,7 @@
 
     /*~~~~~~~~~~Footer~~~~~~~~~~~~*/
 
-    .footer_overskrift {
-        text-align: left;
-    }
+
 
     footer {
         background-color: #3A3550;
@@ -335,23 +387,6 @@
     .footer_indhold {
         display: flex;
         justify-content: center;
-    }
-
-    /* ----Mest genbrugte regler---------*/
-
-    button {
-        font-size: 2.5vw;
-    }
-
-    .social_ikon_pad {
-        height: 4vw;
-        width: 4vw;
-        padding-left: 5vw;
-    }
-
-    .social_ikon {
-        height: 4vw;
-        width: 4vw;
     }
 
     .top {
@@ -369,25 +404,32 @@
         align-items: center;
     }
 
-    .kontakt_ikon {
+    .footer_overskrift {
+        text-align: left;
+    }
+
+    .footer_ikon {
         height: 5vw;
         width: 5vw;
         padding-right: 5vw;
         padding-bottom: 5vw;
     }
 
-    .top {
-        display: flex;
-        align-items: center;
+    .social_ikon_pad {
+        height: 4vw;
+        width: 4vw;
+        padding-left: 5vw;
     }
 
-    .mid {
-        display: flex;
-        align-items: center;
+    .social_ikon {
+        height: 4vw;
+        width: 4vw;
     }
 
-    #forside_splash {
-        display: none;
+    /* ----Mest genbrugte regler---------*/
+
+    button {
+        font-size: 2.5vw;
     }
 
     .tekst {
@@ -528,34 +570,52 @@
         }
     }
 
-    @media screen and (min-width:991px) {
+    @media screen and (min-width:991px) {}
 
 
 
 
 
-        @media screen and (min-width: 684px) {
+    @media screen and (min-width: 684px) {
 
 
-            .citat_overskrift {
-                width: 70vw;
-            }
-
-
-
-
+        .citat_overskrift {
+            width: 70vw;
         }
 
+
+
+
+    }
+
+    @media screen and (max-width:684px) {
+
+        nav {
+            display: none;
+        }
 </style>
 
 <body>
     <header>
 
         <nav>
-            <div id="navigations-knapper">
-                <a class="nav_logo_knap"></a>
-                <a class="nav_om_knap"></a>
-                <a class="nav_kontakt_knap"></a>
+            <div id="navigationsmenu">
+                <div class="logo">
+                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <div class="nav_line"></div>
+                </div>
+
+
+
+
+                <div class="knapper">
+                    <a class="nav_om_knap"> Om Naiha</a>
+                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <div class="nav_line"></div>
+
+                </div>
+
+
             </div>
         </nav>
 
@@ -587,7 +647,7 @@
 
         <section id="event">
             <article class="event_indhold">
-                <div class="event_venstre event_layout">
+                <div class="event_venstre event_box">
                     <div class="tekst">
 
                         <h3 class="event_venstre_dato event_dato"></h3>
@@ -598,7 +658,7 @@
                     </div>
                 </div>
 
-                <div class="event_midten event_layout">
+                <div class="event_midten event_box">
                     <div class="tekst">
 
                         <h3 class="event_midten_dato event_dato"></h3>
@@ -610,7 +670,7 @@
 
                 </div>
 
-                <div class="event_hojre event_layout">
+                <div class="event_hojre event_box">
                     <div class="tekst">
 
                         <h3 class="event_hojre_dato event_dato"></h3>
@@ -680,17 +740,17 @@
                 <h1 class="footer_overskrift"></h1>
 
                 <div class="top">
-                    <img class="email kontakt_ikon">
+                    <img class="email footer_ikon">
                     <a class="email_tekst "></a>
                 </div>
 
                 <div class="mid ">
-                    <img class="tlf kontakt_ikon">
+                    <img class="tlf footer_ikon">
                     <a class="tlf_tekst  "></a>
                 </div>
 
                 <div class="bottom ">
-                    <img class="map kontakt_ikon">
+                    <img class="map footer_ikon">
                     <a class="map_tekst "></a>
                 </div>
                 <div class="social">
@@ -778,10 +838,7 @@
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
         }
-
     </script>
 
 
-</body>
-
-</html>
+</body></html>
