@@ -127,7 +127,6 @@
         display: flex;
         margin-top: 10vw;
         box-shadow: 6px 0px 6px darkgrey;
-
         border: 1px #A67246 solid;
         background-color: #ffffff;
     }
@@ -180,19 +179,16 @@
 
     /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
 
-    #kontakt_formular {
-        height: 130vw;
-    }
 
     .kontakt_formular_indhold {
         display: flex;
+        flex-direction: column;
     }
 
     /* ----Kontakt-Formular-sektion -----Overskrifter----*/
 
     .kontakt_formular_overskrift {
         text-align: center;
-        margin-top: 40%;
         font-size: 7vw;
     }
 
@@ -202,10 +198,14 @@
         font-size: 4vw;
         width: 80vw;
         text-align: center;
-        text-align: justify;
     }
 
     /* ----Kontakt-Formular-sektion-----Knap----*/
+
+    .form_knap {
+        display: flex;
+        justify-content: center;
+    }
 
 
 
@@ -215,6 +215,7 @@
         padding: 10vw;
         display: flex;
         justify-content: center;
+        margin-top: 10vw;
     }
 
     .formular_container {
@@ -327,6 +328,7 @@
     }
 
     .social_buttons {
+        display: none;
         margin-top: 10vw;
         padding-left: 40vw;
     }
@@ -334,6 +336,7 @@
 
     @media screen and (min-width:1024px) {
 
+        /*-----------fonts & variables-----------*/
 
         p {
             font-size: 2vw;
@@ -358,6 +361,7 @@
         }
 
 
+        /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
         .kontakt_indhold {
             flex-direction: row-reverse;
             justify-content: space-around;
@@ -377,24 +381,6 @@
             width: 2vw;
             padding-right: 2vw;
             padding-bottom: 5vw;
-        }
-
-        .tekst {
-            padding: 0vw;
-            padding-top: 5vw;
-        }
-
-
-        .top {
-            height: 5vw
-        }
-
-        .mid {
-            height: 5vw
-        }
-
-        .bottom {
-            height: 5vw
         }
 
         .social_ikon_pad {
@@ -417,18 +403,78 @@
 
         }
 
-        @media screen and (min-width:991px) {}
 
-        @media screen and (min-width: 684px) {}
+        /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
 
-
-
-        @media screen and (max-width:684px) {
-
-            nav {
-                display: none;
-            }
+        #kontakt_formular {
+            display: flex;
         }
+
+        .kontakt_formular_overskrift {
+            font-size: 4vw;
+        }
+
+        .kontakt_formular_tekst {
+            font-size: 2vw;
+            width: 30vw;
+        }
+
+        /*~~~~~~~~~~Formular~~~~~~~~~~~~*/
+
+
+
+        .border {
+            width: 86%;
+        }
+
+        form {
+            padding: 3vw;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 35vw;
+        }
+
+        input[type=submit] {
+            width: 35vw;
+            height: 3.5vw
+        }
+
+        .tekst {
+            padding: 0vw;
+            padding-top: 5vw;
+        }
+
+
+        .top {
+            height: 5vw
+        }
+
+        .mid {
+            height: 5vw
+        }
+
+        .bottom {
+            height: 5vw
+        }
+
+    }
+
+
+    @media screen and (min-width:991px) {}
+
+    @media screen and (min-width: 684px) {}
+
+
+
+    @media screen and (max-width:684px) {
+
+        nav {
+            display: none;
+        }
+    }
 </style>
 
 <body>
@@ -518,7 +564,9 @@
                 </div>
             </div>
         </article>
-        <button class="kontakt_form_knap"></button>
+        <div class="form_knap">
+            <button class="kontakt_form_knap"></button>
+        </div>
 
     </section>
 
@@ -552,31 +600,35 @@
                 <img class="social_buttons_right social_ikon_pad" src="">
             </div>
         </article>
-    </section>
-
-    <section class="formular">
-        <div class="border">
-            <div class="formular_container">
-                <div class="formular_indhold">
-                    <form action="action_page.php">
-                        <label for="fname">Email</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Din mailadresse">
-
-                        <label for="lname">Emne</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Hvad drejer det sig om?">
 
 
+        <div class="formular">
+            <div class="border">
+                <div class="formular_container">
+                    <div class="formular_indhold">
+                        <form action="action_page.php">
+                            <label for="fmail">Email</label>
+                            <input type="text" id="fmail" name="mailadresse" placeholder="Din mailadresse">
 
-                        <label for="subject">Besked</label>
-                        <textarea id="subject" name="subject" placeholder="Skriv besked" style="height:200px"></textarea>
+                            <label for="lname">Emne</label>
+                            <input type="text" id="ltopic" name="topic" placeholder="Hvad drejer det sig om?">
 
-                        <input type="submit" value="Submit">
 
-                    </form>
+
+                            <label for="subject">Besked</label>
+                            <textarea id="lbesked" name="besked" placeholder="Skriv besked" style="height:200px"></textarea>
+
+                            <input type="submit" value="Submit">
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
+
+
 
 
 
