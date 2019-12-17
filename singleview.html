@@ -8,7 +8,55 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    /*-----------Navigation desktop-----------*/
+
+    #navigationsmenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #3A3550;
+        height: 90px;
+    }
+
+    header nav a {
+        text-decoration: none;
+        font-size: 1.65rem;
+        line-height: 5rem;
+        color: #ffffff;
+
+    }
+
+    .nav_line {
+        position: relative;
+        border-bottom: 2px #ffffff solid;
+        width: 120%;
+        bottom: 20%;
+        right: 10%
+    }
+
+    .knapper {
+        padding-right: 10%;
+    }
+
+    .logo {
+
+        padding-left: 5%;
+    }
+
+    .nav_logo_knap {}
+
+
+    .nav_om_knap {}
+
+    .nav_kontakt_knap {
+        padding-left: 80px;
+    }
+
+
     /*-----------Diveres CSS-----------*/
+    body {
+        margin: 0;
+    }
 
     img {
         width: 100%;
@@ -76,14 +124,8 @@
         padding-top: 10vw;
     }
 
-    .tid_ikon {
-        width: 15vw;
-        height: 15vw;
-        display: none;
 
-    }
-
-    .map_ikon {
+    .tid_map_ikon {
         width: 15vw;
         height: 15vw;
         display: none;
@@ -137,15 +179,9 @@
         padding-bottom: 20vw;
     }
 
-    .facebook {
+    .single_event_ikon {
         padding-right: 20vw;
         width: 8vw;
-    }
-
-    .instagram {
-        width: 8vw;
-        padding-right: 20vw;
-
     }
 
     .linked {
@@ -212,6 +248,14 @@
         align-items: center;
 
     }
+
+
+        @media screen and (max-width:684px) {
+
+        nav {
+            display: none;
+        }
+    }
 </style>
 
 <body>
@@ -219,10 +263,23 @@
     <header>
 
         <nav>
-            <div class="nav_logo_knap"></div>
-            <div id="navigations-knapper">
-                <a class="nav_om_knap" href="om.html"></a>
-                <a class="nav_kontakt_knap" href="kontakt.html"></a>
+            <div id="navigationsmenu">
+                <div class="logo">
+                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <div class="nav_line"></div>
+                </div>
+
+
+
+
+                <div class="knapper">
+                    <a class="nav_om_knap"> Om Naiha</a>
+                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <div class="nav_line"></div>
+
+                </div>
+
+
             </div>
         </nav>
 
@@ -237,13 +294,13 @@
             </div>
             <div class="event_information">
                 <div class="top">
-                    <img class="tid_ikon" src="">
+                    <img class="tid_ikon tid_map_ikon" src="">
                     <h1 class="event_overskrift"></h1>
                     <p class="tid"></p>
                 </div>
                 <div class="bottom">
 
-                    <img class="map_ikon" src="">
+                    <img class="map_ikon tid_map_ikon" src="">
                     <p class="mapp"></p>
                     <p class="dato"></p>
                 </div>
@@ -262,8 +319,8 @@
             </div>
 
             <div class="social_container">
-                <img class="facebook" src="">
-                <img class="instagram" src="">
+                <img class="facebook single_event_ikon" src="">
+                <img class="instagram single_event_ikon" src="">
                 <img class="linked" src="">
             </div>
             <div class="knap_box">
