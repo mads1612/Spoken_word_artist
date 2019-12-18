@@ -148,7 +148,7 @@
     }
 
     .om_naiha_h2 {
-        padding-bottom: 100px;
+        padding-bottom: 55px;
     }
 
     /* ---- Om sektion -----Tekst----*/
@@ -160,11 +160,15 @@
         background-color: #A67246;
         border: none;
         color: #ffffff;
-        margin-left: 50px;
         /*
            width: 150px;
         height: 50px;
 */
+    }
+
+    .knap {
+        display: flex;
+        justify-content: center;
     }
 
 
@@ -184,7 +188,6 @@
         border: 1px #A67246 solid;
         background-color: #ffffff;
 
-        height: 77.8vw;
         width: 70vw;
         /*
            height: 389px;
@@ -228,7 +231,6 @@
 
     .press_tekst {
         padding: 35px;
-        padding-top: 60px;
     }
 
     /* ---- Press sektion -----Knap----*/
@@ -262,11 +264,15 @@
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
+
+        width: 70vw;
         /*        height: 450px;
         width: 350px;
         */
+        /*
         height: 90vw;
         width: 70vw;
+*/
     }
 
     .event_midten {
@@ -436,7 +442,7 @@
         padding: 41px;
     }
 
-    @media screen and (min-width:1024px) {
+    @media screen and (min-width:768px) {
 
         p {
             font-size: 2vw;
@@ -465,12 +471,9 @@
 
 
         .om_layout {
-            width: 100vw;
+            width: 84vw;
         }
 
-        .om_naiha_h2 {
-            font-size: 3vw;
-        }
 
         .naiha_historie {
             width: 20vw;
@@ -478,7 +481,13 @@
             font-size: 2vw;
         }
 
+        .tekst_mid {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
         /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
+
 
         .event_midten {
             display: flex;
@@ -489,13 +498,14 @@
         }
 
         .event_indhold {
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
 
-        .event_layout {
-            width: 30vw;
-            height: 43vw;
+        .event_box {
+
+            width: 29vw;
         }
+
 
         .event_knap {
             font-size: 1.3vw;
@@ -510,11 +520,16 @@
             font-size: 4vw
         }
 
+        .event_hojre_overskrift {
+
+            /*            width: 20vw*/
+        }
+
 
         /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
 
         .press_indhold {
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
 
         .press_layout {
@@ -531,6 +546,10 @@
             display: flex;
         }
 
+        .press_venstre_dato {
+            width: 24vw;
+        }
+
 
         .press_knap {
             font-size: 1.3vw;
@@ -541,25 +560,22 @@
         /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
 
         .kontakt_overskrift {
-            font-size: 3.25rem;
 
+            font-size: 3vw;
         }
 
-        .kontakt_overskrift {
-            width: 1200px;
-        }
+
 
 
         .kontakt_tekst {
-            font-size: 2.25rem;
-
+            font-size: 2vw;
         }
 
 
         .kontakt_knap {
             margin-top: 5vw;
-            width: 250px;
-            height: 60px;
+            width: 150px;
+            height: 45px;
             font-size: 1rem;
 
         }
@@ -570,7 +586,6 @@
         }
     }
 
-    @media screen and (min-width:991px) {}
 
 
 
@@ -593,6 +608,7 @@
         nav {
             display: none;
         }
+
 </style>
 
 <body>
@@ -601,7 +617,7 @@
         <nav>
             <div id="navigationsmenu">
                 <div class="logo">
-                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <a class="nav_logo_knap" href="forside.html"> Naiha Khiljee</a>
                     <div class="nav_line"></div>
                 </div>
 
@@ -609,8 +625,8 @@
 
 
                 <div class="knapper">
-                    <a class="nav_om_knap"> Om Naiha</a>
-                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <a class="nav_om_knap" href="om.html"> Om Naiha</a>
+                    <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
                     <div class="nav_line"></div>
 
                 </div>
@@ -637,8 +653,12 @@
                     <h1 class="om_naiha_h1"></h1>
                     <div class="line om_line"></div>
                     <h2 class="om_naiha_h2"></h2>
-                    <p class="om_naiha_tekst"></p>
-                    <button class="naiha_historie"></button>
+                    <div class="tekst_mid">
+                        <p class="om_naiha_tekst"></p>
+                    </div>
+                    <div class="knap">
+                        <button class="naiha_historie"></button>
+                    </div>
                 </div>
             </div>
         </article>
@@ -730,7 +750,6 @@
 
         </article>
     </section>
-
 
     <footer>
 
@@ -838,7 +857,10 @@
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
