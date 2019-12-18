@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
-    #video {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5vw;
-        height: 500px;
-
-
-    }
-
-    .om_video {
-        width: 90%;
-        height: 40vw;
-        object-fit: fill;
-
-    }
-
-    video {}
-
     /*-----------Navigation desktop-----------*/
 
     #navigationsmenu {
@@ -63,10 +43,6 @@
         padding-left: 5%;
     }
 
-    .nav_logo_knap {}
-
-
-    .nav_om_knap {}
 
     .nav_kontakt_knap {
         padding-left: 80px;
@@ -91,7 +67,7 @@
     }
 
     p {
-        font-size: 4vw;
+        font-size: 3vw;
         /*        font-size: 1.5rem;*/
         color: #A67246;
 
@@ -99,7 +75,7 @@
 
 
     h1 {
-        font-size: 9vw;
+        font-size: 6vw;
         /*        font-size: 2.5rem;*/
         text-align: center;
         color: #A67246;
@@ -107,7 +83,7 @@
     }
 
     h2 {
-        font-size: 7vw;
+        font-size: 5vw;
         color: #A67246;
 
         /*        font-size: 1.9rem;*/
@@ -132,10 +108,32 @@
     /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
 
 
-    .om_indhold {
-        display: grid;
-        justify-content: center;
+
+
+
+
+    .om_indhold {}
+
+    .top_box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
     }
+
+
+    .video {
+        align-items: center;
+
+
+    }
+
+    .om_video {
+        height: 40vw;
+        object-fit: fill;
+
+    }
+
 
     .om_box {
         margin-top: 10vw;
@@ -144,6 +142,7 @@
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
+
     }
 
     .om_tekst {
@@ -176,9 +175,22 @@
         text-align: center
     }
 
-    .instagram_feed {
+
+    .face_feed {
+        border: 2px solid #A67246
+    }
+
+    .insta_feed {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+
+    .social_box {
+
         display: flex;
-        justify-content: center
+        flex-direction: column;
+        align-items: center;
     }
 
     /*~~~~~~~~~~Footer~~~~~~~~~~~~*/
@@ -189,7 +201,7 @@
     }
 
     .footer_indhold {
-        display: grid;
+        display: flex;
         justify-content: center;
     }
 
@@ -253,6 +265,77 @@
         padding: 10vw;
     }
 
+
+    @media screen and (min-width:768px) {
+
+
+        p {
+            font-size: 1.5vw;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3.7vw;
+        }
+
+        h2 {
+            font-size: 2vw;
+        }
+
+        h3 {
+            font-size: 2vw;
+        }
+
+        a {
+            font-size: 1.3vw;
+            padding-bottom: 5vw;
+        }
+
+        .om_indhold {}
+
+        .top_box {
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+
+        }
+
+
+        .om_box {
+
+            width: 40vw;
+            margin-top: 0vw;
+            height: 30vw;
+        }
+
+        .video {}
+
+
+        .om_video {
+            width: 40vw;
+            height: 30vw;
+            object-fit: fill;
+
+        }
+
+
+        .naiha_tekst {
+            display: inline;
+            line-height: 0vw;
+        }
+
+        .om_tekst {
+            padding: 0vw;
+        }
+
+
+        .social_box {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+
+    }
+
     @media screen and (max-width:684px) {
 
         nav {
@@ -268,7 +351,7 @@
         <nav>
             <div id="navigationsmenu">
                 <div class="logo">
-                    <a class="nav_logo_knap"> Naiha Khiljee</a>
+                    <a class="nav_logo_knap" href="forside.html"> Naiha Khiljee</a>
                     <div class="nav_line"></div>
                 </div>
 
@@ -276,8 +359,8 @@
 
 
                 <div class="knapper">
-                    <a class="nav_om_knap"> Om Naiha</a>
-                    <a class="nav_kontakt_knap">Kontakt</a>
+                    <a class="nav_om_knap" href="om.html"> Om Naiha</a>
+                    <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
                     <div class="nav_line"></div>
 
                 </div>
@@ -287,16 +370,17 @@
         </nav>
 
     </header>
-    <section id="video">
+
+    <section id="om">
         <h1 class="om_overskrift"></h1>
         <div class="line"></div>
-        <video class="om_video" src="video/kogavideo_loop.mp4"></video>
+        <article class="om_indhold">
+            <div class="top_box">
+                <div class="video">
 
+                    <video class="om_video" src="video/kogavideo_loop.mp4"></video>
+                </div>
 
-    </section>
-    <section class="background_color">
-        <section id="om">
-            <article class="om_indhold">
                 <div class="om_box">
                     <div class="om_tekst">
                         <h2 class="naiha_overskrift"></h2>
@@ -305,20 +389,25 @@
                         <p class="naiha_tekst_bottom naiha_tekst"></p>
                     </div>
                 </div>
-            </article>
-        </section>
-
-        <section id="social_feed">
-
-            <article class="social_indhold">
-                <h1 class="social_overskrift"></h1>
-                <div class="line"></div>
-            </article>
-
-            <div class="facebook_feed">
-                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDitversitet%2Fposts%2F256724891829581&width=500" width="500" height="805" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
-            <div class="instagram_feed">
+        </article>
+    </section>
+
+    <section id="social_feed">
+
+        <h1 class="social_overskrift"></h1>
+        <div class="line"></div>
+        <div class="social_box">
+            <div class="face_feed">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v5.0"></script>
+
+
+                <div class="fb-page" data-href="https://www.facebook.com/Ditversitet/?__tn__=kC-R&amp;eid=ARDjnOtSSOPh1DkQ5ALG4Q25skw_vIZJ_YN7rlbkOyZuNHp7_0YdwP1ZepcdFaf-fqZDM79gUMIEzK1f&amp;hc_ref=ARSvz3SinQ2fW2SxUc8ujkLD7ZSGE-3NXgIs5SuSq0IlActH6kG8QphQVT9RbxEf1rY" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Ditversitet/?__tn__=kC-R&amp;eid=ARDjnOtSSOPh1DkQ5ALG4Q25skw_vIZJ_YN7rlbkOyZuNHp7_0YdwP1ZepcdFaf-fqZDM79gUMIEzK1f&amp;hc_ref=ARSvz3SinQ2fW2SxUc8ujkLD7ZSGE-3NXgIs5SuSq0IlActH6kG8QphQVT9RbxEf1rY" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Ditversitet/?__tn__=kC-R&amp;eid=ARDjnOtSSOPh1DkQ5ALG4Q25skw_vIZJ_YN7rlbkOyZuNHp7_0YdwP1ZepcdFaf-fqZDM79gUMIEzK1f&amp;hc_ref=ARSvz3SinQ2fW2SxUc8ujkLD7ZSGE-3NXgIs5SuSq0IlActH6kG8QphQVT9RbxEf1rY">Ditversitet</a></blockquote>
+                </div>
+            </div>
+            <div class="insta_feed">
 
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/B50kZJMAtzs/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:300px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                     <div style="padding:16px;"> <a href="https://www.instagram.com/p/B50kZJMAtzs/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
@@ -368,10 +457,9 @@
                     </div>
                 </blockquote>
             </div>
+        </div>
 
-            <script async src="//www.instagram.com/embed.js"></script>
-
-        </section>
+        <script async src="//www.instagram.com/embed.js"></script>
     </section>
     <footer>
         <article class="footer_indhold">
