@@ -14,7 +14,7 @@
         padding-top: 60px;
     }
 
-    .kompetencer_box {
+    .kompetencer_column {
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
@@ -60,7 +60,7 @@
 
 
 
-    .video {
+    .video_container {
         display: flex;
         justify-content: center;
     }
@@ -95,7 +95,7 @@
         right: 10%
     }
 
-    .knapper {
+    .nav_knapper {
         padding-right: 10%;
     }
 
@@ -198,7 +198,7 @@
     .om_naiha_indhold {}
 
 
-    .om_layout {}
+    .om_column {}
 
     .om_line {
         border-top: 2px solid #A67246;
@@ -245,7 +245,7 @@
 */
     }
 
-    .knap {
+    .om_knap {
         display: flex;
         justify-content: center;
     }
@@ -259,7 +259,7 @@
         justify-content: center;
     }
 
-    .press_layout {
+    .press_column {
         display: flex;
         justify-content: center;
         align-self: center;
@@ -292,7 +292,7 @@
         display: none;
     }
 
-    .press_line {
+    .press_line_overskrift {
         border-top: 2px solid #A67246;
         width: 50px;
         height: 30px;
@@ -306,18 +306,18 @@
         margin: auto;
     }
 
-    .press_venstre_dato {
+    .press_venstre_overskrift {
         color: #A67246;
     }
 
-    .press_venstre_overskrift {
+    .press_venstre_dato {
         color: #A67246;
     }
 
 
     /* ---- Press sektion -----Tekst----*/
 
-    .press_tekst {
+    .press_tekst_padding {
         padding: 35px;
         padding-top: 81px;
 
@@ -358,7 +358,7 @@
     }
 
 
-    #event .tekst {
+    #event .text_padding {
         align-self: center;
     }
 
@@ -553,7 +553,7 @@
 
 
 
-    .venstree {
+    .row_venstre {
         display: flex;
         flex-direction: column;
 
@@ -569,7 +569,7 @@
         font-size: 0.7rem
     }
 
-    .social {
+    .row_venstre {
         align-self: center
     }
 
@@ -598,7 +598,7 @@
     /* ----Mest genbrugte regler---------*/
 
 
-    .tekst {
+    .text_padding {
         padding: 41px;
     }
 
@@ -636,7 +636,7 @@
 
 
 
-        .kompetencer_box {
+        .kompetencer_column {
             justify-content: center;
             width: 29vw;
             height: 56vw;
@@ -697,7 +697,7 @@
         /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
 
 
-        .om_layout {
+        .om_column {
             width: 84vw;
         }
 
@@ -709,7 +709,7 @@
 */
         }
 
-        .tekst_mid {
+        .paragraph_box {
             padding-left: 10vw;
             padding-right: 10vw;
         }
@@ -772,7 +772,7 @@
             justify-content: space-evenly;
         }
 
-        .press_layout {
+        .press_column {
             width: 28vw;
             height: 35vw;
         }
@@ -786,7 +786,7 @@
             display: flex;
         }
 
-        .press_venstre_dato {
+        .press_venstre_overskrift {
             width: 24vw;
         }
 
@@ -813,7 +813,7 @@
 
         }
 
-        .tekst {
+        .text_padding {
             padding: 41px;
             /*        padding: 10vw;*/
         }
@@ -856,7 +856,7 @@
 
 
 
-                <div class="knapper">
+                <div class="nav_knapper">
                     <a class="nav_om_knap" href="om.html"> Om Naiha</a>
                     <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
                     <div class="nav_line"></div>
@@ -880,15 +880,15 @@
     </section>
     <section id="om_naiha">
         <article class="om_naiha_indhold">
-            <div class="om_layout">
-                <div class="tekst">
+            <div class="om_column">
+                <div class="text_padding">
                     <h1 class="om_naiha_h1"></h1>
                     <div class="line om_line"></div>
                     <h2 class="om_naiha_h2"></h2>
-                    <div class="tekst_mid">
+                    <div class="paragraph_box">
                         <p class="om_naiha_tekst"></p>
                     </div>
-                    <div class="knap">
+                    <div class="om_knap">
                         <button class="naiha_historie"></button>
                     </div>
                 </div>
@@ -903,10 +903,10 @@
 
             <article class="event_indhold">
                 <div class="event_venstre event_box">
-                    <div class="tekst">
+                    <div class="text_padding">
 
                         <h4 class="event_venstre_dato event_dato"></h4>
-                        <h3 class="event_venstre_overskrift event_overskrift"></h3>
+                        <h2 class="event_venstre_overskrift event_overskrift"></h2>
                         <h3 class="event_venstre_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
                         <button class="se_mere_venstre event_knap"></button>
@@ -914,10 +914,10 @@
                 </div>
 
                 <div class="event_midten event_box">
-                    <div class="tekst">
+                    <div class="text_padding">
 
                         <h4 class="event_midten_dato event_dato"></h4>
-                        <h3 class="event_midten_overskrift event_overskrift"></h3>
+                        <h2 class="event_midten_overskrift event_overskrift"></h2>
                         <h3 class="event_midten_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
                         <button class="se_mere_midten event_knap"></button>
@@ -926,10 +926,10 @@
                 </div>
 
                 <div class="event_hojre event_box">
-                    <div class="tekst">
+                    <div class="text_padding">
 
                         <h4 class="event_hojre_dato event_dato"></h4>
-                        <h3 class="event_hojre_overskrift event_overskrift"></h3>
+                        <h2 class="event_hojre_overskrift event_overskrift"></h2>
                         <h3 class="event_hojre_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
                         <button class="se_mere_hojre event_knap"></button>
@@ -946,30 +946,29 @@
 
         <section id="press">
             <h1 class="pres_overskrift"></h1>
-            <div class="line press_line"></div>
+            <div class="line press_line_overskrift"></div>
             <article class="press_indhold">
 
 
-                <div class="press_venstre press_layout">
-                    <div class="press_tekst">
-                        <h2 class="press_venstre_dato"></h2>
-                        <h4 class="press_venstre_overskrift"></h4>
+                <div class="press_venstre press_column">
+                    <div class="press_tekst_padding">
+                        <h2 class="press_venstre_overskrift"></h2>
+                        <h4 class="press_venstre_dato"></h4>
                         <button class="press_las_artikel_venstre press_knap"></button>
                     </div>
                 </div>
-
-                <div class="press_midten press_layout">
-                    <div class="press_tekst">
-                        <h2 class="press_midten_dato"></h2>
-                        <h4 class="press_midten_overskrift"></h4>
+                <div class="press_midten press_column">
+                    <div class="press_tekst_padding">
+                        <h2 class="press_midten_overskrift"></h2>
+                        <h4 class="press_midten_dato"></h4>
                         <button class="press_las_artikel_midten press_knap"></button>
                     </div>
                 </div>
 
-                <div class="press_hojre  press_layout">
-                    <div class="press_tekst">
-                        <h2 class="press_hojre_dato"></h2>
-                        <h4 class="press_hojre_overskrift"></h4>
+                <div class="press_hojre  press_column">
+                    <div class="press_tekst_padding">
+                        <h2 class="press_hojre_overskrift"></h2>
+                        <h4 class="press_hojre_dato"></h4>
                         <button class="press_las_artikel_hojre press_knap"></button>
                     </div>
                 </div>
@@ -977,7 +976,7 @@
         </section>
     </section>
     <section id="video">
-        <div class="video">
+        <div class="video_container">
 
             <video class="om_video" src="video/kogavideo_loop.mp4"></video>
         </div>
@@ -986,20 +985,20 @@
 
         <section id="kompetencer">
             <article class="kompetencer_indhold">
-                <div class="kompetencer_venstre kompetencer_box">
-                    <div class="tekst">
+                <div class="kompetencer_venstre kompetencer_column">
+                    <div class="text_padding">
 
-                        <h3 class="kompetencer_venstre_dato kompetencer_dato">Ditversitet</h3>
+                        <h2 class="kompetencer_venstre_dato kompetencer_dato">Ditversitet</h2>
                         <p class="kompetencer_venstre_overskrift kompetencer_overskrift">Vores formål er at fremme værdige eksistensvilkår for borgere med etnisk minoritetsbaggrund i Danmark. Det gør vi ved at anvende faglig viden, personlige oplevelser og kreativitet til at bidrage med konstruktive værktøjer, der kan bearbejde og bekæmpe racisme og fremme værdig sameksistens i Danmark. </p>
                         <button class="se_mere_venstre kompetencer_knap">Se mere</button>
                     </div>
 
                 </div>
 
-                <div class="kompetencer_midten kompetencer_box">
-                    <div class="tekst">
+                <div class="kompetencer_midten kompetencer_column">
+                    <div class="text_padding">
 
-                        <h3 class="kompetencer_midten_dato kompetencer_dato">Festivaler</h3>
+                        <h2 class="kompetencer_midten_dato kompetencer_dato">Festivaler</h2>
                         <p class="kompetencer_midten_overskrift kompetencer_overskrift">Når Naiha Khiljee optræder med sine stærke tekster. kommer der noget vigtigt og enestående frem. Hun er en stærk poetisk rollemodel, som optræder i en konstellation, hvor ord og musik forstærker hinanden.
 
 
@@ -1009,10 +1008,10 @@
 
 
 
-                <div class="kompetencer_hojre kompetencer_box">
-                    <div class="tekst">
+                <div class="kompetencer_hojre kompetencer_column">
+                    <div class="text_padding">
 
-                        <h3 class="kompetencer_hojre_dato kompetencer_dato">Kære søster</h3>
+                        <h2 class="kompetencer_hojre_dato kompetencer_dato">Kære søster</h2>
                         <p class="kompetencer_hojre_overskrift kompetencer_overskrift">Kære søster er en samling skarpe og humoristiske digte om at vokse op som datter af en immigrant, om kampen mod forskelsbehandling og længslen efter at høre hjemme et sted i verden. Naiha Khiljee giver et nyt perspektiv på debatten om feminisme og racisme.</p>
                         <button class="se_mere_venstre kompetencer_knap">Se mere</button>
                     </div>
@@ -1104,11 +1103,11 @@
     <footer>
 
         <article class="footer_indhold">
-            <div class="venstree">
-                <h5 class="navn"></h5>
-                <h6 class="titel"></h6>
+            <div class="row_venstre">
+                <h4 class="navn"></h4>
+                <h4 class="titel"></h4>
             </div>
-            <div class="social">
+            <div class="row_hojre">
                 <img class="face social_ikon">
                 <img class="insta social_ikon_pad">
                 <img class="linkedin social_ikon_pad">
@@ -1178,16 +1177,16 @@
 
             document.querySelector(".pres_overskrift").textContent = side.forside_press_sektion_overskrift;
 
-            document.querySelector(".press_venstre_dato").textContent = side.forside_press_venstre_tekst;
-            document.querySelector(".press_venstre_overskrift").textContent = side.forside_press_venstre_overskrift;
+            document.querySelector(".press_venstre_overskrift").textContent = side.forside_press_venstre_tekst;
+            document.querySelector(".press_venstre_dato").textContent = side.forside_press_venstre_overskrift;
             document.querySelector(".press_las_artikel_venstre").textContent = side.forside_press_venstre_knap_tekst;
 
-            document.querySelector(".press_midten_dato").textContent = side.forside_press_midten_tekst;
-            document.querySelector(".press_midten_overskrift").textContent = side.forside_press_midten_overskrift;
+            document.querySelector(".press_midten_overskrift").textContent = side.forside_press_midten_tekst;
+            document.querySelector(".press_midten_dato").textContent = side.forside_press_midten_overskrift;
             document.querySelector(".press_las_artikel_midten").textContent = side.forside_press_midten_knap_tekst;
 
-            document.querySelector(".press_hojre_dato").textContent = side.forside_press_hojre_tekst;
-            document.querySelector(".press_hojre_overskrift").textContent = side.forside_press_hojre_overskrift;
+            document.querySelector(".press_hojre_overskrift").textContent = side.forside_press_hojre_tekst;
+            document.querySelector(".press_hojre_dato").textContent = side.forside_press_hojre_overskrift;
             document.querySelector(".press_las_artikel_hojre").textContent = side.forside_press_hojre_knap_tekst;
 
             document.querySelector(".kontakt_overskrift").textContent = side.forside_kontakt_overskrift;
