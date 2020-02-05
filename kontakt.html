@@ -39,7 +39,7 @@
         right: 10%
     }
 
-    .knapper {
+    .nav_knapper {
         padding-right: 10%;
     }
 
@@ -182,12 +182,12 @@
 
     /* ---- Kontakt sektion -----Overskrifter----*/
 
-    .kontakt_container_h1 {
+    .kontakt_container_h2 {
         padding-bottom: 35px;
 
     }
 
-    .Kontakt_venstre_h2 {
+    .Kontakt_venstre_overskrift {
 
         margin-right: 9vw;
         color: #ffffff;
@@ -354,7 +354,7 @@
 
     /* ----Mest genbrugte regler---------*/
 
-    .tekst {
+    .text_padding {
         padding: 50px;
     }
 
@@ -504,7 +504,7 @@
 
 
 
-        .tekst {
+        .text_padding {
             padding: 0vw;
         }
 
@@ -548,7 +548,7 @@
 
 
 
-                <div class="knapper">
+                <div class="nav_knapper">
                     <a class="nav_om_knap" href="om.html"> Om Naiha</a>
                     <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
                     <div class="nav_line"></div>
@@ -569,8 +569,8 @@
 
             <div class="kontakt_venstre kontakt_container img_baggrund">
 
-                <div class="tekst">
-                    <h3 class="Kontakt_venstre_h2"></h3>
+                <div class="text_padding">
+                    <h2 class="Kontakt_venstre_overskrift"></h2>
                     <img class="Kontakt_venstre_ikon_left social_ikon" src="">
                     <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
                     <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
@@ -579,8 +579,8 @@
 
 
             <div class="kontakt_midten kontakt_container">
-                <div class="tekst">
-                    <h3 class="Kontakt_midten_h2 kontakt_container_h1"></h3>
+                <div class="text_padding">
+                    <h2 class="Kontakt_midten_overskrift kontakt_container_h2"></h2>
 
                     <div class="top">
                         <img class="Kontakt_midten_ikon_top kontakt_ikon" src="">
@@ -600,8 +600,8 @@
             </div>
 
             <div class="kontakt_hojre kontakt_container">
-                <div class="tekst">
-                    <h3 class="Kontakt_hojre_h2 kontakt_container_h1"></h3>
+                <div class="text_padding">
+                    <h2 class="Kontakt_hojre_overskrift kontakt_container_h2"></h2>
 
                     <div class="top">
                         <img class="Kontakt_hojre_ikon_top kontakt_ikon" src="">
@@ -719,11 +719,11 @@
     <footer>
 
         <article class="footer_indhold">
-            <div class="venstree">
-                <h5 class="navn"></h5>
-                <h6 class="titel"></h6>
+            <div class="row_venstre">
+                <h4 class="navn"></h4>
+                <h4 class="titel"></h4>
             </div>
-            <div class="social">
+            <div class="row_hojre">
                 <img class="face social_ikon">
                 <img class="insta social_ikon_pad">
                 <img class="linkedin social_ikon_pad">
@@ -755,7 +755,7 @@
 
             document.querySelector(".Kontakt_h1").textContent = side.kontakt_overskrift;
 
-            document.querySelector(".Kontakt_venstre_h2").textContent = side.kontakt_overskrift_hojre_box;
+            document.querySelector(".Kontakt_venstre_overskrift").textContent = side.kontakt_overskrift_hojre_box;
 
             document.querySelector(".Kontakt_venstre_ikon_left").src = side.kontakt_tekst_social_hvid.guid;
 
@@ -766,7 +766,7 @@
             document.querySelector(".linkedin").src = side.kontakt_tekst_social_hvid3.guid;
 
 
-            document.querySelector(".Kontakt_midten_h2").textContent = side.kontakt_overskrift_mid_box;
+            document.querySelector(".Kontakt_midten_overskrift").textContent = side.kontakt_overskrift_mid_box;
 
             document.querySelector(".Kontakt_midten_ikon_top").src = side.kontakt_mail_hvid.guid;
 
@@ -781,7 +781,7 @@
             document.querySelector(".Kontakt_midten_tekst_bottom").textContent = side.kontakt_tekst_mid_map;
 
 
-            document.querySelector(".Kontakt_hojre_h2").textContent = side.kontakt_overskrift_venstre_box;
+            document.querySelector(".Kontakt_hojre_overskrift").textContent = side.kontakt_overskrift_venstre_box;
 
             document.querySelector(".Kontakt_hojre_ikon_top").src = side.kontakt_mail_hvid.guid;
 
