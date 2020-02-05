@@ -9,6 +9,10 @@
 </head>
 
 <style>
+    .hid {
+        display: none;
+    }
+
     /*-----------Navigation desktop-----------*/
 
     #navigationsmenu {
@@ -77,37 +81,44 @@
     p,
     h1,
     h2,
+    h3,
+    h4,
     a {
         font-family: Kepler Std Display;
         color: #A67246;
     }
 
-    p {
-        font-size: 5vw;
-        /*        font-size: 1.5rem;*/
-        padding-bottom: 50px;
+    h5,
+    h6 {
+        font-family: Kepler Std Display;
+        color: #ffffff;
     }
 
+    p {
+        padding-bottom: 50px;
+        font-size: 1.1rem;
+    }
+
+
     h1 {
-        font-size: 9vw;
-        /*        font-size: 2.5rem;*/
         text-align: center;
+        font-size: 2rem
     }
 
     h2 {
-
-        font-size: 6vw;
-        /*        font-size: 1.9rem;*/
+        font-size: 1.7em;
     }
 
     h3 {
-        font-size: 4vw;
-        /*        font-size: 1.3rem;*/
+        font-size: 1.5em
     }
 
     a {
-        font-size: 3.2vw;
-        padding-bottom: 5vw;
+        padding-bottom: 24px;
+    }
+
+    button {
+        font-size: 1em
     }
 
     /*-------------Kontakt--------------*/
@@ -115,9 +126,11 @@
     /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
 
 
-    #kontakt {
+    #kontakt {}
+
+    #kontakt_formular {
         background-color: #D8F0F6;
-        margin-top: 10vw;
+        margin-top: 50px;
     }
 
     .kontakt_indhold {
@@ -129,11 +142,11 @@
 
     .kontakt_container {
 
-        height: 80vw;
-        width: 70vw;
-        justify-content: center;
+        height: 399px;
+        width: 350px;
+
         display: flex;
-        margin-top: 10vw;
+        margin-top: 48px;
         box-shadow: 6px 0px 6px darkgrey;
         border: 1px #A67246 solid;
         background-color: #ffffff;
@@ -151,10 +164,11 @@
 
 
     .kontakt_ikon {
-        height: 5vw;
-        width: 5vw;
-        padding-right: 5vw;
-        padding-bottom: 5vw;
+        height: 32px;
+        width: 32px;
+
+        padding-right: 24px;
+        padding-bottom: 24px;
     }
 
 
@@ -169,7 +183,7 @@
     /* ---- Kontakt sektion -----Overskrifter----*/
 
     .kontakt_container_h1 {
-        padding-bottom: 7vw;
+        padding-bottom: 35px;
 
     }
 
@@ -190,22 +204,16 @@
 
     .kontakt_formular_indhold {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
     }
 
     /* ----Kontakt-Formular-sektion -----Overskrifter----*/
 
-    .kontakt_formular_overskrift {
-        text-align: center;
-        font-size: 7vw;
-    }
+    .kontakt_formular_overskrift {}
 
     /* ----Kontakt-Formular-sektion -----Tekst----*/
 
-    .kontakt_formular_tekst {
-        font-size: 4vw;
-
-    }
+    .kontakt_formular_tekst {}
 
     /* ----Kontakt-Formular-sektion-----Knap----*/
 
@@ -213,15 +221,16 @@
     .form_knap {
         display: flex;
         justify-content: center;
+
     }
 
 
     #singlebutton {
-        margin-top: 5vw;
-        width: 35vw;
-        height: 5vw;
+        margin-top: 35px;
+        width: 275px;
+        height: 35px;
         text-align: left;
-        font-size: 2vw;
+
     }
 
 
@@ -233,6 +242,7 @@
     .formular {
         display: flex;
         justify-content: center;
+        padding-bottom: 55px
     }
 
     .formular_container {
@@ -253,16 +263,17 @@
     }
 
     input[type=text] {
-        width: 35vw;
-        padding: 10px;
+        padding-right: 110px;
+        padding-bottom: 20px;
+
         box-sizing: border-box;
         border: 1px solid #A67246;
         border-radius: 3px;
     }
 
     textarea {
-        width: 35vw;
-        height: 20vw;
+        padding-right: 110px;
+        padding-bottom: 60px;
         border-radius: 3px;
         border: 1px solid #A67246;
 
@@ -270,44 +281,81 @@
     }
 
     .form-group {
-        padding: 2vw;
+        padding: 14px;
+
 
     }
 
     fieldset {
-        padding: 6vw;
+        padding: 14px;
+        background-color: #ffffff;
+
+
     }
 
 
 
     /*-------------Footer--------------*/
-
     footer {
         background-color: #3A3550;
-
     }
+
 
     .footer_indhold {
-        display: grid;
-        justify-content: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 9vw;
+        padding-right: 9vw;
     }
 
 
-    .footer_overskrift {
-        text-align: left;
+
+    .venstree {
+        display: flex;
+        flex-direction: column;
+
     }
 
+    .navn {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    .titel {
+        margin: 0;
+        font-size: 0.7rem
+    }
 
     .social {
-        display: flex;
-        justify-content: center;
-        padding-top: 5vw;
+        align-self: center
+    }
+
+    .footer_ikon {
+        height: 5vw;
+        width: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+    }
+
+    .social_ikon_pad {
+        width: 20px;
+        height: 20px;
+
+        padding-left: 19px;
+    }
+
+    .social_ikon {
+        width: 20px;
+        height: 20px;
+
     }
 
     /* ----Mest genbrugte regler---------*/
 
     .tekst {
-        padding: 10vw;
+        padding: 50px;
     }
 
     .top {
@@ -325,24 +373,14 @@
         align-items: center;
     }
 
-    .social_ikon_pad {
-        height: 4vw;
-        width: 4vw;
-        padding-left: 5vw;
-    }
 
-    .social_ikon {
-        height: 4vw;
-        width: 4vw;
-    }
 
     button {
-        width: 40vw;
-        height: 10vw;
+        width: 200px;
+        height: 50px;
         background-color: #ffffff;
         border: none;
         margin-top: 15vw;
-        font-size: 3vw;
         color: #A67246;
         border: 1px solid #A67246;
     }
@@ -356,29 +394,11 @@
 
     @media screen and (min-width:768px) {
 
+        .hid {
+            display: block;
+        }
+
         /*-----------fonts & variables-----------*/
-
-        p {
-            font-size: 2vw;
-            padding-bottom: 50px;
-        }
-
-        h1 {
-            font-size: 3.7vw;
-        }
-
-        h2 {
-            font-size: 2vw;
-        }
-
-        h3 {
-            font-size: 2vw;
-        }
-
-        a {
-            font-size: 1.3vw;
-            padding-bottom: 5vw;
-        }
 
 
         /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
@@ -417,7 +437,6 @@
         button {
             width: 20vw;
             height: 5vw;
-            font-size: 2vw;
             margin-left: 3vw;
             margin-top: 8vw;
 
@@ -431,18 +450,16 @@
         #kontakt_formular {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 100px;
-            margin-bottom: 100px;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
 
         .kontakt_formular_overskrift {
-            font-size: 4vw;
             text-align: left;
             margin: 0;
         }
 
         .kontakt_formular_tekst {
-            font-size: 2vw;
             width: 30vw;
             text-align: left;
         }
@@ -454,21 +471,32 @@
 
         #singlebutton {
             margin: 0;
-            font-size: 1vw;
             margin-top: 6vw;
             height: 3vw;
+            width: 35vw;
+
+        }
+
+        input[type=text] {
+            width: 35vw;
+
         }
 
         textarea {
             height: 10vw;
+            width: 35vw;
+
         }
 
         .form-group {
             padding: 1vw;
+
+
         }
 
         fieldset {
             padding: 1vw;
+
         }
 
 
@@ -542,7 +570,7 @@
             <div class="kontakt_venstre kontakt_container img_baggrund">
 
                 <div class="tekst">
-                    <h2 class="Kontakt_venstre_h2"></h2>
+                    <h3 class="Kontakt_venstre_h2"></h3>
                     <img class="Kontakt_venstre_ikon_left social_ikon" src="">
                     <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
                     <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
@@ -552,7 +580,7 @@
 
             <div class="kontakt_midten kontakt_container">
                 <div class="tekst">
-                    <h2 class="Kontakt_midten_h2 kontakt_container_h1"></h2>
+                    <h3 class="Kontakt_midten_h2 kontakt_container_h1"></h3>
 
                     <div class="top">
                         <img class="Kontakt_midten_ikon_top kontakt_ikon" src="">
@@ -573,7 +601,7 @@
 
             <div class="kontakt_hojre kontakt_container">
                 <div class="tekst">
-                    <h2 class="Kontakt_hojre_h2 kontakt_container_h1"></h2>
+                    <h3 class="Kontakt_hojre_h2 kontakt_container_h1"></h3>
 
                     <div class="top">
                         <img class="Kontakt_hojre_ikon_top kontakt_ikon" src="">
@@ -600,33 +628,30 @@
 
 
     <section id="kontakt_formular">
-        <article class="kontakt_formular_indhold ">
+        <article class="kontakt_formular_indhold">
 
-            <div class="tekst">
+            <div class="kontakt_tekst">
                 <h1 class="kontakt_formular_overskrift"></h1>
                 <p class="kontakt_formular_tekst"></p>
+                <div class="hid">
+                    <div class="top">
+                        <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_top"></a>
+                    </div>
 
-                <div class="top">
-                    <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_top"></a>
-                </div>
+                    <div class="mid">
+                        <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_mid"></a>
+                    </div>
 
-                <div class="mid">
-                    <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_mid"></a>
-                </div>
-
-                <div class="bottom">
-                    <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
-                    <a class="kontakt_formular_tekst_bottom"></a>
+                    <div class="bottom">
+                        <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
+                        <a class="kontakt_formular_tekst_bottom"></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="social_buttons">
-                <img class="social_buttons_left social_ikon" src="">
-                <img class="social_buttons_mid social_ikon_pad" src="">
-                <img class="social_buttons_right social_ikon_pad" src="">
-            </div>
+
         </article>
 
 
@@ -692,33 +717,22 @@
 
 
     <footer>
+
         <article class="footer_indhold">
-            <div class="tekst">
-                <h1 class="footer_overskrift"></h1>
-
-                <div class="top">
-                    <img class="email kontakt_ikon">
-                    <a class="email_tekst "></a>
-                </div>
-
-                <div class="mid ">
-                    <img class="tlf kontakt_ikon">
-                    <a class="tlf_tekst  "></a>
-                </div>
-
-                <div class="bottom ">
-                    <img class="map kontakt_ikon">
-                    <a class="map_tekst "></a>
-                </div>
-                <div class="social">
-                    <img class="face social_ikon">
-                    <img class="insta social_ikon_pad">
-                    <img class="linkedin social_ikon_pad">
-                </div>
+            <div class="venstree">
+                <h5 class="navn"></h5>
+                <h6 class="titel"></h6>
             </div>
+            <div class="social">
+                <img class="face social_ikon">
+                <img class="insta social_ikon_pad">
+                <img class="linkedin social_ikon_pad">
+            </div>
+
+
+
         </article>
     </footer>
-
     <script src="footer.js"></script>
     <script>
         let side;
@@ -800,11 +814,6 @@
 
             document.querySelector(".kontakt_formular_ikon_bottom").src = side.kontakt_mail_hvid.guid;
 
-            document.querySelector(".social_buttons_left").src = side.kontakt_tekst_social_brun.guid;
-
-            document.querySelector(".social_buttons_mid").src = side.kontakt_tekst_social_brun1.guid;
-
-            document.querySelector(".social_buttons_right").src = side.kontakt_tekst_social_brun2.guid;
 
 
 
