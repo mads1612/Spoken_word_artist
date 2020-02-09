@@ -9,26 +9,37 @@
 </head>
 
 <style>
+    :root {
+        --white: #ffffff;
+        --brown: #A67246;
+        --turquoise: #D8F0F6;
+        --dark: #3A3550;
+
+    }
+
     .hid {
         display: none;
     }
 
     /*-----------Navigation desktop-----------*/
 
+    .burgermenu_ikon {
+        max-width: 40px;
+        padding-top: 35px;
+    }
+
     #navigationsmenu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #3A3550;
         height: 90px;
+        background-color: var(--dark);
+
     }
 
     header nav a {
         text-decoration: none;
-        font-size: 1.65rem;
         line-height: 5rem;
-        color: #ffffff;
-
     }
 
     .nav_line {
@@ -48,14 +59,11 @@
         padding-left: 5%;
     }
 
-    .nav_logo_knap {}
-
-
-    .nav_om_knap {}
-
     .nav_kontakt_knap {
+        display: none;
         padding-left: 80px;
     }
+
 
     /*-----------Diverse CSS-----------*/
 
@@ -187,7 +195,7 @@
 
     }
 
-    .Kontakt_venstre_overskrift {
+    .Kontakt_hojre_overskrift {
 
         margin-right: 9vw;
         color: #ffffff;
@@ -522,15 +530,6 @@
         }
 
     }
-
-
-
-    @media screen and (max-width:684px) {
-
-        nav {
-            display: none;
-        }
-    }
 </style>
 
 <body>
@@ -545,16 +544,12 @@
                     <div class="nav_line"></div>
                 </div>
 
-
-
-
                 <div class="nav_knapper">
-                    <a class="nav_om_knap" href="om.html"> Om Naiha</a>
+                    <img class="burgermenu_ikon" src="Group%204132.png" alt="menu ikon">
+
                     <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
-                    <div class="nav_line"></div>
 
                 </div>
-
 
             </div>
         </nav>
@@ -567,13 +562,13 @@
         <div class="line"></div>
         <article class="kontakt_indhold">
 
-            <div class="kontakt_venstre kontakt_container img_baggrund">
+            <div class="kontakt_hojre kontakt_container img_baggrund">
 
                 <div class="text_padding">
-                    <h2 class="Kontakt_venstre_overskrift"></h2>
-                    <img class="Kontakt_venstre_ikon_left social_ikon" src="">
-                    <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
-                    <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
+                    <h2 class="Kontakt_hojre_overskrift"></h2>
+                    <img class="Kontakt_hojre_ikon_left social_ikon" src="">
+                    <img class="Kontakt_hojre_ikon_mid social_ikon_pad" src="">
+                    <img class="Kontakt_hojre_ikon_right social_ikon_pad" src="">
                 </div>
             </div>
 
@@ -599,23 +594,23 @@
                 </div>
             </div>
 
-            <div class="kontakt_hojre kontakt_container">
+            <div class="kontakt_venstre kontakt_container">
                 <div class="text_padding">
-                    <h2 class="Kontakt_hojre_overskrift kontakt_container_h2"></h2>
+                    <h2 class="Kontakt_venstre_overskrift kontakt_container_h2"></h2>
 
                     <div class="top">
-                        <img class="Kontakt_hojre_ikon_top kontakt_ikon" src="">
-                        <a class="Kontakt_hojre_tekst_top"></a>
+                        <img class="Kontakt_venstre_ikon_top kontakt_ikon" src="">
+                        <a class="Kontakt_venstre_tekst_top"></a>
                     </div>
 
                     <div class="mid">
-                        <img class="Kontakt_hojre_ikon_mid kontakt_ikon" src="">
-                        <a class="Kontakt_hojre_tekst_mid"></a>
+                        <img class="Kontakt_venstre_ikon_mid kontakt_ikon" src="">
+                        <a class="Kontakt_venstre_tekst_mid"></a>
                     </div>
 
                     <div class="bottom">
-                        <img class="Kontakt_hojre_ikon_bottom kontakt_ikon" src="">
-                        <a class="Kontakt_hojre_tekst_bottom"></a>
+                        <img class="Kontakt_venstre_ikon_bottom kontakt_ikon" src="">
+                        <a class="Kontakt_venstre_tekst_bottom"></a>
                     </div>
                 </div>
             </div>
@@ -755,15 +750,15 @@
 
             document.querySelector(".Kontakt_h1").textContent = side.kontakt_overskrift;
 
-            document.querySelector(".Kontakt_venstre_overskrift").textContent = side.kontakt_overskrift_hojre_box;
+            document.querySelector(".Kontakt_hojre_overskrift").textContent = side.kontakt_overskrift_hojre_box;
 
-            document.querySelector(".Kontakt_venstre_ikon_left").src = side.kontakt_tekst_social_hvid.guid;
+            document.querySelector(".Kontakt_hojre_ikon_left").src = side.kontakt_social_hvid_ikon.guid;
 
-            document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_tekst_social_hvid2.guid;
+            document.querySelector(".Kontakt_hojre_ikon_mid").src = side.kontakt_social_hvid_ikon2.guid;
 
-            document.querySelector(".Kontakt_venstre_ikon_right").src = side.kontakt_tekst_social_hvid3.guid;
+            document.querySelector(".Kontakt_hojre_ikon_right").src = side.kontakt_social_hvid_ikon3.guid;
 
-            document.querySelector(".linkedin").src = side.kontakt_tekst_social_hvid3.guid;
+            document.querySelector(".linkedin").src = side.kontakt_social_hvid_ikon3.guid;
 
 
             document.querySelector(".Kontakt_midten_overskrift").textContent = side.kontakt_overskrift_mid_box;
@@ -781,19 +776,19 @@
             document.querySelector(".Kontakt_midten_tekst_bottom").textContent = side.kontakt_tekst_mid_map;
 
 
-            document.querySelector(".Kontakt_hojre_overskrift").textContent = side.kontakt_overskrift_venstre_box;
+            document.querySelector(".Kontakt_venstre_overskrift").textContent = side.kontakt_overskrift_venstre_box;
 
-            document.querySelector(".Kontakt_hojre_ikon_top").src = side.kontakt_mail_hvid.guid;
+            document.querySelector(".Kontakt_venstre_ikon_top").src = side.kontakt_mail_hvid.guid;
 
-            document.querySelector(".Kontakt_hojre_ikon_mid").src = side.kontakt_tlf_hvid.guid;
+            document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_tlf_hvid.guid;
 
-            document.querySelector(".Kontakt_hojre_ikon_bottom").src = side.kontakt_map_hvid.guid;
+            document.querySelector(".Kontakt_venstre_ikon_bottom").src = side.kontakt_map_hvid.guid;
 
-            document.querySelector(".Kontakt_hojre_tekst_top").textContent = side.kontakt_tekst_venstre_mail;
+            document.querySelector(".Kontakt_venstre_tekst_top").textContent = side.kontakt_tekst_venstre_mail;
 
-            document.querySelector(".Kontakt_hojre_tekst_mid").textContent = side.kontakt_tekst_venstre_tlf;
+            document.querySelector(".Kontakt_venstre_tekst_mid").textContent = side.kontakt_tekst_venstre_tlf;
 
-            document.querySelector(".Kontakt_hojre_tekst_bottom").textContent = side.kontakt_tekst_venstre_map;
+            document.querySelector(".Kontakt_venstre_tekst_bottom").textContent = side.kontakt_tekst_venstre_map;
 
 
             document.querySelector(".kontakt_form_knap").textContent = side.kontakt_knap_tekst;
