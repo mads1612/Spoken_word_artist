@@ -8,22 +8,96 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
+    .om_text_padding {
+        padding: 10%;
+
+    }
+
+    .slide1 {
+        animation-duration: 1s;
+        animation-name: slide1;
+    }
+
+    .slide2 {
+        animation-duration: 1s;
+        animation-name: slide2;
+    }
+
+    .slide3 {
+        animation-duration: 1s;
+        animation-name: slide3;
+    }
+
+    @keyframes slide2 {
+
+        100% {
+            transform: translateX(-310px)
+        }
+    }
+
+    @keyframes slide3 {
+
+        100% {
+            transform: translateX(-620px)
+        }
+    }
+
+
+    @keyframes slide1 {
+
+        100% {
+            transform: translateX(0px)
+        }
+    }
+
+    .slider {
+        /* line them up horizontally */
+        margin: auto;
+        /* allow for scrolling */
+        overflow-x: auto;
+        width: 300px;
+        overflow: hidden;
+        /* make it smooth on iOS */
+
+    }
+
+    .slides {
+        display: flex;
+
+    }
+
+    .slider>div {}
+
+    .burgermenu_ikon {
+        max-width: 40px;
+        padding-top: 35px;
+    }
+
+    .kompetencer_text_padding {
+        padding: 31px;
+    }
+
+    :root {
+        --white: #ffffff;
+        --brown: #A67246;
+        --turquoise: #D8F0F6;
+        --dark: #3A3550;
+
+    }
+
     .kompetencer_indhold {
         display: flex;
         justify-content: center;
-        padding-top: 60px;
+        padding-top: 150px;
     }
 
     .kompetencer_column {
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
-        background-color: #ffffff;
-
-        height: 467px;
+        background-color: var(--white);
+        height: auto;
         width: 307px;
         text-align: center;
-
-
     }
 
     .kompetencer_midten {
@@ -34,31 +108,18 @@
         display: none;
     }
 
-
     #kompetencer p {
         text-align: left;
-        padding-bottom: 6px;
-
     }
-
-    #kompetencer h3 {}
-
-
 
     .kompetencer_knap {
         width: 100px;
         height: 42px;
         border: none;
-        color: #ffffff;
-        background-color: #A67246;
         border: 1px #ffffff solid;
-        /*
-         width: 90px;
-        height: 43px;
-*/
+        background-color: var(--brown);
+        color: var(--white);
     }
-
-
 
     .video_container {
         display: flex;
@@ -76,15 +137,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #3A3550;
         height: 90px;
+        background-color: var(--dark);
+
     }
 
     header nav a {
         text-decoration: none;
         line-height: 5rem;
-        color: #ffffff;
-
     }
 
     .nav_line {
@@ -104,17 +164,10 @@
         padding-left: 5%;
     }
 
-    .nav_logo_knap {}
-
-
-    .nav_om_knap {}
-
     .nav_kontakt_knap {
+        display: none;
         padding-left: 80px;
     }
-
-
-
 
     /*-----------Diveres CSS-----------*/
 
@@ -123,12 +176,12 @@
     }
 
     img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .background_color {
-        background-color: #D8F0F6;
-        padding-bottom: 20%;
+        padding-bottom: 150px;
+        background-color: var(--turquoise);
     }
 
     /*-----------fonts & variables-----------*/
@@ -140,19 +193,17 @@
     h4,
     a {
         font-family: Kepler Std Display;
-        color: #A67246;
+        color: var(--brown);
     }
 
     h5,
     h6 {
         font-family: Kepler Std Display;
-        color: #ffffff;
     }
 
     p {
         font-size: 1.1rem;
     }
-
 
     h1 {
         text-align: center;
@@ -161,6 +212,7 @@
 
     h2 {
         font-size: 1.7em;
+        text-align: center;
     }
 
     h3 {
@@ -175,16 +227,70 @@
         font-size: 1em
     }
 
-
     /*------Burgermenu-----*/
 
     /*-------------FORSIDEN--------------*/
 
+    /*~~~~~~~~~~Forside-start-sektion~~~~~~~~~~~~*/
 
-    /*~~~~~~~~~~Forside-splash-sektion~~~~~~~~~~~~*/
+    #forside_start {
+        background-color: var(--dark);
+    }
 
-    #forside_splash {
-        display: none;
+
+
+    .forside_start_indhold {
+        position: relative;
+        height: 635px;
+
+
+
+    }
+
+    .float_tekst {
+        position: absolute;
+        z-index: 2;
+        top: 20%;
+        left: 5%;
+        line-height: 0px;
+        width: 190px -webkit-text-fill-color: white;
+        /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .forside_start_indhold img {}
+
+    .forside_start_h1_top {
+        font-size: 5rem;
+        color: var(--white);
+        text-align: left;
+
+    }
+
+    .forside_start_h1_bunden {
+        font-size: 5rem;
+        color: var(--white);
+        text-align: left;
+
+    }
+
+    .forside_start_h2 {
+        font-size: 1.5rem;
+        color: var(--white);
+        -webkit-text-stroke-width: 0px;
+    }
+
+    .forside_start_billede {
+        padding-top: 60px;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+
+        right: 0;
+
+
+
     }
 
     /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
@@ -192,36 +298,29 @@
     #om_naiha {
         display: flex;
         justify-content: space-around;
-
     }
 
-    .om_naiha_indhold {}
-
-
-    .om_column {}
+    .om_column {
+        text-align: center;
+    }
 
     .om_line {
         border-top: 2px solid #A67246;
         width: 50px;
         height: 50px;
         margin: auto;
-
-
     }
 
     /* ---- Om sektion -----Overskrifter----*/
     .om_naiha_h1 {
-        text-align: center;
         margin: 0;
     }
 
     .om_naiha_h2 {
         line-height: 1.56;
-        text-align: center;
     }
 
     .om_naiha_tekst {
-        text-align: center;
         padding-bottom: 50px;
     }
 
@@ -231,26 +330,15 @@
     .naiha_historie {
         width: 150px;
         height: 50px;
-
-
-
-
-
-        background-color: #A67246;
+        background-color: var(--brown);
+        color: var(--white);
         border: none;
-        color: #ffffff;
-        /*
-           width: 150px;
-        height: 50px;
-*/
     }
 
     .om_knap {
         display: flex;
         justify-content: center;
     }
-
-
 
     /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
 
@@ -262,34 +350,19 @@
     .press_column {
         display: flex;
         justify-content: center;
-        align-self: center;
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
-        background-color: #ffffff;
-
+        background-color: var(--white);
         width: 325px;
         height: 351px;
-
-        /*
-
-        width: 350px;
-        height: 340px;
-*/
-        /*
-                width: 70vw;
-
-           height: 389px;
-        width: 350px;
-*/
     }
 
-
     .press_midten {
-        display: none;
+        display: ;
     }
 
     .press_hojre {
-        display: none;
+        display: ;
     }
 
     .press_line_overskrift {
@@ -302,50 +375,33 @@
     /* ---- Press sektion -----Overskrifter----*/
 
     .pres_overskrift {
-        text-align: center;
         margin: auto;
     }
 
-    .press_venstre_overskrift {
-        color: #A67246;
-    }
+    .press_venstre_overskrift,
+    .press_midten_overskrift,
+    .press_hojre_overskrift {
+        text-align: left;
 
-    .press_venstre_dato {
-        color: #A67246;
     }
-
 
     /* ---- Press sektion -----Tekst----*/
 
     .press_tekst_padding {
         padding: 35px;
         padding-top: 81px;
-
     }
 
     /* ---- Press sektion -----Knap----*/
 
     .press_knap {
-        /*
-        width: 20vw;
-        height: 8.5vw;
-*/
-
+        background-color: var(--brown);
+        color: var(--white);
         width: 100px;
         height: 42px;
-
-
         border: none;
-        color: #ffffff;
-        background-color: #A67246;
         border: 1px #ffffff solid;
-        /*
-  width: 90px;
-        height: 43px;
-*/
     }
-
-
 
     /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
 
@@ -365,38 +421,26 @@
     .event_indhold {
         display: flex;
         justify-content: center;
-        text-align: center;
-
     }
+
+
 
     .event_box {
         box-shadow: 6px 0px 6px grey;
         border: 1px #A67246 solid;
-        background-color: #ffffff;
         height: 467px;
         width: 307px;
-
-
-        /*
-        height: 550px;
-        width: 350px;
-*/
-
-        /*        height: 450px;
-        width: 350px;
-        */
-        /*
-        height: 90vw;
-        width: 70vw;
-*/
+        text-align: center;
+        background-color: var(--white);
     }
 
+
     .event_midten {
-        display: none;
+        display: ;
     }
 
     .event_hojre {
-        display: none;
+        display: ;
     }
 
     .event_line {
@@ -406,37 +450,24 @@
         margin: auto;
     }
 
-
     /* ---- Event sektion -----Overskrifter----*/
     .event_section_overskrift {
-        text-align: center;
         margin: auto;
         padding-top: 100px;
     }
-
 
     /* ---- Event sektion -----Tekst----*/
 
     /* ---- Event sektion -----Knap----*/
 
     .event_knap {
-        /*
-        width: 20vw;
-        height: 8.5vw;
-*/
+        background-color: var(--brown);
+        color: var(--white);
         width: 88px;
         height: 39px;
         border: none;
-        color: #ffffff;
-        background-color: #A67246;
         border: 1px #ffffff solid;
-        /*
-         width: 90px;
-        height: 43px;
-*/
     }
-
-
 
     /*~~~~~~~~~~Citat-sektion~~~~~~~~~~~~*/
 
@@ -447,7 +478,6 @@
     }
 
     .citat_overskrift {
-        text-align: center;
         padding-bottom: 82px;
     }
 
@@ -458,11 +488,6 @@
         flex-direction: column;
     }
 
-    .social_overskrift {
-        text-align: center
-    }
-
-
     .face_feed {
         border: 2px solid #A67246
     }
@@ -471,7 +496,6 @@
         margin-top: 60px;
         margin-bottom: 100px;
     }
-
 
     .social_box {
 
@@ -485,37 +509,36 @@
     /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
 
     #kontakt {
-        background-color: #3A3550;
+        background-color: var(--dark);
     }
 
     .kontakt_indhold {
         display: flex;
         flex-direction: column;
-        text-align: center;
         align-items: center;
-
-
     }
 
     .kontakt_line {
         border-top: 1px solid #ffffff;
         width: 80vw;
         margin: auto;
-        margin-top: 249px;
+        margin-top: 100px;
     }
 
     /* ---- Kontakt sektion -----Overskrifter----*/
     .kontakt_overskrift {
         padding-top: 100px;
-        color: #ffffff;
+        color: var(--white);
+        font-size: 2rem;
     }
 
     /* ---- Kontakt sektion -----Tekst----*/
 
     .kontakt_tekst {
-        color: #ffffff;
-
+        color: var(--white);
+        font-size: 1.2rem;
     }
+
 
     /* ---- Kontakt sektion -----Knap----*/
 
@@ -524,23 +547,17 @@
         margin-top: 15vw;
         width: 40vw;
         height: 10vw;
-        background-color: #A67246;
         border: none;
-        color: #ffffff;
-        /*
-          width: 200px;
-        height: 50px;
-*/
+        background-color: var(--brown);
+        color: var(--white);
     }
 
     /*~~~~~~~~~~Footer~~~~~~~~~~~~*/
 
 
-
     footer {
-        background-color: #3A3550;
+        background-color: var(--dark);
     }
-
 
     .footer_indhold {
         display: flex;
@@ -549,9 +566,8 @@
         padding-bottom: 40px;
         padding-left: 9vw;
         padding-right: 9vw;
+        color: var(--white);
     }
-
-
 
     .row_venstre {
         display: flex;
@@ -562,11 +578,15 @@
     .navn {
         margin: 0;
         font-size: 1.3rem;
+        color: var(--white);
+
     }
 
     .titel {
         margin: 0;
-        font-size: 0.7rem
+        font-size: 0.7rem;
+        color: var(--white);
+
     }
 
     .row_venstre {
@@ -594,7 +614,6 @@
     }
 
 
-
     /* ----Mest genbrugte regler---------*/
 
 
@@ -604,17 +623,76 @@
 
     @media screen and (min-width:768px) {
 
+        .forside_start_h1_top {
+            font-size: 8rem;
 
 
+        }
 
-        .social_box {
+        .forside_start_h1_bunden {
+            font-size: 8rem;
 
 
-            flex-direction: row;
-            justify-content: space-evenly;
+        }
+
+        .forside_start_h2 {
+            font-size: 2rem;
+
+            text-align: center;
         }
 
 
+        .float_tekst {
+            left: 11%;
+            top: 17%;
+        }
+
+        #forside_start {}
+
+
+        #eventslide {
+            display: none;
+        }
+
+        #pressslide {
+            display: none;
+        }
+
+        #kompetencerslide {
+            display: none;
+        }
+
+
+        .forside_start_indhold {
+
+            max-width: 67.750em;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+
+
+        .forside_start_billede {
+
+            min-width: 758px;
+            width: 70%;
+
+        }
+
+        /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
+
+
+        /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
+
+        .om_column {
+            width: 84vw;
+        }
+
+        .paragraph_box {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
 
         .kompetencer_indhold {
             justify-content: space-evenly;
@@ -628,97 +706,15 @@
             display: flex;
         }
 
-        #kompetencer p {}
-
-        #kompetencer h3 {
-            text-align: center;
-        }
-
-
-
         .kompetencer_column {
-            justify-content: center;
-            width: 29vw;
-            height: 56vw;
+            max-width: 30vw;
+            height: auto;
         }
 
 
-        /*
-        p {
-            padding-bottom: 50px;
-        }
-
-        h1 {
-            font-size: rem;
-        }
-
-        h2 {
-            font-size: 1.5em;
-
-        }
-
-        h3 {
-            font-size: 1.2em;
-        }
-
-        a {
-            padding-bottom: 5vw;
-        }
-*/
-
-
-        /*
-         p {
-            padding-bottom: 50px;
-             font-size: 2.vw
-        }
-
-        h1 {
-            font-size: 4vw;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            font-size: 3vw;
-
-        }
-
-        h3 {
-            font-size: 1.2em;
-            font-size: 2vw;
-        }
-
-        a {
-            padding-bottom: 5vw;
-        }
-*/
-
-
-        /*~~~~~~~~~~Om-sektion~~~~~~~~~~~~*/
-
-
-        .om_column {
-            width: 84vw;
-        }
-
-
-        .naiha_historie {
-            /*
-            width: 20vw;
-            height: 7vw;
-*/
-        }
-
-        .paragraph_box {
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
-
-        /*~~~~~~~~~~Event-sektion~~~~~~~~~~~~*/
         .event_venstre {
             display: flex;
         }
-
 
         .event_midten {
             display: flex;
@@ -728,55 +724,27 @@
             display: flex;
         }
 
-
         .event_indhold {
             justify-content: space-evenly;
         }
 
+        /*
         .event_box {
             justify-content: center;
-            /*
-            width: 29vw;
-            height: 49vw;
+            height: auto;
+            max-width: 30vw;
+        }
 */
-            width: 28vw;
-            height: 48vw;
-        }
 
-
-
-        .event_knap {
-            width: 13vw;
-            height: 4vw;
-        }
-
-        .event_line {
-            height: 107px;
-        }
-
-        /*~~~~~~~~~~Citat-sektion~~~~~~~~~~~~*/
-
-        .citat_overskrift {
-            width: 933px;
-        }
-
-        .event_hojre_overskrift {
-
-            /*            width: 20vw*/
-        }
-
-
-        /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
 
         .press_indhold {
             justify-content: space-evenly;
         }
 
         .press_column {
-            width: 28vw;
-            height: 35vw;
+            height: auto;
+            max-width: 30vw;
         }
-
 
         .press_midten {
             display: flex;
@@ -786,25 +754,15 @@
             display: flex;
         }
 
-        .press_venstre_overskrift {
-            width: 24vw;
+
+
+        .press_tekst_padding {
+            padding: 6%;
         }
 
-
-        .press_knap {
-            width: 8.5vw;
-            height: 4.1vw;
+        .social_box {
+            flex-direction: row;
         }
-
-        /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
-
-        .kontakt_overskrift {}
-
-
-
-
-        .kontakt_tekst {}
-
 
         .kontakt_knap {
             margin-top: 5vw;
@@ -815,32 +773,36 @@
 
         .text_padding {
             padding: 41px;
-            /*        padding: 10vw;*/
-        }
-    }
-
-
-
-
-
-
-    @media screen and (min-width: 684px) {
-
-
-        .citat_overskrift {
-            width: 70vw;
         }
 
 
+        /*~~~~~~~~~~Citat-sektion~~~~~~~~~~~~*/
+
+        /*~~~~~~~~~~Press-sektion~~~~~~~~~~~~*/
 
 
     }
 
-    @media screen and (max-width:684px) {
+    @media screen and (min-width: 684px) {}
 
-        nav {
+    @media screen and (max-width:684px) {}
+
+    @media screen and (max-width:768px) {
+        #event {
             display: none;
         }
+
+        #press {
+            display: none;
+        }
+
+        #kompetencer {
+            display: none;
+        }
+
+
+    }
+
 </style>
 
 <body>
@@ -853,41 +815,41 @@
                     <div class="nav_line"></div>
                 </div>
 
-
-
-
                 <div class="nav_knapper">
-                    <a class="nav_om_knap" href="om.html"> Om Naiha</a>
+                    <img class="burgermenu_ikon" src="Group%204132.png" alt="menu ikon">
+
                     <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
-                    <div class="nav_line"></div>
 
                 </div>
-
 
             </div>
         </nav>
 
     </header>
 
-    <section id="forside_splash">
-        <article class="forside_splash_indhold">
+    <section id="forside_start">
+        <article class="forside_start_indhold">
+            <div class="float_tekst">
+                <h1 class="forside_start_h1_top"></h1>
+                <h1 class="forside_start_h1_bunden"></h1>
+                <h2 class="forside_start_h2"></h2>
 
-            <h1 class="forside_splash_h1"></h1>
-            <h2 class="forside_splash_h2"></h2>
-            <img class="forside_splash_billede" src="" alt="Morgen cykel">
+            </div>
+            <img class="forside_start_billede" src="" alt="forside billede af klient">
 
         </article>
     </section>
     <section id="om_naiha">
         <article class="om_naiha_indhold">
             <div class="om_column">
-                <div class="text_padding">
+                <div class="om_text_padding">
                     <h1 class="om_naiha_h1"></h1>
                     <div class="line om_line"></div>
                     <h2 class="om_naiha_h2"></h2>
                     <div class="paragraph_box">
                         <p class="om_naiha_tekst"></p>
                     </div>
+                    <!--denne knap burde fører til video sektion-->
                     <div class="om_knap">
                         <button class="naiha_historie"></button>
                     </div>
@@ -897,10 +859,74 @@
     </section>
     <section class="background_color">
 
-        <section id="event">
+        <section id="eventslide">
             <h1 class="event_section_overskrift">Events</h1>
             <div class="line event_line_overskrift"></div>
+            <div class="slider">
+                <div class="slides">
+                    <article class="event_indhold">
 
+                        <div id="slide1">
+                            <div class="event_venstre_slide event_box">
+
+                                <div class="text_padding ">
+
+                                    <h4 class="event_venstre_dato_slide event_dato"></h4>
+                                    <h2 class="event_venstre_overskrift_slide  event_overskrift"></h2>
+                                    <h3 class="event_venstre_lokation_slide event_lokation"></h3>
+                                    <div class="line event_line"></div>
+                                    <a href="https://www.facebook.com/events/548784048984869/"> <button class="se_mere_venstre_slide event_knap"></button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="slide2">
+
+                            <div class="event_midten_slide  event_box">
+                                <div class="text_padding ">
+
+                                    <h4 class="event_midten_dato_slide  event_dato"></h4>
+                                    <h2 class="event_midten_overskrift_slide  event_overskrift"></h2>
+                                    <h3 class="event_midten_lokation_slide  event_lokation"></h3>
+                                    <div class="line event_line"></div>
+                                    <a href="https://www.facebook.com/events/308945159700321/"> <button class="se_mere_midten_slide event_knap"></button></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="slide3">
+
+
+                            <div class="event_hojre_slide event_box">
+                                <div class="text_padding">
+
+                                    <h4 class="event_hojre_dato_slide event_dato"></h4>
+                                    <h2 class="event_hojre_overskrift_slide event_overskrift"></h2>
+                                    <h3 class="event_hojre_lokation_slide event_lokation"></h3>
+                                    <div class="line event_line"></div>
+                                    <a href="https://www.facebook.com/events/716799978808770/"> <button class="se_mere_hojre_slide event_knap"></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+            <div class="slidebuttons">
+                <a class="slidebutton1" href="#slide1">1</a>
+                <a class="slidebutton2" href="#slide2">2</a>
+                <a class="slidebutton3" href="#slide3">3</a>
+            </div>
+
+
+        </section>
+
+
+        <section id="event">
+
+            <h1 class="event_section_overskrift">Events</h1>
+            <div class="line event_line_overskrift"></div>
             <article class="event_indhold">
                 <div class="event_venstre event_box">
                     <div class="text_padding">
@@ -909,7 +935,7 @@
                         <h2 class="event_venstre_overskrift event_overskrift"></h2>
                         <h3 class="event_venstre_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
-                        <button class="se_mere_venstre event_knap"></button>
+                        <a href="https://www.facebook.com/events/548784048984869/"> <button class="se_mere_venstre event_knap"></button></a>
                     </div>
                 </div>
 
@@ -920,7 +946,7 @@
                         <h2 class="event_midten_overskrift event_overskrift"></h2>
                         <h3 class="event_midten_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
-                        <button class="se_mere_midten event_knap"></button>
+                        <a href="https://www.facebook.com/events/308945159700321/"> <button class="se_mere_midten event_knap"></button></a>
                     </div>
 
                 </div>
@@ -932,7 +958,7 @@
                         <h2 class="event_hojre_overskrift event_overskrift"></h2>
                         <h3 class="event_hojre_lokation event_lokation"></h3>
                         <div class="line event_line"></div>
-                        <button class="se_mere_hojre event_knap"></button>
+                        <a href="https://www.facebook.com/events/716799978808770/"> <button class="se_mere_hojre event_knap"></button></a>
                     </div>
                 </div>
             </article>
@@ -944,6 +970,56 @@
             </article>
         </section>
 
+
+        <section id="pressslide">
+            <h1 class="pres_overskrift"></h1>
+            <div class="line press_line_overskrift"></div>
+
+            <div class="slider">
+                <div class="slides">
+                    <article class="press_indhold">
+
+
+                        <div id="slide4">
+                            <div class="press_venstre_slide press_column">
+                                <div class="press_tekst_padding">
+                                    <h2 class="press_venstre_overskrift_slide"></h2>
+                                    <h4 class="press_venstre_dato_slide"></h4>
+                                    <a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg?fbclid=IwAR2XPK4qb7-XiNI23x5Yd4xhbZcOXZxvweg0BD86ZHBOzNMkoEJCFS5KgZY#!/"> <button class="press_las_artikel_venstre_slide press_knap"></button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="slide5">
+                            <div class="press_midten_slide press_column">
+                                <div class="press_tekst_padding">
+                                    <h2 class="press_midten_overskrift_slide"></h2>
+                                    <h4 class="press_midten_dato_slide"></h4>
+                                    <a href="https://www.bo-vest.dk/om-bo-vest/nyheder/nyheder-fra-bo-vest/2019/5/spirende-digtere-blandt-broendbys-unge/"><button class="press_las_artikel_midten_slide press_knap"></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="slide6">
+                            <div class="press_hojre_slide press_column">
+                                <div class="press_tekst_padding">
+                                    <h2 class="press_hojre_overskrift_slide"></h2>
+                                    <h4 class="press_hojre_dato_slide"></h4>
+                                    <a href="https://www.kbhplus.dk/ukoen-poesi-en-aften-i-feminismens-tegn.html"><button class="press_las_artikel_hojre_slide press_knap"></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="slidebuttons">
+            <a class="slidebutton1" href="#slide4">1</a>
+            <a class="slidebutton2" href="#slide5">2</a>
+            <a class="slidebutton3" href="#slide6">3</a>
+        </div>
+
+
+
         <section id="press">
             <h1 class="pres_overskrift"></h1>
             <div class="line press_line_overskrift"></div>
@@ -954,14 +1030,14 @@
                     <div class="press_tekst_padding">
                         <h2 class="press_venstre_overskrift"></h2>
                         <h4 class="press_venstre_dato"></h4>
-                        <button class="press_las_artikel_venstre press_knap"></button>
+                        <a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg?fbclid=IwAR2XPK4qb7-XiNI23x5Yd4xhbZcOXZxvweg0BD86ZHBOzNMkoEJCFS5KgZY#!/"> <button class="press_las_artikel_venstre press_knap"></button></a>
                     </div>
                 </div>
                 <div class="press_midten press_column">
                     <div class="press_tekst_padding">
                         <h2 class="press_midten_overskrift"></h2>
                         <h4 class="press_midten_dato"></h4>
-                        <button class="press_las_artikel_midten press_knap"></button>
+                        <a href="https://www.bo-vest.dk/om-bo-vest/nyheder/nyheder-fra-bo-vest/2019/5/spirende-digtere-blandt-broendbys-unge/"><button class="press_las_artikel_midten press_knap"></button></a>
                     </div>
                 </div>
 
@@ -969,55 +1045,112 @@
                     <div class="press_tekst_padding">
                         <h2 class="press_hojre_overskrift"></h2>
                         <h4 class="press_hojre_dato"></h4>
-                        <button class="press_las_artikel_hojre press_knap"></button>
+                        <a href="https://www.kbhplus.dk/ukoen-poesi-en-aften-i-feminismens-tegn.html"><button class="press_las_artikel_hojre press_knap"></button></a>
                     </div>
                 </div>
             </article>
         </section>
+
     </section>
+    <!--
     <section id="video">
         <div class="video_container">
 
             <video class="om_video" src="video/kogavideo_loop.mp4"></video>
         </div>
     </section>
+-->
     <section class="background_color">
+
+
+        <section id="kompetencerslide">
+
+            <div class="slider">
+                <div class="slides">
+                    <article class="press_indhold">
+
+                        <div id="slide7">
+                            <div class="kompetencer_venstre_slide kompetencer_column">
+                                <div class="kompetencer_text_padding">
+
+                                    <h2 class="kompetencer_venstre_overskrift_slide kompetencer_dato"></h2>
+                                    <p class="kompetencer_venstre_tekst_slide kompetencer_overskrift"></p>
+                                    <a href="https://www.facebook.com/Ditversitet/"> <button class="knap_venstre_slide kompetencer_knap"></button></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="slide8">
+
+                            <div class="kompetencer_midten_slide kompetencer_column">
+                                <div class="kompetencer_text_padding">
+
+                                    <h2 class="kompetencer_midten_overskrift_slide kompetencer_dato"></h2>
+                                    <p class="kompetencer_midten_tekst_slide kompetencer_overskrift"></p>
+                                    <a href="https://www.instagram.com/naihakhiljee/tagged/"> <button class="knap_midten_slide kompetencer_knap"></button></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="slide9">
+
+                            <div class="kompetencer_hojre_slide kompetencer_column">
+                                <div class="kompetencer_text_padding">
+
+                                    <h2 class="kompetencer_hojre_overskrift_slide kompetencer_dato"></h2>
+                                    <p class="kompetencer_hojre_tekst_slide kompetencer_overskrift"></p>
+                                    <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_indbundet_9788711918753"> <button class="knap_hojre_slide kompetencer_knap"></button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="slidebuttons">
+            <a class="slidebutton1" href="#slide7">1</a>
+            <a class="slidebutton2" href="#slide8">2</a>
+            <a class="slidebutton3" href="#slide9">3</a>
+        </div>
+
+
 
         <section id="kompetencer">
             <article class="kompetencer_indhold">
                 <div class="kompetencer_venstre kompetencer_column">
-                    <div class="text_padding">
+                    <div class="kompetencer_text_padding">
 
-                        <h2 class="kompetencer_venstre_dato kompetencer_dato">Ditversitet</h2>
-                        <p class="kompetencer_venstre_overskrift kompetencer_overskrift">Vores formål er at fremme værdige eksistensvilkår for borgere med etnisk minoritetsbaggrund i Danmark. Det gør vi ved at anvende faglig viden, personlige oplevelser og kreativitet til at bidrage med konstruktive værktøjer, der kan bearbejde og bekæmpe racisme og fremme værdig sameksistens i Danmark. </p>
-                        <button class="se_mere_venstre kompetencer_knap">Se mere</button>
+                        <h2 class="kompetencer_venstre_overskrift kompetencer_dato"></h2>
+                        <p class="kompetencer_venstre_tekst kompetencer_overskrift"></p>
+                        <a href="https://www.facebook.com/Ditversitet/"><button class="knap_venstre kompetencer_knap"></button></a>
                     </div>
 
                 </div>
 
                 <div class="kompetencer_midten kompetencer_column">
-                    <div class="text_padding">
+                    <div class="kompetencer_text_padding">
 
-                        <h2 class="kompetencer_midten_dato kompetencer_dato">Festivaler</h2>
-                        <p class="kompetencer_midten_overskrift kompetencer_overskrift">Når Naiha Khiljee optræder med sine stærke tekster. kommer der noget vigtigt og enestående frem. Hun er en stærk poetisk rollemodel, som optræder i en konstellation, hvor ord og musik forstærker hinanden.
+                        <h2 class="kompetencer_midten_overskrift kompetencer_dato"></h2>
+                        <p class="kompetencer_midten_tekst kompetencer_overskrift"></p>
+                        <a href="https://www.instagram.com/naihakhiljee/tagged/"><button class="knap_midten kompetencer_knap"></button></a>
 
 
-                        </p>
                     </div>
                 </div>
 
-
-
                 <div class="kompetencer_hojre kompetencer_column">
-                    <div class="text_padding">
+                    <div class="kompetencer_text_padding">
 
-                        <h2 class="kompetencer_hojre_dato kompetencer_dato">Kære søster</h2>
-                        <p class="kompetencer_hojre_overskrift kompetencer_overskrift">Kære søster er en samling skarpe og humoristiske digte om at vokse op som datter af en immigrant, om kampen mod forskelsbehandling og længslen efter at høre hjemme et sted i verden. Naiha Khiljee giver et nyt perspektiv på debatten om feminisme og racisme.</p>
-                        <button class="se_mere_venstre kompetencer_knap">Se mere</button>
+                        <h2 class="kompetencer_hojre_overskrift kompetencer_dato"></h2>
+                        <p class="kompetencer_hojre_tekst kompetencer_overskrift"></p>
+                        <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_indbundet_9788711918753"> <button class="knap_hojre kompetencer_knap"></button></a>
                     </div>
                 </div>
             </article>
         </section>
+
 
 
         <section id="social_feed">
@@ -1085,36 +1218,29 @@
                     </blockquote>
                 </div>
             </div>
-
         </section>
-
     </section>
 
     <section id="kontakt">
         <article class="kontakt_indhold">
             <h2 class="kontakt_overskrift"></h2>
             <h4 class="kontakt_tekst"></h4>
-            <button class="kontakt_knap"></button>
+            <a href="kontakt.html"><button class="kontakt_knap"></button></a>
             <div class="kontakt_line"></div>
-
         </article>
     </section>
 
     <footer>
-
         <article class="footer_indhold">
             <div class="row_venstre">
                 <h4 class="navn"></h4>
                 <h4 class="titel"></h4>
             </div>
             <div class="row_hojre">
-                <img class="face social_ikon">
-                <img class="insta social_ikon_pad">
-                <img class="linkedin social_ikon_pad">
+                <a href="https://www.facebook.com/naiha.khiljee"><img class="face social_ikon"></a>
+                <a href="https://www.instagram.com/naihakhiljee/tagged/"><img class="insta social_ikon_pad"> </a>
+                <a href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b"><img class="linkedin social_ikon_pad"> </a>
             </div>
-
-
-
         </article>
     </footer>
     <script src="header.js"></script>
@@ -1126,6 +1252,9 @@
         const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/forside/16";
         document.addEventListener("DOMContentLoaded", start);
 
+
+
+
         function start() {
             hentJson();
         }
@@ -1136,23 +1265,20 @@
             vis();
         }
 
-
-
-
-
         function vis() {
 
-            document.querySelector(".forside_splash_h1").textContent = side.forside_navn;
+            document.querySelector(".forside_start_h1_top").textContent = side.forside_start_overskrift;
+            document.querySelector(".forside_start_h1_bunden").textContent = side.forside_start_overskrift2;
 
-            document.querySelector(".forside_splash_h2").textContent = side.forside_profession;
+            document.querySelector(".forside_start_h2").textContent = side.forside_start_overskrift3;
 
-            document.querySelector(".forside_splash_billede").src = side.forside_splash.guid;
+            document.querySelector(".forside_start_billede").src = side.forside_start_billede.guid;
 
 
-            document.querySelector(".om_naiha_h1").textContent = side.om_overskrift;
+            document.querySelector(".om_naiha_h1").textContent = side.forside_om_overskrift;
             document.querySelector(".om_naiha_h2").textContent = side.forside_om_citat;
 
-            document.querySelector(".om_naiha_tekst").textContent = side.forside_tekst;
+            document.querySelector(".om_naiha_tekst").textContent = side.forside_om_tekst;
 
             document.querySelector(".naiha_historie").textContent = side.forside_om_knap_tekst;
 
@@ -1172,6 +1298,22 @@
             document.querySelector(".event_hojre_lokation").textContent = side.forside_event_tekst2_hojre;
             document.querySelector(".se_mere_hojre").textContent = side.forside_event_knap_tekst_hojre;
 
+
+            document.querySelector(".event_venstre_dato_slide").textContent = side.forside_event_tekst_venstre;
+            document.querySelector(".event_venstre_overskrift_slide").textContent = side.forside_event_overskrift_venstre;
+            document.querySelector(".event_venstre_lokation_slide").textContent = side.forside_event_tekst2_venstre;
+            document.querySelector(".se_mere_venstre_slide").textContent = side.forside_event_knap_tekst_venstre;
+
+            document.querySelector(".event_midten_dato_slide").textContent = side.forside_event_tekst_midten;
+            document.querySelector(".event_midten_overskrift_slide").textContent = side.forside_event_overskrift_midten;
+            document.querySelector(".event_midten_lokation_slide").textContent = side.forside_event_tekst2_midten;
+            document.querySelector(".se_mere_midten_slide").textContent = side.forside_event_knap_tekst_midten;
+
+            document.querySelector(".event_hojre_dato_slide").textContent = side.forside_event_tekst_hojre;
+            document.querySelector(".event_hojre_overskrift_slide").textContent = side.forside_event_overskrift_hojre;
+            document.querySelector(".event_hojre_lokation_slide").textContent = side.forside_event_tekst2_hojre;
+            document.querySelector(".se_mere_hojre_slide").textContent = side.forside_event_knap_tekst_hojre;
+
             document.querySelector(".citat_overskrift").textContent = side.forside_citat_overskrift;
 
 
@@ -1189,64 +1331,170 @@
             document.querySelector(".press_hojre_dato").textContent = side.forside_press_hojre_overskrift;
             document.querySelector(".press_las_artikel_hojre").textContent = side.forside_press_hojre_knap_tekst;
 
+            document.querySelector(".press_venstre_overskrift_slide").textContent = side.forside_press_venstre_tekst;
+            document.querySelector(".press_venstre_dato_slide").textContent = side.forside_press_venstre_overskrift;
+            document.querySelector(".press_las_artikel_venstre_slide").textContent = side.forside_press_venstre_knap_tekst;
+
+            document.querySelector(".press_midten_overskrift_slide").textContent = side.forside_press_midten_tekst;
+            document.querySelector(".press_midten_dato_slide").textContent = side.forside_press_midten_overskrift;
+            document.querySelector(".press_las_artikel_midten_slide").textContent = side.forside_press_midten_knap_tekst;
+
+            document.querySelector(".press_hojre_overskrift_slide").textContent = side.forside_press_hojre_tekst;
+            document.querySelector(".press_hojre_dato_slide").textContent = side.forside_press_hojre_overskrift;
+            document.querySelector(".press_las_artikel_hojre_slide").textContent = side.forside_press_hojre_knap_tekst;
+
+
+
+            document.querySelector(".kompetencer_venstre_overskrift").textContent = side.forside_kompetencer_venstre_overskrift;
+            document.querySelector(".kompetencer_venstre_tekst").textContent = side.forside_kompetencer_venstre_tekst;
+            document.querySelector(".knap_venstre").textContent = side.forside_kompetencer_knap_tekst;
+
+            document.querySelector(".kompetencer_midten_overskrift").textContent = side.forside_kompetencer_midten_overskrift;
+            document.querySelector(".kompetencer_midten_tekst").textContent = side.forside_kompetencer_midten_tekst;
+            document.querySelector(".knap_midten").textContent = side.forside_kompetencer_knap_tekst;
+
+            document.querySelector(".kompetencer_hojre_overskrift").textContent = side.forside_kompetencer_hojre_overskrift;
+            document.querySelector(".kompetencer_hojre_tekst").textContent = side.forside_kompetencer_hojre_tekst;
+            document.querySelector(".knap_hojre").textContent = side.forside_kompetencer_knap_tekst;
+
+
+
+            document.querySelector(".kompetencer_venstre_overskrift_slide").textContent = side.forside_kompetencer_venstre_overskrift;
+            document.querySelector(".kompetencer_venstre_tekst_slide").textContent = side.forside_kompetencer_venstre_tekst;
+            document.querySelector(".knap_venstre_slide").textContent = side.forside_kompetencer_knap_tekst;
+
+            document.querySelector(".kompetencer_midten_overskrift_slide").textContent = side.forside_kompetencer_midten_overskrift;
+            document.querySelector(".kompetencer_midten_tekst_slide").textContent = side.forside_kompetencer_midten_tekst;
+            document.querySelector(".knap_midten_slide").textContent = side.forside_kompetencer_knap_tekst;
+
+            document.querySelector(".kompetencer_hojre_overskrift_slide").textContent = side.forside_kompetencer_hojre_overskrift;
+            document.querySelector(".kompetencer_hojre_tekst_slide").textContent = side.forside_kompetencer_hojre_tekst;
+            document.querySelector(".knap_hojre_slide").textContent = side.forside_kompetencer_knap_tekst;
+
             document.querySelector(".kontakt_overskrift").textContent = side.forside_kontakt_overskrift;
             document.querySelector(".kontakt_tekst").textContent = side.forside_kontakt_tekst;
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
 
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
+
 
 
 <!--
 
-    .top {
-        display: flex;
-        align-items: center;
-    }
 
-    .mid {
-        display: flex;
-        align-items: center;
-    }
+/*
+        .social_box {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
 
-    .bottom {
-        display: flex;
-        align-items: center;
-    }
+        .kompetencer_indhold {
+            justify-content: space-evenly;
+        }
 
-    .footer_overskrift {
-        text-align: left;
-    }
+        .kompetencer_midten {
+            display: flex;
+        }
 
- <footer>
+        .kompetencer_hojre {
+            display: flex;
+        }
 
-        <article class="footer_indhold">
+        .kompetencer_column {
+            justify-content: center;
+            width: 29vw;
+            height: 56vw;
+        }
+*/
 
-            <div class="tekst">
-                <h1 class="footer_overskrift"></h1>
+        /*
+        .om_column {
+            width: 84vw;
+        }
 
-                <div class="top">
-                    <img class="email footer_ikon">
-                    <a class="email_tekst "></a>
-                </div>
+        .paragraph_box {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+*/
+   /*
 
-                <div class="mid ">
-                    <img class="tlf footer_ikon">
-                    <a class="tlf_tekst  "></a>
-                </div>
+        .event_box {
+            justify-content: center;
+            width: 28vw;
+            height: 48vw;
+        }
 
-                <div class="bottom ">
-                    <img class="map footer_ikon">
-                    <a class="map_tekst "></a>
-                </div>
-                <div class="social">
-                    <img class="face social_ikon">
-                    <img class="insta social_ikon_pad">
-                    <img class="linkedin social_ikon_pad">
-                </div>
-            </div>
-        </article>
-    </footer>-->
+        .event_knap {
+            width: 13vw;
+            height: 4vw;
+        }
+
+        .event_line {
+            height: 107px;
+        }
+*/
+
+  /*
+
+        .citat_overskrift {
+            width: 933px;
+        }
+*/
+
+    /*
+        .press_indhold {
+            justify-content: space-evenly;
+        }
+
+        .press_column {
+            width: 28vw;
+            height: 35vw;
+        }
+
+        .press_midten {
+            display: flex;
+        }
+
+        .press_hojre {
+            display: flex;
+        }
+
+        .press_venstre_overskrift {
+            width: 24vw;
+        }
+
+        .press_knap {
+            width: 8.5vw;
+            height: 4.1vw;
+        }
+*/
+
+        /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
+
+        /*
+        .kontakt_knap {
+            margin-top: 5vw;
+            width: 150px;
+            height: 45px;
+
+        }
+
+        .text_padding {
+            padding: 41px;
+        }
+*/
+        /*
+
+        .citat_overskrift {
+            width: 70vw;
+        }
+*/
+-->
