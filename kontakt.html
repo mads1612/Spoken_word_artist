@@ -8,14 +8,276 @@
     <link rel="stylesheet" href="">
 </head>
 
+
+
+
 <style>
-    :root {
-        --white: #ffffff;
-        --brown: #A67246;
-        --turquoise: #D8F0F6;
-        --dark: #3A3550;
+    .hidden {
+
+        visibility: hidden;
+    }
+
+    .appeareffekt {
+        opacity: 0;
+        transform: translateY(2em);
+        animation: titlesAppeartemp 900ms ease forwards;
+        animation-delay: 1000ms;
+    }
+
+
+    @keyframes titlesAppeartemp {
+        0% {
+            opacity: 0;
+            transform: translateY(2em)
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+
+
+    .slide-in-bottom {
+        animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        transform: translateX(-5%) scale(1);
+        animation-delay: 2000ms;
+        transition: transform 600m
+    }
+
+
+
+    .slide-in-bottom2 {
+        animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        transform: translateX(-5%) scale(1);
+        animation-delay: 2100ms;
+        transition: transform 600m
+    }
+
+    @-webkit-keyframes slide-in-bottom {
+        0% {
+            transform: translateY(150px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes titlesAppear {
+        0% {
+            opacity: 0;
+            transform: translateY(-5);
+
+        }
+
+        50% {
+            transform: translate3d(0, 0, 0) scaleY(1);
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+
+        }
+    }
+
+    .titleappear1 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+        animation-delay: 1500ms;
 
     }
+
+    .titleappear2 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+        animation-delay: 1600ms;
+    }
+
+    .titleappear3 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+
+        animation-delay: 1700ms;
+    }
+
+    .titleappear4 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+
+        animation-delay: 1800ms;
+    }
+
+    .titleappear5 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+
+        animation-delay: 1900ms;
+    }
+
+    .titleappear6 {
+        transform: translateY(2em);
+        animation: titlesAppear 900ms ease forwards;
+
+        animation-delay: 2000ms;
+    }
+
+
+    .kontakt_line {
+        border-top: 1px solid #ffffff;
+        width: 80vw;
+        margin: auto;
+        grid-area: line;
+    }
+
+    .kontakt_formular_overskrift,
+    .kontakt_formular_tekst {
+        color: var(--white);
+    }
+
+    .kontakt_knap {
+        width: 150px;
+        height: 50px;
+        border: none;
+        background-color: var(--brown);
+        color: var(--white);
+        grid-area: knap;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    @-webkit-keyframes slide-in-left {
+        0% {
+            transform: translateX(-1000px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+
+
+    .slide_in_left1 {
+        animation: slide-in-left 900ms ease forwards;
+        animation-delay: 900ms;
+
+    }
+
+    .slide_in_left2 {
+        animation: slide-in-left 900ms ease forwards;
+        animation-delay: 1000ms;
+    }
+
+    .slide_in_left3 {
+        animation: slide-in-left 900ms ease forwards;
+
+        animation-delay: 1100ms;
+    }
+
+    .slide_in_left4 {
+        animation: slide-in-left 900ms ease forwards;
+
+        animation-delay: 1200ms;
+    }
+
+    .slide_in_left5 {
+        animation: slide-in-left 900ms ease forwards;
+
+        animation-delay: 1300ms;
+    }
+
+
+
+    .scale_up_ver_bottom {
+        animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+
+
+
+    @-webkit-keyframes scale-up-ver-bottom {
+        0% {
+            transform: scaleY(0.4);
+            transform-origin: 0% 100%;
+            opacity: 0;
+        }
+
+        100% {
+            transform: scaleY(1);
+            transform-origin: 0% 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+
+
+    .slide-in-fwd-center {
+        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay: 3s;
+    }
+
+
+    @-webkit-keyframes slide-in-fwd-center {
+        0% {
+            transform: translateZ(-1400px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateZ(0);
+            opacity: 1;
+        }
+    }
+
+
+
+
+    .button {
+        display: inline-block;
+        position: relative;
+
+        cursor: pointer;
+        z-index: 0;
+        width: 220px;
+        height: 50px;
+        background-color: var(--brown);
+        color: var(--white);
+        border: none;
+    }
+
+    .button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--dark);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .3s ease-out;
+    }
+
+    .button:hover:before {
+        transform: scaleX(1);
+    }
+
+
+
 
     .hid {
         display: none;
@@ -34,7 +296,6 @@
         justify-content: space-between;
         height: 90px;
         background-color: var(--dark);
-
     }
 
     header nav a {
@@ -64,13 +325,11 @@
         padding-left: 80px;
     }
 
-
     /*-----------Diverse CSS-----------*/
 
     body {
         margin: 0;
     }
-
 
     img {
         width: 100%;
@@ -80,11 +339,18 @@
         resize: none;
     }
 
-    .hidden {
+    .hide {
         display: none !important;
     }
 
     /*-----------fonts & variables-----------*/
+
+    :root {
+        --white: #ffffff;
+        --brown: #A67246;
+        --turquoise: #D8F0F6;
+        --dark: #3A3550;
+    }
 
     p,
     h1,
@@ -133,82 +399,170 @@
 
     /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
 
+    #kontakt_naiha {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background-color: var(--turquoise);
 
-    #kontakt {}
-
-    #kontakt_formular {
-        background-color: #D8F0F6;
-        margin-top: 50px;
     }
 
-    .kontakt_indhold {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .kontakt_container {
-
-        height: 399px;
-        width: 350px;
-
-        display: flex;
-        margin-top: 48px;
-        box-shadow: 6px 0px 6px darkgrey;
-        border: 1px #A67246 solid;
-        background-color: #ffffff;
+    .Kontakt_h1 {
+        margin: 0;
     }
 
     .line {
-        border-top: 2px solid;
+        border-top: 2px solid #A67246;
         width: 50px;
-        color: #A67246;
+        height: 50px;
         margin: auto;
+    }
 
+    .kontakt_indhold {
+        justify-content: center;
+        display: grid;
+    }
+
+    .kontakt_venstre {
+        display: grid;
+        grid-template-areas:
+            "overskrift overskrift overskrift overskrift"
+            "icons icons icons icons";
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        width: 307px;
+        height: 380px;
+        align-items: center;
+        grid-template-rows: 170px 10px;
+        justify-content: center;
+        margin: auto;
     }
 
 
 
 
-    .kontakt_ikon {
-        height: 32px;
-        width: 32px;
 
-        padding-right: 24px;
-        padding-bottom: 24px;
+
+
+
+
+    .kontakt_container {
+        display: grid;
+        grid-template-areas:
+            "overskrift overskrift overskrift overskrift"
+            "navn navn navn navn"
+            "titel titel titel titel"
+            "tlf tlf tlf tlf"
+            "mail mail mail mail"
+            "adresse adresse adresse adresse"
+            "cvr cvr cvr cvr"
+
+
+        ;
+        box-shadow: 6px 0px 6px grey;
+        border: 1px #A67246 solid;
+        background-color: var(--white);
+        width: 307px;
+        height: 380px;
+        grid-template-rows: 100px 25px 25px 25px 25px 25px 90px;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+        /*
+                padding-top: 42px;
+        margin-top: 48px
+*/
+    }
+
+    .Kontakt_midten_navn,
+    .Kontakt_hojre_navn {
+        grid-area: navn;
+    }
+
+    .Kontakt_midten_titel,
+    .Kontakt_hojre_titel {
+
+        grid-area: titel;
+
+    }
+
+    .Kontakt_midten_tlf,
+    .Kontakt_hojre_tlf {
+        grid-area: tlf;
+    }
+
+    .Kontakt_midten_mail,
+    .Kontakt_hojre_mail {
+        grid-area: mail;
+    }
+
+    .Kontakt_midten_adresse,
+    .Kontakt_hojre_adresse {
+        grid-area: adresse;
+
+    }
+
+    .Kontakt_midten_cvr,
+    .Kontakt_hojre_cvr {
+        grid-area: cvr;
+
     }
 
 
 
     .img_baggrund {
         background-image: url(kontakt_naiha.png);
-        background-size: cover;
-
+        background-size: contain;
+        background-repeat: round;
     }
 
-
-    /* ---- Kontakt sektion -----Overskrifter----*/
-
-    .kontakt_container_h2 {
-        padding-bottom: 35px;
-
-    }
-
-    .Kontakt_hojre_overskrift {
-
-        margin-right: 9vw;
+    .Kontakt_venstre_overskrift {
+        grid-area: overskrift;
         color: #ffffff;
     }
 
+
+    .ikoner {
+        grid-area: icons;
+    }
+
+    .social_ikon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social_ikon_pad {
+        width: 20px;
+        height: 20px;
+        padding-left: 19px;
+    }
+
+    .kontakt_ikon {
+        height: 32px;
+        width: 32px;
+        padding-right: 24px;
+        padding-bottom: 24px;
+    }
+
+    .kontakt_container_h2 {
+        grid-area: overskrift;
+        /*        padding-bottom: 35px;*/
+    }
+
+    .form_knap {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ---- Kontakt sektion -----Overskrifter----*/
     /* ---- Kontakt sektion -----Tekst----*/
-
     /* ---- Kontakt sektion -----Knap----*/
-
-
 
     /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
 
+    #kontakt_formular {
+        background-color: var(--dark);
+        ;
+    }
 
     .kontakt_formular_indhold {
         display: flex;
@@ -216,36 +570,10 @@
     }
 
     /* ----Kontakt-Formular-sektion -----Overskrifter----*/
-
-    .kontakt_formular_overskrift {}
-
     /* ----Kontakt-Formular-sektion -----Tekst----*/
-
-    .kontakt_formular_tekst {}
-
     /* ----Kontakt-Formular-sektion-----Knap----*/
 
-
-    .form_knap {
-        display: flex;
-        justify-content: center;
-
-    }
-
-
-    #singlebutton {
-        margin-top: 35px;
-        width: 275px;
-        height: 35px;
-        text-align: left;
-
-    }
-
-
-
-
     /*~~~~~~~~~~Formular-sektion~~~~~~~~~~~~*/
-
 
     .formular {
         display: flex;
@@ -255,7 +583,13 @@
 
     .formular_container {
         background-color: #ffffff;
+    }
 
+    #singlebutton {
+        margin-top: 35px;
+        width: 275px;
+        height: 35px;
+        text-align: left;
     }
 
     /*
@@ -271,43 +605,36 @@
     }
 
     input[type=text] {
-        padding-right: 110px;
+        padding-right: 220px;
         padding-bottom: 20px;
-
         box-sizing: border-box;
         border: 1px solid #A67246;
         border-radius: 3px;
     }
 
     textarea {
-        padding-right: 110px;
-        padding-bottom: 60px;
+        padding-right: 233px;
+        padding-bottom: 120px;
         border-radius: 3px;
         border: 1px solid #A67246;
-
 
     }
 
     .form-group {
         padding: 14px;
-
-
     }
 
     fieldset {
         padding: 14px;
         background-color: #ffffff;
-
-
+        display: contents;
     }
-
-
 
     /*-------------Footer--------------*/
-    footer {
-        background-color: #3A3550;
-    }
 
+    footer {
+        background-color: var(--dark);
+    }
 
     .footer_indhold {
         display: flex;
@@ -316,28 +643,28 @@
         padding-bottom: 40px;
         padding-left: 9vw;
         padding-right: 9vw;
+        color: var(--white);
     }
 
-
-
-    .venstree {
+    .row_venstre {
         display: flex;
         flex-direction: column;
+    }
 
+    .row_venstre {
+        align-self: center
     }
 
     .navn {
         margin: 0;
         font-size: 1.3rem;
+        color: var(--white);
     }
 
     .titel {
         margin: 0;
-        font-size: 0.7rem
-    }
-
-    .social {
-        align-self: center
+        font-size: 0.7rem;
+        color: var(--white);
     }
 
     .footer_ikon {
@@ -347,41 +674,36 @@
         padding-bottom: 5vw;
     }
 
-    .social_ikon_pad {
-        width: 20px;
-        height: 20px;
-
-        padding-left: 19px;
-    }
-
     .social_ikon {
         width: 20px;
         height: 20px;
+    }
 
+    .social_ikon_pad {
+        width: 20px;
+        height: 20px;
+        padding-left: 19px;
     }
 
     /* ----Mest genbrugte regler---------*/
 
-    .text_padding {
-        padding: 50px;
-    }
-
     .top {
+        grid-area: topp;
         display: flex;
         align-items: center;
     }
 
     .mid {
+        grid-area: midd;
         display: flex;
         align-items: center;
     }
 
     .bottom {
+        grid-area: bot;
         display: flex;
         align-items: center;
     }
-
-
 
     button {
         width: 200px;
@@ -402,44 +724,26 @@
 
     @media screen and (min-width:768px) {
 
+        /*
         .hid {
             display: block;
         }
+*/
 
         /*-----------fonts & variables-----------*/
 
-
         /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
         .kontakt_indhold {
-            flex-direction: row-reverse;
-            justify-content: space-evenly;
+            grid-template-columns: repeat(3, 1fr);
 
         }
 
+        .kontakt_venstre {
+            max-width: 27vw;
+        }
 
         .kontakt_container {
-
-            width: 27vw;
-            height: 38vw;
-        }
-
-
-        .kontakt_ikon {
-            height: 2vw;
-            width: 2vw;
-            padding-right: 2vw;
-            padding-bottom: 5vw;
-        }
-
-        .social_ikon_pad {
-            height: 2vw;
-            width: 2vw;
-            padding-left: 2vw;
-        }
-
-        .social_ikon {
-            height: 2vw;
-            width: 2vw;
+            max-width: 27vw;
         }
 
         button {
@@ -447,13 +751,10 @@
             height: 5vw;
             margin-left: 3vw;
             margin-top: 8vw;
-
         }
 
-
         /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
-
-
+        /*
 
         #kontakt_formular {
             display: flex;
@@ -465,69 +766,66 @@
         .kontakt_formular_overskrift {
             text-align: left;
             margin: 0;
+            visibility: hidden;
+
         }
 
         .kontakt_formular_tekst {
             width: 30vw;
             text-align: left;
+            visibility: hidden;
+
         }
+
+        .top1 {
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+
+        }
+
+        .mid1 {
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+
+        }
+
+        .bottom1 {
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+        }
+*/
+
 
         /*~~~~~~~~~~Formular~~~~~~~~~~~~*/
 
-
-
-
+        /*
         #singlebutton {
             margin: 0;
             margin-top: 6vw;
             height: 3vw;
             width: 35vw;
-
         }
 
         input[type=text] {
             width: 35vw;
-
         }
 
         textarea {
-            height: 10vw;
-            width: 35vw;
-
+            height: 6vw;
+            width: 28vw;
         }
 
         .form-group {
             padding: 1vw;
-
-
         }
 
         fieldset {
             padding: 1vw;
-
         }
-
-
-
-
-
-
-        .text_padding {
-            padding: 0vw;
-        }
-
-
-        .top {
-            height: 5vw
-        }
-
-        .mid {
-            height: 5vw
-        }
-
-        .bottom {
-            height: 5vw
-        }
+*/
 
     }
 </style>
@@ -556,67 +854,52 @@
 
     </header>
 
-    <section id="kontakt_naiha">
+    <section id="kontakt_naiha" class="">
 
         <h1 class="Kontakt_h1"></h1>
         <div class="line"></div>
-        <article class="kontakt_indhold">
+        <article class="kontakt_indhold scale_up_ver_bottom hidden">
 
-            <div class="kontakt_hojre kontakt_container img_baggrund">
+            <div class="kontakt_venstre  img_baggrund">
 
-                <div class="text_padding">
-                    <h2 class="Kontakt_hojre_overskrift"></h2>
-                    <img class="Kontakt_hojre_ikon_left social_ikon" src="">
-                    <img class="Kontakt_hojre_ikon_mid social_ikon_pad" src="">
-                    <img class="Kontakt_hojre_ikon_right social_ikon_pad" src="">
+                <h2 class="Kontakt_venstre_overskrift appeareffekt"></h2>
+                <div class="ikoner hidden titleappear1">
+                    <img class="Kontakt_venstre_ikon_left social_ikon" src="">
+                    <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
+                    <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
                 </div>
             </div>
 
 
             <div class="kontakt_midten kontakt_container">
-                <div class="text_padding">
-                    <h2 class="Kontakt_midten_overskrift kontakt_container_h2"></h2>
+                <h2 class="Kontakt_midten_overskrift kontakt_container_h2 appeareffekt"></h2>
 
-                    <div class="top">
-                        <img class="Kontakt_midten_ikon_top kontakt_ikon" src="">
-                        <a class="Kontakt_midten_tekst_top"></a>
-                    </div>
+                <a class="Kontakt_midten_navn hidden titleappear1"></a>
+                <a class="Kontakt_midten_titel hidden titleappear2"></a>
+                <a class="Kontakt_midten_tlf hidden titleappear3"></a>
+                <a class="Kontakt_midten_mail hidden titleappear4"></a>
+                <a class="Kontakt_midten_adresse hidden titleappear5"></a>
+                <a class="Kontakt_midten_cvr hidden titleappear6"></a>
 
-                    <div class="mid">
-                        <img class="Kontakt_midten_ikon_mid kontakt_ikon" src="">
-                        <a class="Kontakt_midten_tekst_mid"></a>
-                    </div>
 
-                    <div class="bottom ">
-                        <img class="Kontakt_midten_ikon_bottom kontakt_ikon" src="">
-                        <a class="Kontakt_midten_tekst_bottom"></a>
-                    </div>
-                </div>
+
+
             </div>
 
-            <div class="kontakt_venstre kontakt_container">
-                <div class="text_padding">
-                    <h2 class="Kontakt_venstre_overskrift kontakt_container_h2"></h2>
+            <div class="kontakt_hojre kontakt_container">
+                <h2 class="Kontakt_hojre_overskrift kontakt_container_h2 appeareffekt"></h2>
 
-                    <div class="top">
-                        <img class="Kontakt_venstre_ikon_top kontakt_ikon" src="">
-                        <a class="Kontakt_venstre_tekst_top"></a>
-                    </div>
+                <a class="Kontakt_hojre_navn hidden titleappear1"></a>
+                <a class="Kontakt_hojre_titel hidden titleappear2"></a>
+                <a class="Kontakt_hojre_tlf hidden titleappear3"></a>
+                <a class="Kontakt_hojre_mail hidden titleappear4"></a>
+                <a class="Kontakt_hojre_adresse hidden titleappear5"></a>
+                <a class="Kontakt_hojre_cvr hidden titleappear6"></a>
 
-                    <div class="mid">
-                        <img class="Kontakt_venstre_ikon_mid kontakt_ikon" src="">
-                        <a class="Kontakt_venstre_tekst_mid"></a>
-                    </div>
-
-                    <div class="bottom">
-                        <img class="Kontakt_venstre_ikon_bottom kontakt_ikon" src="">
-                        <a class="Kontakt_venstre_tekst_bottom"></a>
-                    </div>
-                </div>
             </div>
         </article>
         <div class="form_knap">
-            <button class="kontakt_form_knap"></button>
+            <button class="kontakt_form_knap button"></button>
         </div>
 
     </section>
@@ -626,24 +909,9 @@
         <article class="kontakt_formular_indhold">
 
             <div class="kontakt_tekst">
-                <h1 class="kontakt_formular_overskrift"></h1>
-                <p class="kontakt_formular_tekst"></p>
-                <div class="hid">
-                    <div class="top">
-                        <img class="kontakt_formular_ikon_top kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_top"></a>
-                    </div>
+                <h1 class="kontakt_formular_overskrift hidden"></h1>
+                <p class="kontakt_formular_tekst hidden"></p>
 
-                    <div class="mid">
-                        <img class="kontakt_formular_ikon_mid kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_mid"></a>
-                    </div>
-
-                    <div class="bottom">
-                        <img class="kontakt_formular_ikon_bottom kontakt_ikon" src="">
-                        <a class="kontakt_formular_tekst_bottom"></a>
-                    </div>
-                </div>
             </div>
 
 
@@ -661,7 +929,7 @@
 
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Mail</label>
+                            <label class="col-md-4 control-label" for="textinput"></label>
                             <div class="col-md-4">
                                 <input id="textinput" name="textinput" type="text" placeholder="Din mailadresse" class="form-control input-md">
                                 <span class="help-block"></span>
@@ -670,7 +938,7 @@
 
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput">Emne (Valgfrit)</label>
+                            <label class="col-md-4 control-label" for="textinput"></label>
                             <div class="col-md-4">
                                 <input id="textinput" name="textinput" type="text" placeholder="Hvad drejer det sig om?" class="form-control input-md">
                                 <span class="help-block"></span>
@@ -679,26 +947,24 @@
 
                         <!-- Textarea -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="textarea">Besked</label>
+                            <label class="col-md-4 control-label" for="textarea"></label>
                             <div class="col-md-4">
                                 <textarea class="form-control" id="textarea" name="textarea">...</textarea>
                             </div>
                         </div>
 
                         <!-- Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="singlebutton"></label>
-                            <div class="col-md-4">
-                                <button id="singlebutton" name="singlebutton" class="btn btn-primary">SEND</button>
-                            </div>
-                        </div>
+
 
                     </fieldset>
                 </form>
 
 
             </div>
+
         </div>
+        <button class="kontakt_knap" href="kontakt.html">SEND</button>
+        <div class="kontakt_line"></div>
 
     </section>
 
@@ -750,45 +1016,40 @@
 
             document.querySelector(".Kontakt_h1").textContent = side.kontakt_overskrift;
 
-            document.querySelector(".Kontakt_hojre_overskrift").textContent = side.kontakt_overskrift_hojre_box;
+            document.querySelector(".Kontakt_venstre_overskrift").textContent = side.kontakt_overskrift_venstre_box;
 
-            document.querySelector(".Kontakt_hojre_ikon_left").src = side.kontakt_social_hvid_ikon.guid;
+            document.querySelector(".Kontakt_venstre_ikon_left").src = side.kontakt_social_hvid_ikon.guid;
 
-            document.querySelector(".Kontakt_hojre_ikon_mid").src = side.kontakt_social_hvid_ikon2.guid;
+            document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_social_hvid_ikon2.guid;
 
-            document.querySelector(".Kontakt_hojre_ikon_right").src = side.kontakt_social_hvid_ikon3.guid;
+            document.querySelector(".Kontakt_venstre_ikon_right").src = side.kontakt_social_hvid_ikon3.guid;
 
-            document.querySelector(".linkedin").src = side.kontakt_social_hvid_ikon3.guid;
 
 
             document.querySelector(".Kontakt_midten_overskrift").textContent = side.kontakt_overskrift_mid_box;
 
-            document.querySelector(".Kontakt_midten_ikon_top").src = side.kontakt_mail_hvid.guid;
 
-            document.querySelector(".Kontakt_midten_ikon_mid").src = side.kontakt_tlf_hvid.guid;
+            document.querySelector(".Kontakt_midten_navn").textContent = side.kontakt_tekst_mid_navn;
+            document.querySelector(".Kontakt_midten_titel").textContent = side.kontakt_tekst_mid_titel;
 
-            document.querySelector(".Kontakt_midten_ikon_bottom").src = side.kontakt_map_hvid.guid;
-
-            document.querySelector(".Kontakt_midten_tekst_top").textContent = side.kontakt_tekst_mid_mail;
-
-            document.querySelector(".Kontakt_midten_tekst_mid").textContent = side.kontakt_tekst_mid_tlf;
-
-            document.querySelector(".Kontakt_midten_tekst_bottom").textContent = side.kontakt_tekst_mid_map;
+            document.querySelector(".Kontakt_midten_tlf").textContent = side.kontakt_tekst_mid_tlf;
+            document.querySelector(".Kontakt_midten_mail").textContent = side.kontakt_tekst_mid_mail;
 
 
-            document.querySelector(".Kontakt_venstre_overskrift").textContent = side.kontakt_overskrift_venstre_box;
+            document.querySelector(".Kontakt_midten_adresse").textContent = side.kontakt_tekst_mid_map;
+            document.querySelector(".Kontakt_midten_cvr").textContent = side.kontakt_tekst_mid_cvr;
 
-            document.querySelector(".Kontakt_venstre_ikon_top").src = side.kontakt_mail_hvid.guid;
 
-            document.querySelector(".Kontakt_venstre_ikon_mid").src = side.kontakt_tlf_hvid.guid;
+            document.querySelector(".Kontakt_hojre_overskrift").textContent = side.kontakt_overskrift_hojre_box;
 
-            document.querySelector(".Kontakt_venstre_ikon_bottom").src = side.kontakt_map_hvid.guid;
 
-            document.querySelector(".Kontakt_venstre_tekst_top").textContent = side.kontakt_tekst_venstre_mail;
 
-            document.querySelector(".Kontakt_venstre_tekst_mid").textContent = side.kontakt_tekst_venstre_tlf;
-
-            document.querySelector(".Kontakt_venstre_tekst_bottom").textContent = side.kontakt_tekst_venstre_map;
+            document.querySelector(".Kontakt_hojre_navn").textContent = side.kontakt_tekst_hojre_navn;
+            document.querySelector(".Kontakt_hojre_titel").textContent = side.kontakt_tekst_hojre_titel;
+            document.querySelector(".Kontakt_hojre_tlf").textContent = side.kontakt_tekst_hojre_mail;
+            document.querySelector(".Kontakt_hojre_mail").textContent = side.kontakt_tekst_hojre_tlf;
+            document.querySelector(".Kontakt_hojre_adresse").textContent = side.kontakt_tekst_hojre_map;
+            document.querySelector(".Kontakt_hojre_cvr").textContent = side.kontakt_tekst_hojre_cvr;
 
 
             document.querySelector(".kontakt_form_knap").textContent = side.kontakt_knap_tekst;
@@ -797,23 +1058,23 @@
 
             document.querySelector(".kontakt_formular_tekst").textContent = side.kontakt_tekst_formular;
 
-            document.querySelector(".kontakt_formular_tekst_top").textContent = side.kontakt_map_formular;
 
-            document.querySelector(".kontakt_formular_tekst_mid").textContent = side.kontakt_tlf_formular;
 
-            document.querySelector(".kontakt_formular_tekst_bottom").textContent = side.kontakt_mail_formular;
 
-            document.querySelector(".kontakt_formular_ikon_top").src = side.kontakt_map_hvid.guid;
-
-            document.querySelector(".kontakt_formular_ikon_mid").src = side.kontakt_tlf_hvid.guid;
-
-            document.querySelector(".kontakt_formular_ikon_bottom").src = side.kontakt_mail_hvid.guid;
 
 
 
 
             function toggleContactFormHidden() {
-                document.querySelector("#kontakt_formular").classList.toggle("hidden");
+                document.querySelector("#kontakt_formular").classList.toggle("hide");
+                document.querySelector(".kontakt_formular_overskrift").classList.add("slide_in_left1");
+                document.querySelector(".kontakt_formular_tekst").classList.add("slide_in_left2");
+                document.querySelector(".top1").classList.add("slide_in_left3");
+                document.querySelector(".mid1").classList.add("slide_in_left4");
+                document.querySelector(".bottom1").classList.add("slide_in_left5");
+                document.querySelector(".formular").classList.add("scale_up_ver_bottom");
+
+
             }
 
             document.querySelector(".kontakt_form_knap").addEventListener("click", toggleContactFormHidden);
@@ -824,7 +1085,62 @@
 </body></html>
 
 
+
+
+
+
+
+
 <!--
+        <div class="formular">
+            <div class="formular_indhold">
+
+
+                <form class="form-horizontal">
+                    <fieldset>
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="textinput">Mail</label>
+                            <div class="col-md-4">
+                                <input id="textinput" name="textinput" type="text" placeholder="Din mailadresse" class="form-control input-md">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="textinput">Emne (Valgfrit)</label>
+                            <div class="col-md-4">
+                                <input id="textinput" name="textinput" type="text" placeholder="Hvad drejer det sig om?" class="form-control input-md">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="textarea">Besked</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="textarea" name="textarea">...</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton"></label>
+                            <div class="col-md-4">
+                                <button id="singlebutton" name="singlebutton" class="btn btn-primary">SEND</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+            </div>
+        </div>
+
+-->
+
+<!--
+
     <div class="formular">
             <div class="border">
                 <div class="formular_container">
