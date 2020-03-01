@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+
 </head>
 <style>
 
@@ -17,7 +19,7 @@
         <nav>
             <div class="header_indhold">
                 <div class="logodiv">
-                    <a href="test4_carosel.html">Naiha Khiljee</a>
+                    <a class="logo" href="forside.html"></a>
                 </div>
                 <div class="menuikonn">
 
@@ -25,9 +27,9 @@
                 <div class="menuikon">
 
                     <div class="navknap">
-                        <a class="navfor" href="test4_carosel.html">Forside</a>
+                        <a class="navfor" href="forside.html"></a>
 
-                        <a class="navkon" href="test1-kontakt.html">Kontakt</a>
+                        <a class="navkon" href="kontakt.html"></a>
                     </div>
                     <img class="burgerikon" src="Group%204132.png">
                 </div>
@@ -49,7 +51,7 @@
                     <button class="navigations_knap" onclick="toggleMenu()">x</button>
                 </div>
                 <div id="menu_logo">
-                    <h1>Naiha Khiljee</h1>
+                    <h1 class="logo_burger"> </h1>
                 </div>
 
 
@@ -57,7 +59,7 @@
                     <div id="nav_knapper_top">
 
                         <nav>
-                            <a href="test4_carosel.html">Forside</a>
+                            <a class="burger_forside" href="forside.html"></a>
                         </nav>
                     </div>
 
@@ -65,15 +67,17 @@
 
 
                         <nav>
-                            <a href="test1-kontakt.html">Kontakt</a>
+                            <a class="burger_kontakt" href="kontakt.html"></a>
                         </nav>
                     </div>
                     <div id="Social_bottom">
-                        <img class="social_face" src="Facebook%20%E2%80%93%201@2x.png">
-                        <img class="social_insta" src="Instagram%20%E2%80%93%201@2x.png">
-                        <img class="social_linkin" src="linkinbrunx2.jpg">
+                        <img href="https://www.facebook.com/naiha.khiljee" class="social_face" src="">
+                        <img href="https://www.instagram.com/naihakhiljee/tagged/" class="social_insta" src="">
+                        <img href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b" class="social_linkin" src="">
                     </div>
                 </div>
+
+
 
 
             </div>
@@ -99,7 +103,7 @@
     </section>
 
     <section id="om_naiha ">
-        <div class="om_column animatedParent   ">
+        <div class="om_column  animatedParent  ">
             <div class="animated fadeInUpShort">
                 <h1 class="om_naiha_h1"></h1>
                 <div class="line om_line"></div>
@@ -108,7 +112,7 @@
                 <p class="om_naiha_tekst"></p>
 
                 <!--denne knap burde fører til video sektion-->
-                <a href="test1-kontakt.html"><button class="naiha_historie button"></button></a>
+                <a href="kontakt.html"><button class="naiha_historie button"></button></a>
             </div>
         </div>
     </section>
@@ -153,12 +157,68 @@
             </article>
         </section>
 
+
+        <section id="event_slider">
+            <div class="animatedParent  ">
+
+                <h1 class="event_section_overskrift_slider animated fadeInLeftShort"></h1>
+                <div class="line event_line_overskrift animated fadeInLeftShort"></div>
+            </div>
+            <div class="slider">
+
+                <div class="slides animatedParent">
+
+                    <div id="slide-1">
+                        <div class="  event_venstre event_box animated fadeInUpShort  ">
+                            <h3 class="event_venstre_dato_slider event_dato delay1 animated fadeInUp "></h3>
+                            <h2 class="event_venstre_overskrift_slider event_overskrift delay2 animated fadeInUp "></h2>
+                            <h2 class="event_venstre_lokation_slider event_lokation delay3 animated fadeInUp "></h2>
+                            <div class="line event_line  delay4 animated fadeInUp"></div>
+                            <a href="https://www.facebook.com/events/548784048984869/"><button class=" delay5 animated fadeInUp button se_mere_venstre_slider event_knap"></button></a>
+                        </div>
+                    </div>
+                    <div id="slide-2">
+                        <div class="  event_midten event_box animated fadeInUpShort">
+
+                            <h3 class="event_midten_dato_slider event_dato delay1 animated fadeInUp "></h3>
+                            <h2 class="event_midten_overskrift_slider event_overskrift delay2 animated fadeInUp ">
+                            </h2>
+                            <h2 class="event_midten_lokation_slider event_lokation delay3 animated fadeInUp  "></h2>
+                            <div class="line event_line delay4 animated fadeInUp "></div>
+                            <a href="https://www.facebook.com/events/308945159700321/"> <button class=" delay5 animated fadeInUp button se_mere_midten_slider event_knap  "></button></a>
+                        </div>
+                    </div>
+                    <div id="slide-3">
+                        <div class=" event_hojre event_box animated fadeInUpShort">
+
+                            <h3 class="event_hojre_dato_slider event_dato delay1 animated fadeInUp ">
+                            </h3>
+                            <h2 class="event_hojre_overskrift_slider event_overskrift delay2 animated fadeInUp ">
+                            </h2>
+                            <h2 class="event_hojre_lokation_slider event_lokationdelay3 animated fadeInUp  ">
+                            </h2>
+                            <div class="line event_line delay4 animated fadeInUp "></div>
+                            <a href="https://www.facebook.com/events/716799978808770/"><button class=" delay5 animated fadeInUp button se_mere_hojre_slider event_knap  "></button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="animatedParent but">
+                    <a class="slide_knap1 delay8 animated rollIn" href="#slide-1"></a>
+                    <a class="slide_knap2 delay8 animated rollIn" href="#slide-2 "></a>
+                    <a class="slide_knap3 delay8 animated rollIn" href="#slide-3"></a>
+                </div>
+            </div>
+        </section>
+
+
+
         <section id="citat">
             <div class="citat_box animatedParent">
                 <h1 class="citat_overskrift animated fadeInUpShort "></h1>
             </div>
         </section>
-
 
 
 
@@ -214,12 +274,98 @@
             </article>
         </section>
 
+
+
+        <section id="press_slider">
+            <div class="animatedParent  ">
+
+                <h1 class="press_overskrift_slider animated fadeInLeftShort"></h1>
+                <div class="line press_line_overskrift animated fadeInLeftShort"></div>
+            </div>
+            <div class="slider">
+
+
+
+
+                <div class="slides animatedParent">
+                    <div id="slide-4">
+                        <div class="press_venstre press_column span_1_of_3  animated fadeInUpShort">
+
+                            <h2 class="text_line1_slider line1_slider  delay1  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line2_slider line2  delay2  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line3_slider line3  delay3  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line4_slider line4  delay4  animated fadeInUp">
+                            </h2>
+                            <h3 class="press_venstre_dato_slider press_dato  delay5  animated fadeInUp">
+                            </h3>
+                            <a href="https://www.dr.dk/nyheder/kultur/boeger/naiha-paa-25-vil-skrive-en-bog-hvis-der-skal-vaere-plads-til-mig-skal-jeg?fbclid=IwAR2XPK4qb7-XiNI23x5Yd4xhbZcOXZxvweg0BD86ZHBOzNMkoEJCFS5KgZY#!/"> <button class="press_dato_og_button delay6 animated fadeInUp press_las_artikel_venstre_slider press_knap button"></button></a>
+
+                        </div>
+                    </div>
+                    <div id="slide-5">
+                        <div class="press_midten press_column span_1_of_3 animated fadeInUpShort">
+
+                            <h2 class="text_line5_slider line1  delay1  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line6_slider line2  delay2  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line7_slider line3  delay3  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line8_slider line4  delay4  animated fadeInUp">
+                            </h2>
+                            <h3 class="press_midten_dato_slider press_dato  delay5  animated fadeInUp">
+                            </h3>
+                            <a href="https://www.bo-vest.dk/om-bo-vest/nyheder/nyheder-fra-bo-vest/2019/5/spirende-digtere-blandt-broendbys-unge/"><button class="press_dato_og_button  delay6 animated fadeInUp press_las_artikel_midten_slider press_knap button"></button></a>
+
+                        </div>
+                    </div>
+                    <div id="slide-6">
+                        <div class="press_hojre  press_column span_1_of_3 animated fadeInUpShort">
+
+                            <h2 class="text_line9_slider line1  delay1  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line10_slider line2  delay2  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line11_slider line3  delay3  animated fadeInUp">
+                            </h2>
+
+                            <h2 class="text_line12_slider line4  delay4  animated fadeInUp"></h2>
+                            <h3 class="press_hojre_dato_slider press_dato  delay5  animated fadeInUp">
+                            </h3>
+                            <a href="https://www.kbhplus.dk/ukoen-poesi-en-aften-i-feminismens-tegn.html"><button class="press_dato_og_button  delay6 animated fadeInUp press_las_artikel_hojre_slider press_knap button"></button></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="animatedParent but">
+
+                    <a class="slide_knap4 delay77 animated rollIn" href="#slide-4"></a>
+                    <a class=" slide_knap5 delay77 animated rollIn" href="#slide-5"></a>
+                    <a class="slide_knap6 delay77 animated rollIn" href="#slide-6"></a>
+                </div>
+            </div>
+        </section>
+
     </section>
+
 
     <section id="video">
         <div class="video_container">
 
-            <video class="om_video" autoplay muted loop type="video/mp4" src="13%20(1)_1.mp4"></video>
+            <video class="om_video" controls type="video/mp4" src="13%20(1)_1.mp4"></video>
         </div>
     </section>
 
@@ -276,9 +422,96 @@
                     <h2 class="text_line24 line5 delay55 animated fadeInUp "></h2>
                     <h2 class="text_line25 line6 delay66 animated fadeInUp "></h2>
                     <h2 class="text_line26 line7 delay7 animated fadeInUp "></h2>
-                    <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_indbundet_9788711918753"><button class=" delay8 animated fadeInUp knap_hojre kompetencer_knap button">Intereseret?</button></a>
+                    <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_indbundet_9788711918753"><button class=" delay8 animated fadeInUp knap_hojre kompetencer_knap button"></button></a>
                 </div>
             </article>
+        </section>
+
+
+        <section id="kompetencer_Slider">
+            <div class="animatedParent  ">
+
+                <h1 class="kompetencer_overskrift_slider animated fadeInLeftShort"></h1>
+                <div class="line press_line_overskrift animated fadeInLeftShort"></div>
+            </div>
+            <div class="slider">
+
+                <div class="slides animatedParent">
+                    <div id="slide-7">
+                        <div class="kompetencer_venstre kompetencer_column animated fadeInUpShort">
+                            <h2 class="text_line13_slider line1 delay1 animated fadeInUp ">"
+                            </h2>
+                            <h2 class="text_line14_slider line2 delay2 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line15_slider line3 delay3 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line16_slider line4 delay4 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line17_slider line5 delay55 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line18_slider line6 delay66 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line19_slider line7 delay7 animated fadeInUp ">
+                            </h2>
+
+
+
+                            <a href="https://www.facebook.com/Ditversitet/"><button class=" delay8 animated fadeInUp knap_venstre_slider kompetencer_knap button"></button></a>
+                        </div>
+                    </div>
+                    <div id="slide-8">
+                        <div class="kompetencer_midten kompetencer_column animated fadeInUpShort">
+                            <h2 class="text_line27_slider line1 delay1 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line28_slider line2  delay2 animated fadeInUp">
+                            </h2>
+                            <h2 class="text_line29_slider line3 delay3 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line30_slider line4  delay4 animated fadeInUp">
+
+                            </h2>
+                            <h2 class="text_line31_slider line5 delay55 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line32_slider line6 delay66 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line33_slider line7  delay7 animated fadeInUp">
+                            </h2>
+                            <a href="https://www.instagram.com/naihakhiljee/tagged/"><button class=" delay8 animated fadeInUp knap_midten_slider kompetencer_knap button"></button></a>
+
+                        </div>
+                    </div>
+
+                    <div id="slide-9">
+                        <div class="kompetencer_hojre kompetencer_column animated fadeInUpShort">
+
+                            <h2 class="text_line20_slider line1 delay1 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line21_slider line2 delay2 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line22_slider line3 delay3 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line23_slider line4 delay4 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line24_slider line5  delay55 animated fadeInUp">
+                            </h2>
+                            <h2 class="text_line25_slider line6 delay66 animated fadeInUp ">
+                            </h2>
+                            <h2 class="text_line26_slider line7  delay7 animated fadeInUp">
+                            </h2>
+                            <a href="https://www.saxo.com/dk/kaere-soester_naiha-khiljee_indbundet_9788711918753"><button class=" delay8 animated fadeInUp knap_hojre_slider kompetencer_knap button"></button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="animatedParent but">
+
+                    <a class="slide_knap7 delay6 animated rollIn" href="#slide-7"></a>
+                    <a class="slide_knap8 delay6 animated rollIn" href="#slide-8"></a>
+                    <a class="slide_knap9 delay6 animated rollIn" href="#slide-9"></a>
+                </div>
+            </div>
+
         </section>
 
 
@@ -353,7 +586,7 @@
             </h2>
             <h3 class="kontakt_tekst">
             </h3>
-            <a href="test1-kontakt.html"><button class="kontakt_knap"></button></a>
+            <a class="kontakt_knap" href="kontakt.html"><button></button></a>
             <div class="kontakt_line"></div>
         </div>
     </section>
@@ -368,13 +601,15 @@
             </div>
             <div class="row_hojre">
                 <a href="https://www.facebook.com/naiha.khiljee"><img class="face social_ikon"></a>
-                <a href="https://www.instagram.com/naihakhiljee/tagged/"><img class="insta social_ikon_pad"> </a>
-                <a href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b"><img class="linkedin social_ikon_pad"> </a>
+                <a href="https://www.instagram.com/naihakhiljee/tagged/"><img class="insta social_ikon_pad"></a>
+                <a href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b"><img class="linkedin social_ikon_pad"></a>
             </div>
         </article>
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="css3-animate-it.js"></script>
     <script src="footer.js"></script>
 
     <script>
@@ -382,6 +617,7 @@
         const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/forside/16";
         document.addEventListener("DOMContentLoaded", start);
 
+        document.querySelector(".menuikon").addEventListener("click", toggleNavBar);
 
 
         function start() {
@@ -395,6 +631,23 @@
         }
 
         function vis() {
+
+
+
+            document.querySelector(".logo").textContent = side.forside_nav_logo;
+            document.querySelector(".navfor").textContent = side.forside_nav_knap1;
+            document.querySelector(".navkon").textContent = side.forside_nav_knap2;
+            document.querySelector(".logo_burger").textContent = side.forside_nav_logo;
+            document.querySelector(".burger_forside").textContent = side.forside_nav_knap1;
+            document.querySelector(".burger_kontakt").textContent = side.forside_nav_knap2;
+
+            document.querySelector(".social_face").src = side.forside_nav_ikon1.guid;
+            document.querySelector(".social_insta").src = side.forside_nav_ikon2.guid;
+            document.querySelector(".social_linkin").src = side.forside_nav_ikon3.guid;
+
+
+
+
 
             document.querySelector(".forside_start_h1_top").textContent = side.forside_start_overskrift;
             document.querySelector(".forside_start_h1_bunden").textContent = side.forside_start_overskrift2;
@@ -431,6 +684,29 @@
             document.querySelector(".se_mere_hojre").textContent = side.forside_event_knap_tekst_hojre;
 
 
+            document.querySelector(".citat_overskrift").textContent = side.forside_citat_overskrift;
+
+
+
+            document.querySelector(".event_section_overskrift_slider").textContent = side.forside_event_sektion_overskrift;
+
+            document.querySelector(".event_venstre_dato_slider").textContent = side.forside_event_tekst_venstre;
+            document.querySelector(".event_venstre_overskrift_slider").textContent = side.forside_event_overskrift_venstre;
+            document.querySelector(".event_venstre_lokation_slider").textContent = side.forside_event_tekst2_venstre;
+            document.querySelector(".se_mere_venstre_slider").textContent = side.forside_event_knap_tekst_venstre;
+
+            document.querySelector(".event_midten_dato_slider").textContent = side.forside_event_tekst_midten;
+            document.querySelector(".event_midten_overskrift_slider").textContent = side.forside_event_overskrift_midten;
+            document.querySelector(".event_midten_lokation_slider").textContent = side.forside_event_tekst2_midten;
+            document.querySelector(".se_mere_midten_slider").textContent = side.forside_event_knap_tekst_midten;
+
+            document.querySelector(".event_hojre_dato_slider").textContent = side.forside_event_tekst_hojre;
+            document.querySelector(".event_hojre_overskrift_slider").textContent = side.forside_event_overskrift_hojre;
+            document.querySelector(".event_hojre_lokation_slider").textContent = side.forside_event_tekst2_hojre;
+            document.querySelector(".se_mere_hojre_slider").textContent = side.forside_event_knap_tekst_hojre;
+
+
+
 
 
             document.querySelector(".press_overskrift").textContent = side.forside_press_sektion_overskrift;
@@ -461,6 +737,36 @@
             document.querySelector(".press_las_artikel_hojre").textContent = side.forside_press_hojre_knap_tekst;
 
 
+            document.querySelector(".press_overskrift_slider").textContent = side.forside_press_sektion_overskrift;
+
+
+            document.querySelector(".text_line1_slider").textContent = side.forside_press_venstre_text_linje1;
+            document.querySelector(".text_line2_slider").textContent = side.forside_press_venstre_text_linje2;
+            document.querySelector(".text_line3_slider").textContent = side.forside_press_venstre_text_linje3;
+            document.querySelector(".text_line4_slider").textContent = side.forside_press_venstre_text_linje4;
+
+            document.querySelector(".press_venstre_dato_slider").textContent = side.forside_press_venstre_overskrift;
+            document.querySelector(".press_las_artikel_venstre_slider").textContent = side.forside_press_venstre_knap_tekst;
+
+            document.querySelector(".text_line5_slider").textContent = side.forside_press_midten_text_linje1;
+            document.querySelector(".text_line6_slider").textContent = side.forside_press_midten_text_linje2;
+            document.querySelector(".text_line7_slider").textContent = side.forside_press_midten_text_linje3;
+            document.querySelector(".text_line8_slider").textContent = side.forside_press_midten_text_linje4;
+
+            document.querySelector(".press_midten_dato_slider").textContent = side.forside_press_midten_overskrift;
+            document.querySelector(".press_las_artikel_midten_slider").textContent = side.forside_press_midten_knap_tekst;
+
+            document.querySelector(".text_line9_slider").textContent = side.forside_press_hojre_text_linje1;
+            document.querySelector(".text_line10_slider").textContent = side.forside_press_hojre_text_linje2;
+            document.querySelector(".text_line11_slider").textContent = side.forside_press_hojre_text_linje3;
+            document.querySelector(".text_line12_slider").textContent = side.forside_press_hojre_text_linje4;
+
+            document.querySelector(".press_hojre_dato_slider").textContent = side.forside_press_hojre_overskrift;
+            document.querySelector(".press_las_artikel_hojre_slider").textContent = side.forside_press_hojre_knap_tekst;
+
+
+
+
             document.querySelector(".kompetencer_overskrift").textContent = side.forside_kompetencer_sektion_overskrift;
 
 
@@ -471,7 +777,7 @@
             document.querySelector(".text_line17").textContent = side.forside_kompetencer_venstre_text_linje5;
             document.querySelector(".text_line18").textContent = side.forside_kompetencer_venstre_text_linje6;
             document.querySelector(".text_line19").textContent = side.forside_kompetencer_venstre_text_linje7;
-            document.querySelector(".text_line20").textContent = side.forside_kompetencer_venstre_text_linje8;
+
 
 
 
@@ -499,9 +805,78 @@
             document.querySelector(".knap_hojre").textContent = side.forside_kompetencer_knap_tekst;
 
 
+
+            document.querySelector(".kompetencer_overskrift_slider").textContent = side.forside_kompetencer_sektion_overskrift;
+
+
+
+            document.querySelector(".text_line13_slider").textContent = side.forside_kompetencer_venstre_text_linje1;
+            document.querySelector(".text_line14_slider").textContent = side.forside_kompetencer_venstre_text_linje2;
+            document.querySelector(".text_line15_slider").textContent = side.forside_kompetencer_venstre_text_linje3;
+            document.querySelector(".text_line16_slider").textContent = side.forside_kompetencer_venstre_text_linje4;
+            document.querySelector(".text_line17_slider").textContent = side.forside_kompetencer_venstre_text_linje5;
+            document.querySelector(".text_line18_slider").textContent = side.forside_kompetencer_venstre_text_linje6;
+            document.querySelector(".text_line19_slider").textContent = side.forside_kompetencer_venstre_text_linje7;
+
+
+
+
+            document.querySelector(".text_line27_slider").textContent = side.forside_kompetencer_midten_text_linje1;
+
+            document.querySelector(".text_line28_slider").textContent = side.forside_kompetencer_midten_text_linje3;
+            document.querySelector(".text_line29_slider").textContent = side.forside_kompetencer_midten_text_linje4;
+            document.querySelector(".text_line30_slider").textContent = side.forside_kompetencer_midten_text_linje5;
+            document.querySelector(".text_line31_slider").textContent = side.forside_kompetencer_midten_text_linje6;
+            document.querySelector(".text_line32_slider").textContent = side.forside_kompetencer_midten_text_linje7;
+
+
+            document.querySelector(".text_line20_slider").textContent = side.forside_kompetencer_hojre_text_linje1;
+            document.querySelector(".text_line21_slider").textContent = side.forside_kompetencer_hojre_text_linje2;
+            document.querySelector(".text_line22_slider").textContent = side.forside_kompetencer_hojre_text_linje3;
+            document.querySelector(".text_line23_slider").textContent = side.forside_kompetencer_hojre_text_linje4;
+            document.querySelector(".text_line24_slider").textContent = side.forside_kompetencer_hojre_text_linje5;
+            document.querySelector(".text_line25_slider").textContent = side.forside_kompetencer_hojre_text_linje6;
+            document.querySelector(".text_line26_slider").textContent = side.forside_kompetencer_hojre_text_linje7;
+
+
+
+            document.querySelector(".knap_venstre_slider").textContent = side.forside_kompetencer_knap_tekst;
+            document.querySelector(".knap_midten_slider").textContent = side.forside_kompetencer_knap_tekst;
+            document.querySelector(".knap_hojre_slider").textContent = side.forside_kompetencer_knap_tekst;
+
+
+            document.querySelector(".slide_knap1").textContent = side.forside_slider_knap_1;
+            document.querySelector(".slide_knap2").textContent = side.forside_slider_knap_2;
+            document.querySelector(".slide_knap3").textContent = side.forside_slider_knap_3;
+
+            document.querySelector(".slide_knap4").textContent = side.forside_slider_knap_1;
+            document.querySelector(".slide_knap5").textContent = side.forside_slider_knap_2;
+            document.querySelector(".slide_knap6").textContent = side.forside_slider_knap_3;
+
+            document.querySelector(".slide_knap7").textContent = side.forside_slider_knap_1;
+            document.querySelector(".slide_knap8").textContent = side.forside_slider_knap_2;
+            document.querySelector(".slide_knap9").textContent = side.forside_slider_knap_3;
+
+
             document.querySelector(".kontakt_overskrift").textContent = side.forside_kontakt_overskrift;
             document.querySelector(".kontakt_tekst").textContent = side.forside_kontakt_tekst;
             document.querySelector(".kontakt_knap").textContent = side.forside_kontakt_knap;
+
+
+        }
+
+
+
+        function toggleMenu() {
+            var element = document.getElementById("fullscreen_menu");
+            element.classList.toggle("hide");
+
+        }
+
+
+        function toggleNavBar() {
+            document.querySelector(".navknap").classList.toggle("hide");
+
 
 
         }
