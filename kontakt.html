@@ -5,912 +5,141 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 
 
 
 
-<style>
-    .hidden {
-
-        visibility: hidden;
-    }
-
-    .appeareffekt {
-        opacity: 0;
-        transform: translateY(2em);
-        animation: titlesAppeartemp 900ms ease forwards;
-        animation-delay: 1000ms;
-    }
-
-
-    @keyframes titlesAppeartemp {
-        0% {
-            opacity: 0;
-            transform: translateY(2em)
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0)
-        }
-    }
-
-
-
-    .slide-in-bottom {
-        animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        transform: translateX(-5%) scale(1);
-        animation-delay: 2000ms;
-        transition: transform 600m
-    }
-
-
-
-    .slide-in-bottom2 {
-        animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        transform: translateX(-5%) scale(1);
-        animation-delay: 2100ms;
-        transition: transform 600m
-    }
-
-    @-webkit-keyframes slide-in-bottom {
-        0% {
-            transform: translateY(150px);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes titlesAppear {
-        0% {
-            opacity: 0;
-            transform: translateY(-5);
-
-        }
-
-        50% {
-            transform: translate3d(0, 0, 0) scaleY(1);
-            visibility: visible;
-        }
-
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-
-        }
-    }
-
-    .titleappear1 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-        animation-delay: 1500ms;
-
-    }
-
-    .titleappear2 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-        animation-delay: 1600ms;
-    }
-
-    .titleappear3 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-
-        animation-delay: 1700ms;
-    }
-
-    .titleappear4 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-
-        animation-delay: 1800ms;
-    }
-
-    .titleappear5 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-
-        animation-delay: 1900ms;
-    }
-
-    .titleappear6 {
-        transform: translateY(2em);
-        animation: titlesAppear 900ms ease forwards;
-
-        animation-delay: 2000ms;
-    }
-
-
-    .kontakt_line {
-        border-top: 1px solid #ffffff;
-        width: 80vw;
-        margin: auto;
-        grid-area: line;
-    }
-
-    .kontakt_formular_overskrift,
-    .kontakt_formular_tekst {
-        color: var(--white);
-    }
-
-    .kontakt_knap {
-        width: 150px;
-        height: 50px;
-        border: none;
-        background-color: var(--brown);
-        color: var(--white);
-        grid-area: knap;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-
-    @-webkit-keyframes slide-in-left {
-        0% {
-            transform: translateX(-1000px);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-
-
-    .slide_in_left1 {
-        animation: slide-in-left 900ms ease forwards;
-        animation-delay: 900ms;
-
-    }
-
-    .slide_in_left2 {
-        animation: slide-in-left 900ms ease forwards;
-        animation-delay: 1000ms;
-    }
-
-    .slide_in_left3 {
-        animation: slide-in-left 900ms ease forwards;
-
-        animation-delay: 1100ms;
-    }
-
-    .slide_in_left4 {
-        animation: slide-in-left 900ms ease forwards;
-
-        animation-delay: 1200ms;
-    }
-
-    .slide_in_left5 {
-        animation: slide-in-left 900ms ease forwards;
-
-        animation-delay: 1300ms;
-    }
-
-
-
-    .scale_up_ver_bottom {
-        animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    }
-
-
-
-
-    @-webkit-keyframes scale-up-ver-bottom {
-        0% {
-            transform: scaleY(0.4);
-            transform-origin: 0% 100%;
-            opacity: 0;
-        }
-
-        100% {
-            transform: scaleY(1);
-            transform-origin: 0% 100%;
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-
-
-    .slide-in-fwd-center {
-        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation-delay: 3s;
-    }
-
-
-    @-webkit-keyframes slide-in-fwd-center {
-        0% {
-            transform: translateZ(-1400px);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateZ(0);
-            opacity: 1;
-        }
-    }
-
-
-
-
-    .button {
-        display: inline-block;
-        position: relative;
-
-        cursor: pointer;
-        z-index: 0;
-        width: 220px;
-        height: 50px;
-        background-color: var(--brown);
-        color: var(--white);
-        border: none;
-    }
-
-    .button:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--dark);
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        transition: transform .3s ease-out;
-    }
-
-    .button:hover:before {
-        transform: scaleX(1);
-    }
-
-
-
-
-    .hid {
-        display: none;
-    }
-
-    /*-----------Navigation desktop-----------*/
-
-    .burgermenu_ikon {
-        max-width: 40px;
-        padding-top: 35px;
-    }
-
-    #navigationsmenu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 90px;
-        background-color: var(--dark);
-    }
-
-    header nav a {
-        text-decoration: none;
-        line-height: 5rem;
-    }
-
-    .nav_line {
-        position: relative;
-        border-bottom: 2px #ffffff solid;
-        width: 120%;
-        bottom: 20%;
-        right: 10%
-    }
-
-    .nav_knapper {
-        padding-right: 10%;
-    }
-
-    .logo {
-
-        padding-left: 5%;
-    }
-
-    .nav_kontakt_knap {
-        display: none;
-        padding-left: 80px;
-    }
-
-    /*-----------Diverse CSS-----------*/
-
-    body {
-        margin: 0;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    textarea {
-        resize: none;
-    }
-
-    .hide {
-        display: none !important;
-    }
-
-    /*-----------fonts & variables-----------*/
-
-    :root {
-        --white: #ffffff;
-        --brown: #A67246;
-        --turquoise: #D8F0F6;
-        --dark: #3A3550;
-    }
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    a {
-        font-family: Kepler Std Display;
-        color: #A67246;
-    }
-
-    h5,
-    h6 {
-        font-family: Kepler Std Display;
-        color: #ffffff;
-    }
-
-    p {
-        padding-bottom: 50px;
-        font-size: 1.1rem;
-    }
-
-
-    h1 {
-        text-align: center;
-        font-size: 2rem
-    }
-
-    h2 {
-        font-size: 1.7em;
-    }
-
-    h3 {
-        font-size: 1.5em
-    }
-
-    a {
-        padding-bottom: 24px;
-    }
-
-    button {
-        font-size: 1em
-    }
-
-    /*-------------Kontakt--------------*/
-
-    /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
-
-    #kontakt_naiha {
-        padding-top: 150px;
-        padding-bottom: 150px;
-        background-color: var(--turquoise);
-
-    }
-
-    .Kontakt_h1 {
-        margin: 0;
-    }
-
-    .line {
-        border-top: 2px solid #A67246;
-        width: 50px;
-        height: 50px;
-        margin: auto;
-    }
-
-    .kontakt_indhold {
-        justify-content: center;
-        display: grid;
-    }
-
-    .kontakt_venstre {
-        display: grid;
-        grid-template-areas:
-            "overskrift overskrift overskrift overskrift"
-            "icons icons icons icons";
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        width: 307px;
-        height: 380px;
-        align-items: center;
-        grid-template-rows: 170px 10px;
-        justify-content: center;
-        margin: auto;
-    }
-
-
-
-
-
-
-
-
-
-    .kontakt_container {
-        display: grid;
-        grid-template-areas:
-            "overskrift overskrift overskrift overskrift"
-            "navn navn navn navn"
-            "titel titel titel titel"
-            "tlf tlf tlf tlf"
-            "mail mail mail mail"
-            "adresse adresse adresse adresse"
-            "cvr cvr cvr cvr"
-
-
-        ;
-        box-shadow: 6px 0px 6px grey;
-        border: 1px #A67246 solid;
-        background-color: var(--white);
-        width: 307px;
-        height: 380px;
-        grid-template-rows: 100px 25px 25px 25px 25px 25px 90px;
-        align-content: center;
-        justify-content: center;
-        margin: auto;
-        /*
-                padding-top: 42px;
-        margin-top: 48px
-*/
-    }
-
-    .Kontakt_midten_navn,
-    .Kontakt_hojre_navn {
-        grid-area: navn;
-    }
-
-    .Kontakt_midten_titel,
-    .Kontakt_hojre_titel {
-
-        grid-area: titel;
-
-    }
-
-    .Kontakt_midten_tlf,
-    .Kontakt_hojre_tlf {
-        grid-area: tlf;
-    }
-
-    .Kontakt_midten_mail,
-    .Kontakt_hojre_mail {
-        grid-area: mail;
-    }
-
-    .Kontakt_midten_adresse,
-    .Kontakt_hojre_adresse {
-        grid-area: adresse;
-
-    }
-
-    .Kontakt_midten_cvr,
-    .Kontakt_hojre_cvr {
-        grid-area: cvr;
-
-    }
-
-
-
-    .img_baggrund {
-        background-image: url(kontakt_naiha.png);
-        background-size: contain;
-        background-repeat: round;
-    }
-
-    .Kontakt_venstre_overskrift {
-        grid-area: overskrift;
-        color: #ffffff;
-    }
-
-
-    .ikoner {
-        grid-area: icons;
-    }
-
-    .social_ikon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .social_ikon_pad {
-        width: 20px;
-        height: 20px;
-        padding-left: 19px;
-    }
-
-    .kontakt_ikon {
-        height: 32px;
-        width: 32px;
-        padding-right: 24px;
-        padding-bottom: 24px;
-    }
-
-    .kontakt_container_h2 {
-        grid-area: overskrift;
-        /*        padding-bottom: 35px;*/
-    }
-
-    .form_knap {
-        display: flex;
-        justify-content: center;
-    }
-
-    /* ---- Kontakt sektion -----Overskrifter----*/
-    /* ---- Kontakt sektion -----Tekst----*/
-    /* ---- Kontakt sektion -----Knap----*/
-
-    /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
-
-    #kontakt_formular {
-        background-color: var(--dark);
-        ;
-    }
-
-    .kontakt_formular_indhold {
-        display: flex;
-        justify-content: center;
-    }
-
-    /* ----Kontakt-Formular-sektion -----Overskrifter----*/
-    /* ----Kontakt-Formular-sektion -----Tekst----*/
-    /* ----Kontakt-Formular-sektion-----Knap----*/
-
-    /*~~~~~~~~~~Formular-sektion~~~~~~~~~~~~*/
-
-    .formular {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 55px
-    }
-
-    .formular_container {
-        background-color: #ffffff;
-    }
-
-    #singlebutton {
-        margin-top: 35px;
-        width: 275px;
-        height: 35px;
-        text-align: left;
-    }
-
-    /*
-    .border {
-        border: 1px solid #ccc;
-        width: 90%;
-    }
-*/
-
-    form {
-        /*        padding: 10vw;*/
-        color: #A67246;
-    }
-
-    input[type=text] {
-        padding-right: 220px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-        border: 1px solid #A67246;
-        border-radius: 3px;
-    }
-
-    textarea {
-        padding-right: 233px;
-        padding-bottom: 120px;
-        border-radius: 3px;
-        border: 1px solid #A67246;
-
-    }
-
-    .form-group {
-        padding: 14px;
-    }
-
-    fieldset {
-        padding: 14px;
-        background-color: #ffffff;
-        display: contents;
-    }
-
-    /*-------------Footer--------------*/
-
-    footer {
-        background-color: var(--dark);
-    }
-
-    .footer_indhold {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 9vw;
-        padding-right: 9vw;
-        color: var(--white);
-    }
-
-    .row_venstre {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .row_venstre {
-        align-self: center
-    }
-
-    .navn {
-        margin: 0;
-        font-size: 1.3rem;
-        color: var(--white);
-    }
-
-    .titel {
-        margin: 0;
-        font-size: 0.7rem;
-        color: var(--white);
-    }
-
-    .footer_ikon {
-        height: 5vw;
-        width: 5vw;
-        padding-right: 5vw;
-        padding-bottom: 5vw;
-    }
-
-    .social_ikon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .social_ikon_pad {
-        width: 20px;
-        height: 20px;
-        padding-left: 19px;
-    }
-
-    /* ----Mest genbrugte regler---------*/
-
-    .top {
-        grid-area: topp;
-        display: flex;
-        align-items: center;
-    }
-
-    .mid {
-        grid-area: midd;
-        display: flex;
-        align-items: center;
-    }
-
-    .bottom {
-        grid-area: bot;
-        display: flex;
-        align-items: center;
-    }
-
-    button {
-        width: 200px;
-        height: 50px;
-        background-color: #ffffff;
-        border: none;
-        margin-top: 15vw;
-        color: #A67246;
-        border: 1px solid #A67246;
-    }
-
-    .social_buttons {
-        display: none;
-        margin-top: 10vw;
-        padding-left: 40vw;
-    }
-
-
-    @media screen and (min-width:768px) {
-
-        /*
-        .hid {
-            display: block;
-        }
-*/
-
-        /*-----------fonts & variables-----------*/
-
-        /*~~~~~~~~~~Kontakt-sektion~~~~~~~~~~~~*/
-        .kontakt_indhold {
-            grid-template-columns: repeat(3, 1fr);
-
-        }
-
-        .kontakt_venstre {
-            max-width: 27vw;
-        }
-
-        .kontakt_container {
-            max-width: 27vw;
-        }
-
-        button {
-            width: 20vw;
-            height: 5vw;
-            margin-left: 3vw;
-            margin-top: 8vw;
-        }
-
-        /*~~~~~~~~~~Kontakt-Formular-sektion~~~~~~~~~~~~*/
-        /*
-
-        #kontakt_formular {
-            display: flex;
-            justify-content: space-evenly;
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-
-        .kontakt_formular_overskrift {
-            text-align: left;
-            margin: 0;
-            visibility: hidden;
-
-        }
-
-        .kontakt_formular_tekst {
-            width: 30vw;
-            text-align: left;
-            visibility: hidden;
-
-        }
-
-        .top1 {
-            display: flex;
-            align-items: center;
-            visibility: hidden;
-
-        }
-
-        .mid1 {
-            display: flex;
-            align-items: center;
-            visibility: hidden;
-
-        }
-
-        .bottom1 {
-            display: flex;
-            align-items: center;
-            visibility: hidden;
-        }
-*/
-
-
-        /*~~~~~~~~~~Formular~~~~~~~~~~~~*/
-
-        /*
-        #singlebutton {
-            margin: 0;
-            margin-top: 6vw;
-            height: 3vw;
-            width: 35vw;
-        }
-
-        input[type=text] {
-            width: 35vw;
-        }
-
-        textarea {
-            height: 6vw;
-            width: 28vw;
-        }
-
-        .form-group {
-            padding: 1vw;
-        }
-
-        fieldset {
-            padding: 1vw;
-        }
-*/
-
-    }
-</style>
-
 <body>
-
-
     <header>
-
         <nav>
-            <div id="navigationsmenu">
-                <div class="logo">
-                    <a class="nav_logo_knap" href="forside.html"> Naiha Khiljee</a>
-                    <div class="nav_line"></div>
+            <div class="header_indhold">
+                <div class="logodiv">
+                    <a class="logo" href="forside.html"> </a>
                 </div>
-
-                <div class="nav_knapper">
-                    <img class="burgermenu_ikon" src="Group%204132.png" alt="menu ikon">
-
-                    <a class="nav_kontakt_knap" href="kontakt.html">Kontakt</a>
+                <div class="menuikonn">
 
                 </div>
+                <div class="menuikon">
+
+                    <div class="navknap">
+                        <a class="navfor" href="forside.html"></a>
+
+                        <a class="navkon" href="kontakt.html"></a>
+                    </div>
+                    <img class="burgerikon" src="Group%204132.png">
+                </div>
+            </div>
+
+
+        </nav>
+        <div class="skrid">
+            <div id="fullscreen_menu_knap">
+
+                <button class="navigations_knap" onclick="toggleMenu()">☰</button>
 
             </div>
-        </nav>
+        </div>
+        <section id="fullscreen_menu" class="hide">
+            <div class="sectionwrapper">
+
+                <div id="fullscreen_menu_knap">
+                    <button class="navigations_knap" onclick="toggleMenu()">x</button>
+                </div>
+                <div id="menu_logo">
+                    <h1 class="logo_burger"> </h1>
+                </div>
+
+
+                <div class="nav_knapper">
+                    <div id="nav_knapper_top">
+
+                        <nav>
+                            <a class="burger_forside" href="forside.html"></a>
+                        </nav>
+                    </div>
+
+                    <div id="nav_knapper_bottom">
+
+
+                        <nav>
+                            <a class="burger_kontakt" href="kontakt.html"></a>
+                        </nav>
+                    </div>
+                    <div id="Social_bottom">
+                        <img href="https://www.facebook.com/naiha.khiljee" class="social_face" src="">
+                        <img href="https://www.instagram.com/naihakhiljee/tagged/" class="social_insta" src="">
+                        <img href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b" class="social_linkin" src="">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </section>
 
     </header>
 
-    <section id="kontakt_naiha" class="">
+    <section id="kontakt_naiha">
+        <div class="animatedParent">
+            <h1 class="Kontakt_h1 animated fadeInLeftShort"></h1>
+            <div class="line animated fadeInLeftShort"></div>
+        </div>
+        <div class="slider">
+            <div class="kontakt_indhold animatedParent">
+                <div class="kontakt_venstre img_baggrund animated fadeInUpShort">
+                    <h2 class="Kontakt_venstre_overskrift delay1 animated fadeInUp "> </h2>
+                    <div class="ikoner  ">
+                        <a href="https://www.facebook.com/naiha.khiljee"><img class="Kontakt_venstre_ikon_left social_ikon ikon1 delay2 animated fadeInUp" src="facehvidx2.png"></a>
+                        <a href="https://www.instagram.com/naihakhiljee/tagged/"> <img class="Kontakt_venstre_ikon_mid social_ikon_pad ikon2 delay3 animated fadeInUp" src="instahvid2x.png"></a>
+                        <a href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b"> <img class="Kontakt_venstre_ikon_right social_ikon_pad ikon3 delay4 animated fadeInUp" src="instahvid2x.png"></a>
+                    </div>
+                </div>
 
-        <h1 class="Kontakt_h1"></h1>
-        <div class="line"></div>
-        <article class="kontakt_indhold scale_up_ver_bottom hidden">
+                <div class="kontakt_midten kontakt_container  animated fadeInUpShort">
+                    <h2 class="Kontakt_midten_overskrift kontakt_container_h2 delay1 animated fadeInUp"></h2>
 
-            <div class="kontakt_venstre  img_baggrund">
+                    <a class="Kontakt_midten_navn delay2 animated fadeInUp "></a>
+                    <a class="Kontakt_midten_titel  delay3 animated fadeInUp"> </a>
+                    <a href="tel:+4529578042" class="Kontakt_midten_tlf delay4 animated fadeInUp "></a>
+                    <a href="mailto:info@diversitet.dk" class="Kontakt_midten_mail  delay55 animated fadeInUp"></a>
+                    <a href="https://goo.gl/maps/AbBMK2t58XKuEFEe9" class="Kontakt_midten_adresse delay66 animated fadeInUp "> </a>
+                    <a class="Kontakt_midten_cvr delay7 animated fadeInUp "></a>
 
-                <h2 class="Kontakt_venstre_overskrift appeareffekt"></h2>
-                <div class="ikoner hidden titleappear1">
-                    <img class="Kontakt_venstre_ikon_left social_ikon" src="">
-                    <img class="Kontakt_venstre_ikon_mid social_ikon_pad" src="">
-                    <img class="Kontakt_venstre_ikon_right social_ikon_pad" src="">
+
+
+
+                </div>
+
+                <div class="kontakt_hojre kontakt_container  animated fadeInUpShort">
+                    <h2 class="Kontakt_hojre_overskrift kontakt_container_h2 delay1 animated fadeInUp"></h2>
+
+                    <a class="Kontakt_hojre_navn delay2 animated fadeInUp "></a>
+                    <a class="Kontakt_hojre_titel  delay3 animated fadeInUp">.</a>
+                    <a href="tel:+4533305522" class="Kontakt_hojre_tlf  delay4 animated fadeInUp"></a>
+                    <a href="mailto:@lindhardtogringhof.dk" class="Kontakt_hojre_mail  delay55 animated fadeInUp"></a>
+                    <a href="https://goo.gl/maps/fBdLZSWu2YM7UJTS8" class="Kontakt_hojre_adresse delay66 animated fadeInUp "></a>
+                    <a class="Kontakt_hojre_cvr  delay7 animated fadeInUp"></a>
+
                 </div>
             </div>
-
-
-            <div class="kontakt_midten kontakt_container">
-                <h2 class="Kontakt_midten_overskrift kontakt_container_h2 appeareffekt"></h2>
-
-                <a class="Kontakt_midten_navn hidden titleappear1"></a>
-                <a class="Kontakt_midten_titel hidden titleappear2"></a>
-                <a class="Kontakt_midten_tlf hidden titleappear3"></a>
-                <a class="Kontakt_midten_mail hidden titleappear4"></a>
-                <a class="Kontakt_midten_adresse hidden titleappear5"></a>
-                <a class="Kontakt_midten_cvr hidden titleappear6"></a>
-
-
-
-
+            <div class="form_knap">
+                <button class="kontakt_form_knap button"></button>
             </div>
-
-            <div class="kontakt_hojre kontakt_container">
-                <h2 class="Kontakt_hojre_overskrift kontakt_container_h2 appeareffekt"></h2>
-
-                <a class="Kontakt_hojre_navn hidden titleappear1"></a>
-                <a class="Kontakt_hojre_titel hidden titleappear2"></a>
-                <a class="Kontakt_hojre_tlf hidden titleappear3"></a>
-                <a class="Kontakt_hojre_mail hidden titleappear4"></a>
-                <a class="Kontakt_hojre_adresse hidden titleappear5"></a>
-                <a class="Kontakt_hojre_cvr hidden titleappear6"></a>
-
-            </div>
-        </article>
-        <div class="form_knap">
-            <button class="kontakt_form_knap button"></button>
         </div>
-
     </section>
 
 
-    <section id="kontakt_formular">
-        <article class="kontakt_formular_indhold">
+    <section id="kontakt_formular" class="hide">
+        <article class="kontakt_formular_indhold  ">
 
-            <div class="kontakt_tekst">
-                <h1 class="kontakt_formular_overskrift hidden"></h1>
-                <p class="kontakt_formular_tekst hidden"></p>
+            <div class="kontakt_tekst ">
+                <h1 class="kontakt_formular_overskrift "></h1>
+                <h3 class="kontakt_formular_tekst  "></h3>
 
             </div>
 
@@ -919,55 +148,52 @@
 
 
         <div class="formular">
-            <div class="formular_indhold">
 
 
-                <form class="form-horizontal">
-                    <fieldset>
+            <form class="form-horizontal ">
+                <fieldset>
 
-                        <!-- Form Name -->
+                    <!-- Form Name -->
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-4">
-                                <input id="textinput" name="textinput" type="text" placeholder="Din mailadresse" class="form-control input-md">
-                                <span class="help-block"></span>
-                            </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput"></label>
+                        <div class="col-md-4">
+                            <input id="textinput" name="textinput" type="text" placeholder="Din mailadresse" class="form-control input-md">
+                            <span class="help-block"></span>
                         </div>
+                    </div>
 
-                        <!-- Text input-->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textinput"></label>
-                            <div class="col-md-4">
-                                <input id="textinput" name="textinput" type="text" placeholder="Hvad drejer det sig om?" class="form-control input-md">
-                                <span class="help-block"></span>
-                            </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput"></label>
+                        <div class="col-md-4">
+                            <input id="textinput" name="textinput" type="text" placeholder="Hvad drejer det sig om?" class="form-control input-md">
+                            <span class="help-block"></span>
                         </div>
+                    </div>
 
-                        <!-- Textarea -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="textarea"></label>
-                            <div class="col-md-4">
-                                <textarea class="form-control" id="textarea" name="textarea">...</textarea>
-                            </div>
+                    <!-- Textarea -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textarea"></label>
+                        <div class="col-md-4">
+                            <textarea class="form-control" id="textarea" name="textarea">...</textarea>
                         </div>
+                    </div>
 
-                        <!-- Button -->
-
-
-                    </fieldset>
-                </form>
+                    <!-- Button -->
 
 
-            </div>
+                </fieldset>
+            </form>
+
+
 
         </div>
-        <button class="kontakt_knap" href="kontakt.html">SEND</button>
+
+        <button class="kontakt_knap" href="kontakt.html"></button>
         <div class="kontakt_line"></div>
-
     </section>
-
 
 
 
@@ -978,27 +204,31 @@
 
 
     <footer>
-
         <article class="footer_indhold">
             <div class="row_venstre">
-                <h4 class="navn"></h4>
-                <h4 class="titel"></h4>
+                <h3 class="navn">
+                </h3>
+                <h3 class="titel">
+                </h3>
             </div>
             <div class="row_hojre">
-                <img class="face social_ikon">
-                <img class="insta social_ikon_pad">
-                <img class="linkedin social_ikon_pad">
+                <a href="https://www.facebook.com/naiha.khiljee"><img class="face social_ikon"></a>
+                <a href="https://www.instagram.com/naihakhiljee/tagged/"><img class="insta social_ikon_pad"></a>
+                <a href="https://dk.linkedin.com/in/naiha-khiljee-71073b10b"><img class="linkedin social_ikon_pad"></a>
             </div>
-
-
-
         </article>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="css3-animate-it.js"></script>
     <script src="footer.js"></script>
     <script>
         let side;
         const url = "https://madsiversenn.dk/kea/02-semester/tema10/eksamensprojekt/wordpress-5.3/wordpress/wp-json/wp/v2/kontakt/110";
         document.addEventListener("DOMContentLoaded", start);
+        document.querySelector(".menuikon").addEventListener("click", toggleNavBar);
+
 
         function start() {
             hentJson();
@@ -1013,6 +243,22 @@
 
 
         function vis() {
+
+
+            document.querySelector(".logo").textContent = side.kontakt_nav_logo;
+            document.querySelector(".navfor").textContent = side.kontakt_nav_knap1;
+            document.querySelector(".navkon").textContent = side.kontakt_nav_knap2;
+            document.querySelector(".logo_burger").textContent = side.kontakt_nav_logo;
+            document.querySelector(".burger_forside").textContent = side.kontakt_nav_knap1;
+            document.querySelector(".burger_kontakt").textContent = side.kontakt_nav_knap2;
+
+            document.querySelector(".social_face").src = side.kontakt_nav_ikon1.guid;
+            document.querySelector(".social_insta").src = side.kontakt_nav_ikon2.guid;
+            document.querySelector(".social_linkin").src = side.kontakt_nav_ikon3.guid;
+
+
+
+
 
             document.querySelector(".Kontakt_h1").textContent = side.kontakt_overskrift;
 
@@ -1060,24 +306,35 @@
 
 
 
+        }
 
 
 
 
 
-            function toggleContactFormHidden() {
-                document.querySelector("#kontakt_formular").classList.toggle("hide");
-                document.querySelector(".kontakt_formular_overskrift").classList.add("slide_in_left1");
-                document.querySelector(".kontakt_formular_tekst").classList.add("slide_in_left2");
-                document.querySelector(".top1").classList.add("slide_in_left3");
-                document.querySelector(".mid1").classList.add("slide_in_left4");
-                document.querySelector(".bottom1").classList.add("slide_in_left5");
-                document.querySelector(".formular").classList.add("scale_up_ver_bottom");
+        function toggleContactFormHidden() {
+            document.querySelector("#kontakt_formular").classList.toggle("hide");
+
+            window.scrollTo(0, 1700);
 
 
-            }
+        }
 
-            document.querySelector(".kontakt_form_knap").addEventListener("click", toggleContactFormHidden);
+        document.querySelector(".kontakt_form_knap").addEventListener("click", toggleContactFormHidden);
+
+
+
+
+        function toggleMenu() {
+            var element = document.getElementById("fullscreen_menu");
+            element.classList.toggle("hide");
+
+        }
+
+
+        function toggleNavBar() {
+            document.querySelector(".navknap").classList.toggle("hide");
+
 
 
         }
